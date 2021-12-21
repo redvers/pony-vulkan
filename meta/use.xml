@@ -1,0 +1,5133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<castxml2pony xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="./renderuse.xml"/>
+<xi:include href="./usetypes.xml"/>
+<xi:include href="./vulkan.xml"/>
+                    <uses>
+                      <use id="_736" name="vkCreateInstance"
+     ponyname="vkCreateInstance"
+     fid="f7"
+     lineno="3599"
+     rv="I32">
+     <useargs>
+       <usearg name="pCreateInfo" type="NullablePointer[VkInstanceCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pInstance" type="Array[NullablePointer[VkInstanceT]]"/>
+     </useargs>
+  </use>
+  <use id="_737" name="vkDestroyInstance"
+     ponyname="vkDestroyInstance"
+     fid="f7"
+     lineno="3604"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_738" name="vkEnumeratePhysicalDevices"
+     ponyname="vkEnumeratePhysicalDevices"
+     fid="f7"
+     lineno="3608"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pPhysicalDeviceCount" type="Pointer[U32]"/>
+       <usearg name="pPhysicalDevices" type="Array[NullablePointer[VkPhysicalDeviceT]]"/>
+     </useargs>
+  </use>
+  <use id="_739" name="vkGetPhysicalDeviceFeatures"
+     ponyname="vkGetPhysicalDeviceFeatures"
+     fid="f7"
+     lineno="3613"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pFeatures" type="NullablePointer[VkPhysicalDeviceFeatures]"/>
+     </useargs>
+  </use>
+  <use id="_740" name="vkGetPhysicalDeviceFormatProperties"
+     ponyname="vkGetPhysicalDeviceFormatProperties"
+     fid="f7"
+     lineno="3617"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="pFormatProperties" type="NullablePointer[VkFormatProperties]"/>
+     </useargs>
+  </use>
+  <use id="_741" name="vkGetPhysicalDeviceImageFormatProperties"
+     ponyname="vkGetPhysicalDeviceImageFormatProperties"
+     fid="f7"
+     lineno="3622"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="ptype" type="I32"/>
+       <usearg name="tiling" type="I32"/>
+       <usearg name="usage" type="U32"/>
+       <usearg name="flags" type="U32"/>
+       <usearg name="pImageFormatProperties" type="NullablePointer[VkImageFormatProperties]"/>
+     </useargs>
+  </use>
+  <use id="_742" name="vkGetPhysicalDeviceProperties"
+     ponyname="vkGetPhysicalDeviceProperties"
+     fid="f7"
+     lineno="3631"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pProperties" type="NullablePointer[VkPhysicalDeviceProperties]"/>
+     </useargs>
+  </use>
+  <use id="_743" name="vkGetPhysicalDeviceQueueFamilyProperties"
+     ponyname="vkGetPhysicalDeviceQueueFamilyProperties"
+     fid="f7"
+     lineno="3635"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pQueueFamilyPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pQueueFamilyProperties" type="NullablePointer[VkQueueFamilyProperties]"/>
+     </useargs>
+  </use>
+  <use id="_744" name="vkGetPhysicalDeviceMemoryProperties"
+     ponyname="vkGetPhysicalDeviceMemoryProperties"
+     fid="f7"
+     lineno="3640"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pMemoryProperties" type="NullablePointer[VkPhysicalDeviceMemoryProperties]"/>
+     </useargs>
+  </use>
+  <use id="_745" name="vkGetInstanceProcAddr"
+     ponyname="vkGetInstanceProcAddr"
+     fid="f7"
+     lineno="3644"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pName" type="String"/>
+     </useargs>
+  </use>
+  <use id="_746" name="vkGetDeviceProcAddr"
+     ponyname="vkGetDeviceProcAddr"
+     fid="f7"
+     lineno="3648"
+     rv="Pointer[None]">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pName" type="String"/>
+     </useargs>
+  </use>
+  <use id="_747" name="vkCreateDevice"
+     ponyname="vkCreateDevice"
+     fid="f7"
+     lineno="3652"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDeviceCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pDevice" type="Array[NullablePointer[VkDeviceT]]"/>
+     </useargs>
+  </use>
+  <use id="_748" name="vkDestroyDevice"
+     ponyname="vkDestroyDevice"
+     fid="f7"
+     lineno="3658"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_749" name="vkEnumerateInstanceExtensionProperties"
+     ponyname="vkEnumerateInstanceExtensionProperties"
+     fid="f7"
+     lineno="3662"
+     rv="I32">
+     <useargs>
+       <usearg name="pLayerName" type="String"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkExtensionProperties]"/>
+     </useargs>
+  </use>
+  <use id="_750" name="vkEnumerateDeviceExtensionProperties"
+     ponyname="vkEnumerateDeviceExtensionProperties"
+     fid="f7"
+     lineno="3667"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pLayerName" type="String"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkExtensionProperties]"/>
+     </useargs>
+  </use>
+  <use id="_751" name="vkEnumerateInstanceLayerProperties"
+     ponyname="vkEnumerateInstanceLayerProperties"
+     fid="f7"
+     lineno="3673"
+     rv="I32">
+     <useargs>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkLayerProperties]"/>
+     </useargs>
+  </use>
+  <use id="_752" name="vkEnumerateDeviceLayerProperties"
+     ponyname="vkEnumerateDeviceLayerProperties"
+     fid="f7"
+     lineno="3677"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkLayerProperties]"/>
+     </useargs>
+  </use>
+  <use id="_753" name="vkGetDeviceQueue"
+     ponyname="vkGetDeviceQueue"
+     fid="f7"
+     lineno="3682"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="queueFamilyIndex" type="U32"/>
+       <usearg name="queueIndex" type="U32"/>
+       <usearg name="pQueue" type="Array[NullablePointer[VkQueueT]]"/>
+     </useargs>
+  </use>
+  <use id="_754" name="vkQueueSubmit"
+     ponyname="vkQueueSubmit"
+     fid="f7"
+     lineno="3688"
+     rv="I32">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="submitCount" type="U32"/>
+       <usearg name="pSubmits" type="NullablePointer[VkSubmitInfo]"/>
+       <usearg name="fence" type="NullablePointer[VkFenceT]"/>
+     </useargs>
+  </use>
+  <use id="_755" name="vkQueueWaitIdle"
+     ponyname="vkQueueWaitIdle"
+     fid="f7"
+     lineno="3694"
+     rv="I32">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+     </useargs>
+  </use>
+  <use id="_756" name="vkDeviceWaitIdle"
+     ponyname="vkDeviceWaitIdle"
+     fid="f7"
+     lineno="3697"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+     </useargs>
+  </use>
+  <use id="_757" name="vkAllocateMemory"
+     ponyname="vkAllocateMemory"
+     fid="f7"
+     lineno="3700"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pAllocateInfo" type="NullablePointer[VkMemoryAllocateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pMemory" type="Array[NullablePointer[VkDeviceMemoryT]]"/>
+     </useargs>
+  </use>
+  <use id="_758" name="vkFreeMemory"
+     ponyname="vkFreeMemory"
+     fid="f7"
+     lineno="3706"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="memory" type="NullablePointer[VkDeviceMemoryT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_759" name="vkMapMemory"
+     ponyname="vkMapMemory"
+     fid="f7"
+     lineno="3711"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="memory" type="NullablePointer[VkDeviceMemoryT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="size" type="U64"/>
+       <usearg name="flags" type="U32"/>
+       <usearg name="ppData" type="NullablePointer[Pointer[None]]"/>
+     </useargs>
+  </use>
+  <use id="_760" name="vkUnmapMemory"
+     ponyname="vkUnmapMemory"
+     fid="f7"
+     lineno="3719"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="memory" type="NullablePointer[VkDeviceMemoryT]"/>
+     </useargs>
+  </use>
+  <use id="_761" name="vkFlushMappedMemoryRanges"
+     ponyname="vkFlushMappedMemoryRanges"
+     fid="f7"
+     lineno="3723"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="memoryRangeCount" type="U32"/>
+       <usearg name="pMemoryRanges" type="NullablePointer[VkMappedMemoryRange]"/>
+     </useargs>
+  </use>
+  <use id="_762" name="vkInvalidateMappedMemoryRanges"
+     ponyname="vkInvalidateMappedMemoryRanges"
+     fid="f7"
+     lineno="3728"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="memoryRangeCount" type="U32"/>
+       <usearg name="pMemoryRanges" type="NullablePointer[VkMappedMemoryRange]"/>
+     </useargs>
+  </use>
+  <use id="_763" name="vkGetDeviceMemoryCommitment"
+     ponyname="vkGetDeviceMemoryCommitment"
+     fid="f7"
+     lineno="3733"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="memory" type="NullablePointer[VkDeviceMemoryT]"/>
+       <usearg name="pCommittedMemoryInBytes" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_764" name="vkBindBufferMemory"
+     ponyname="vkBindBufferMemory"
+     fid="f7"
+     lineno="3738"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="memory" type="NullablePointer[VkDeviceMemoryT]"/>
+       <usearg name="memoryOffset" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_765" name="vkBindImageMemory"
+     ponyname="vkBindImageMemory"
+     fid="f7"
+     lineno="3744"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="memory" type="NullablePointer[VkDeviceMemoryT]"/>
+       <usearg name="memoryOffset" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_766" name="vkGetBufferMemoryRequirements"
+     ponyname="vkGetBufferMemoryRequirements"
+     fid="f7"
+     lineno="3750"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements]"/>
+     </useargs>
+  </use>
+  <use id="_767" name="vkGetImageMemoryRequirements"
+     ponyname="vkGetImageMemoryRequirements"
+     fid="f7"
+     lineno="3755"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements]"/>
+     </useargs>
+  </use>
+  <use id="_768" name="vkGetImageSparseMemoryRequirements"
+     ponyname="vkGetImageSparseMemoryRequirements"
+     fid="f7"
+     lineno="3760"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="pSparseMemoryRequirementCount" type="Pointer[U32]"/>
+       <usearg name="pSparseMemoryRequirements" type="NullablePointer[VkSparseImageMemoryRequirements]"/>
+     </useargs>
+  </use>
+  <use id="_769" name="vkGetPhysicalDeviceSparseImageFormatProperties"
+     ponyname="vkGetPhysicalDeviceSparseImageFormatProperties"
+     fid="f7"
+     lineno="3766"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="ptype" type="I32"/>
+       <usearg name="samples" type="I32"/>
+       <usearg name="usage" type="U32"/>
+       <usearg name="tiling" type="I32"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkSparseImageFormatProperties]"/>
+     </useargs>
+  </use>
+  <use id="_770" name="vkQueueBindSparse"
+     ponyname="vkQueueBindSparse"
+     fid="f7"
+     lineno="3776"
+     rv="I32">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="bindInfoCount" type="U32"/>
+       <usearg name="pBindInfo" type="NullablePointer[VkBindSparseInfo]"/>
+       <usearg name="fence" type="NullablePointer[VkFenceT]"/>
+     </useargs>
+  </use>
+  <use id="_771" name="vkCreateFence"
+     ponyname="vkCreateFence"
+     fid="f7"
+     lineno="3782"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkFenceCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pFence" type="Array[NullablePointer[VkFenceT]]"/>
+     </useargs>
+  </use>
+  <use id="_772" name="vkDestroyFence"
+     ponyname="vkDestroyFence"
+     fid="f7"
+     lineno="3788"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="fence" type="NullablePointer[VkFenceT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_773" name="vkResetFences"
+     ponyname="vkResetFences"
+     fid="f7"
+     lineno="3793"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="fenceCount" type="U32"/>
+       <usearg name="pFences" type="Array[NullablePointer[VkFenceT]]"/>
+     </useargs>
+  </use>
+  <use id="_774" name="vkGetFenceStatus"
+     ponyname="vkGetFenceStatus"
+     fid="f7"
+     lineno="3798"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="fence" type="NullablePointer[VkFenceT]"/>
+     </useargs>
+  </use>
+  <use id="_775" name="vkWaitForFences"
+     ponyname="vkWaitForFences"
+     fid="f7"
+     lineno="3802"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="fenceCount" type="U32"/>
+       <usearg name="pFences" type="Array[NullablePointer[VkFenceT]]"/>
+       <usearg name="waitAll" type="U32"/>
+       <usearg name="timeout" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_776" name="vkCreateSemaphore"
+     ponyname="vkCreateSemaphore"
+     fid="f7"
+     lineno="3809"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkSemaphoreCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pSemaphore" type="Array[NullablePointer[VkSemaphoreT]]"/>
+     </useargs>
+  </use>
+  <use id="_777" name="vkDestroySemaphore"
+     ponyname="vkDestroySemaphore"
+     fid="f7"
+     lineno="3815"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="semaphore" type="NullablePointer[VkSemaphoreT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_778" name="vkCreateEvent"
+     ponyname="vkCreateEvent"
+     fid="f7"
+     lineno="3820"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkEventCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pEvent" type="Array[NullablePointer[VkEventT]]"/>
+     </useargs>
+  </use>
+  <use id="_779" name="vkDestroyEvent"
+     ponyname="vkDestroyEvent"
+     fid="f7"
+     lineno="3826"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_780" name="vkGetEventStatus"
+     ponyname="vkGetEventStatus"
+     fid="f7"
+     lineno="3831"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+     </useargs>
+  </use>
+  <use id="_781" name="vkSetEvent"
+     ponyname="vkSetEvent"
+     fid="f7"
+     lineno="3835"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+     </useargs>
+  </use>
+  <use id="_782" name="vkResetEvent"
+     ponyname="vkResetEvent"
+     fid="f7"
+     lineno="3839"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+     </useargs>
+  </use>
+  <use id="_783" name="vkCreateQueryPool"
+     ponyname="vkCreateQueryPool"
+     fid="f7"
+     lineno="3843"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkQueryPoolCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pQueryPool" type="Array[NullablePointer[VkQueryPoolT]]"/>
+     </useargs>
+  </use>
+  <use id="_784" name="vkDestroyQueryPool"
+     ponyname="vkDestroyQueryPool"
+     fid="f7"
+     lineno="3849"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_785" name="vkGetQueryPoolResults"
+     ponyname="vkGetQueryPoolResults"
+     fid="f7"
+     lineno="3854"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="firstQuery" type="U32"/>
+       <usearg name="queryCount" type="U32"/>
+       <usearg name="dataSize" type="U64"/>
+       <usearg name="pData" type="Pointer[None]"/>
+       <usearg name="stride" type="U64"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_786" name="vkCreateBuffer"
+     ponyname="vkCreateBuffer"
+     fid="f7"
+     lineno="3864"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkBufferCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pBuffer" type="Array[NullablePointer[VkBufferT]]"/>
+     </useargs>
+  </use>
+  <use id="_787" name="vkDestroyBuffer"
+     ponyname="vkDestroyBuffer"
+     fid="f7"
+     lineno="3870"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_788" name="vkCreateBufferView"
+     ponyname="vkCreateBufferView"
+     fid="f7"
+     lineno="3875"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkBufferViewCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pView" type="Array[NullablePointer[VkBufferViewT]]"/>
+     </useargs>
+  </use>
+  <use id="_789" name="vkDestroyBufferView"
+     ponyname="vkDestroyBufferView"
+     fid="f7"
+     lineno="3881"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="bufferView" type="NullablePointer[VkBufferViewT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_790" name="vkCreateImage"
+     ponyname="vkCreateImage"
+     fid="f7"
+     lineno="3886"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkImageCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pImage" type="Array[NullablePointer[VkImageT]]"/>
+     </useargs>
+  </use>
+  <use id="_791" name="vkDestroyImage"
+     ponyname="vkDestroyImage"
+     fid="f7"
+     lineno="3892"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_792" name="vkGetImageSubresourceLayout"
+     ponyname="vkGetImageSubresourceLayout"
+     fid="f7"
+     lineno="3897"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="pSubresource" type="NullablePointer[VkImageSubresource]"/>
+       <usearg name="pLayout" type="NullablePointer[VkSubresourceLayout]"/>
+     </useargs>
+  </use>
+  <use id="_793" name="vkCreateImageView"
+     ponyname="vkCreateImageView"
+     fid="f7"
+     lineno="3903"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkImageViewCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pView" type="Array[NullablePointer[VkImageViewT]]"/>
+     </useargs>
+  </use>
+  <use id="_794" name="vkDestroyImageView"
+     ponyname="vkDestroyImageView"
+     fid="f7"
+     lineno="3909"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="imageView" type="NullablePointer[VkImageViewT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_795" name="vkCreateShaderModule"
+     ponyname="vkCreateShaderModule"
+     fid="f7"
+     lineno="3914"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkShaderModuleCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pShaderModule" type="Array[NullablePointer[VkShaderModuleT]]"/>
+     </useargs>
+  </use>
+  <use id="_796" name="vkDestroyShaderModule"
+     ponyname="vkDestroyShaderModule"
+     fid="f7"
+     lineno="3920"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="shaderModule" type="NullablePointer[VkShaderModuleT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_797" name="vkCreatePipelineCache"
+     ponyname="vkCreatePipelineCache"
+     fid="f7"
+     lineno="3925"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkPipelineCacheCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pPipelineCache" type="Array[NullablePointer[VkPipelineCacheT]]"/>
+     </useargs>
+  </use>
+  <use id="_798" name="vkDestroyPipelineCache"
+     ponyname="vkDestroyPipelineCache"
+     fid="f7"
+     lineno="3931"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipelineCache" type="NullablePointer[VkPipelineCacheT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_799" name="vkGetPipelineCacheData"
+     ponyname="vkGetPipelineCacheData"
+     fid="f7"
+     lineno="3936"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipelineCache" type="NullablePointer[VkPipelineCacheT]"/>
+       <usearg name="pDataSize" type="Pointer[U64]"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_800" name="vkMergePipelineCaches"
+     ponyname="vkMergePipelineCaches"
+     fid="f7"
+     lineno="3942"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="dstCache" type="NullablePointer[VkPipelineCacheT]"/>
+       <usearg name="srcCacheCount" type="U32"/>
+       <usearg name="pSrcCaches" type="Array[NullablePointer[VkPipelineCacheT]]"/>
+     </useargs>
+  </use>
+  <use id="_801" name="vkCreateGraphicsPipelines"
+     ponyname="vkCreateGraphicsPipelines"
+     fid="f7"
+     lineno="3948"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipelineCache" type="NullablePointer[VkPipelineCacheT]"/>
+       <usearg name="createInfoCount" type="U32"/>
+       <usearg name="pCreateInfos" type="NullablePointer[VkGraphicsPipelineCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pPipelines" type="Array[NullablePointer[VkPipelineT]]"/>
+     </useargs>
+  </use>
+  <use id="_802" name="vkCreateComputePipelines"
+     ponyname="vkCreateComputePipelines"
+     fid="f7"
+     lineno="3956"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipelineCache" type="NullablePointer[VkPipelineCacheT]"/>
+       <usearg name="createInfoCount" type="U32"/>
+       <usearg name="pCreateInfos" type="NullablePointer[VkComputePipelineCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pPipelines" type="Array[NullablePointer[VkPipelineT]]"/>
+     </useargs>
+  </use>
+  <use id="_803" name="vkDestroyPipeline"
+     ponyname="vkDestroyPipeline"
+     fid="f7"
+     lineno="3964"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_804" name="vkCreatePipelineLayout"
+     ponyname="vkCreatePipelineLayout"
+     fid="f7"
+     lineno="3969"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkPipelineLayoutCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pPipelineLayout" type="Array[NullablePointer[VkPipelineLayoutT]]"/>
+     </useargs>
+  </use>
+  <use id="_805" name="vkDestroyPipelineLayout"
+     ponyname="vkDestroyPipelineLayout"
+     fid="f7"
+     lineno="3975"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipelineLayout" type="NullablePointer[VkPipelineLayoutT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_806" name="vkCreateSampler"
+     ponyname="vkCreateSampler"
+     fid="f7"
+     lineno="3980"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkSamplerCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pSampler" type="Array[NullablePointer[VkSamplerT]]"/>
+     </useargs>
+  </use>
+  <use id="_807" name="vkDestroySampler"
+     ponyname="vkDestroySampler"
+     fid="f7"
+     lineno="3986"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="sampler" type="NullablePointer[VkSamplerT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_808" name="vkCreateDescriptorSetLayout"
+     ponyname="vkCreateDescriptorSetLayout"
+     fid="f7"
+     lineno="3991"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDescriptorSetLayoutCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pSetLayout" type="Array[NullablePointer[VkDescriptorSetLayoutT]]"/>
+     </useargs>
+  </use>
+  <use id="_809" name="vkDestroyDescriptorSetLayout"
+     ponyname="vkDestroyDescriptorSetLayout"
+     fid="f7"
+     lineno="3997"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorSetLayout" type="NullablePointer[VkDescriptorSetLayoutT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_810" name="vkCreateDescriptorPool"
+     ponyname="vkCreateDescriptorPool"
+     fid="f7"
+     lineno="4002"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDescriptorPoolCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pDescriptorPool" type="Array[NullablePointer[VkDescriptorPoolT]]"/>
+     </useargs>
+  </use>
+  <use id="_811" name="vkDestroyDescriptorPool"
+     ponyname="vkDestroyDescriptorPool"
+     fid="f7"
+     lineno="4008"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorPool" type="NullablePointer[VkDescriptorPoolT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_812" name="vkResetDescriptorPool"
+     ponyname="vkResetDescriptorPool"
+     fid="f7"
+     lineno="4013"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorPool" type="NullablePointer[VkDescriptorPoolT]"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_813" name="vkAllocateDescriptorSets"
+     ponyname="vkAllocateDescriptorSets"
+     fid="f7"
+     lineno="4018"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pAllocateInfo" type="NullablePointer[VkDescriptorSetAllocateInfo]"/>
+       <usearg name="pDescriptorSets" type="Array[NullablePointer[VkDescriptorSetT]]"/>
+     </useargs>
+  </use>
+  <use id="_814" name="vkFreeDescriptorSets"
+     ponyname="vkFreeDescriptorSets"
+     fid="f7"
+     lineno="4023"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorPool" type="NullablePointer[VkDescriptorPoolT]"/>
+       <usearg name="descriptorSetCount" type="U32"/>
+       <usearg name="pDescriptorSets" type="Array[NullablePointer[VkDescriptorSetT]]"/>
+     </useargs>
+  </use>
+  <use id="_815" name="vkUpdateDescriptorSets"
+     ponyname="vkUpdateDescriptorSets"
+     fid="f7"
+     lineno="4029"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorWriteCount" type="U32"/>
+       <usearg name="pDescriptorWrites" type="NullablePointer[VkWriteDescriptorSet]"/>
+       <usearg name="descriptorCopyCount" type="U32"/>
+       <usearg name="pDescriptorCopies" type="NullablePointer[VkCopyDescriptorSet]"/>
+     </useargs>
+  </use>
+  <use id="_816" name="vkCreateFramebuffer"
+     ponyname="vkCreateFramebuffer"
+     fid="f7"
+     lineno="4036"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkFramebufferCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pFramebuffer" type="Array[NullablePointer[VkFramebufferT]]"/>
+     </useargs>
+  </use>
+  <use id="_817" name="vkDestroyFramebuffer"
+     ponyname="vkDestroyFramebuffer"
+     fid="f7"
+     lineno="4042"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="framebuffer" type="NullablePointer[VkFramebufferT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_818" name="vkCreateRenderPass"
+     ponyname="vkCreateRenderPass"
+     fid="f7"
+     lineno="4047"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkRenderPassCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pRenderPass" type="Array[NullablePointer[VkRenderPassT]]"/>
+     </useargs>
+  </use>
+  <use id="_819" name="vkDestroyRenderPass"
+     ponyname="vkDestroyRenderPass"
+     fid="f7"
+     lineno="4053"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="renderPass" type="NullablePointer[VkRenderPassT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_820" name="vkGetRenderAreaGranularity"
+     ponyname="vkGetRenderAreaGranularity"
+     fid="f7"
+     lineno="4058"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="renderPass" type="NullablePointer[VkRenderPassT]"/>
+       <usearg name="pGranularity" type="NullablePointer[VkExtent2D]"/>
+     </useargs>
+  </use>
+  <use id="_821" name="vkCreateCommandPool"
+     ponyname="vkCreateCommandPool"
+     fid="f7"
+     lineno="4063"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkCommandPoolCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pCommandPool" type="Array[NullablePointer[VkCommandPoolT]]"/>
+     </useargs>
+  </use>
+  <use id="_822" name="vkDestroyCommandPool"
+     ponyname="vkDestroyCommandPool"
+     fid="f7"
+     lineno="4069"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="commandPool" type="NullablePointer[VkCommandPoolT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_823" name="vkResetCommandPool"
+     ponyname="vkResetCommandPool"
+     fid="f7"
+     lineno="4074"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="commandPool" type="NullablePointer[VkCommandPoolT]"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_824" name="vkAllocateCommandBuffers"
+     ponyname="vkAllocateCommandBuffers"
+     fid="f7"
+     lineno="4079"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pAllocateInfo" type="NullablePointer[VkCommandBufferAllocateInfo]"/>
+       <usearg name="pCommandBuffers" type="Array[NullablePointer[VkCommandBufferT]]"/>
+     </useargs>
+  </use>
+  <use id="_825" name="vkFreeCommandBuffers"
+     ponyname="vkFreeCommandBuffers"
+     fid="f7"
+     lineno="4084"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="commandPool" type="NullablePointer[VkCommandPoolT]"/>
+       <usearg name="commandBufferCount" type="U32"/>
+       <usearg name="pCommandBuffers" type="Array[NullablePointer[VkCommandBufferT]]"/>
+     </useargs>
+  </use>
+  <use id="_826" name="vkBeginCommandBuffer"
+     ponyname="vkBeginCommandBuffer"
+     fid="f7"
+     lineno="4090"
+     rv="I32">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pBeginInfo" type="NullablePointer[VkCommandBufferBeginInfo]"/>
+     </useargs>
+  </use>
+  <use id="_827" name="vkEndCommandBuffer"
+     ponyname="vkEndCommandBuffer"
+     fid="f7"
+     lineno="4094"
+     rv="I32">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+     </useargs>
+  </use>
+  <use id="_828" name="vkResetCommandBuffer"
+     ponyname="vkResetCommandBuffer"
+     fid="f7"
+     lineno="4097"
+     rv="I32">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_829" name="vkCmdBindPipeline"
+     ponyname="vkCmdBindPipeline"
+     fid="f7"
+     lineno="4101"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pipelineBindPoint" type="I32"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+     </useargs>
+  </use>
+  <use id="_830" name="vkCmdSetViewport"
+     ponyname="vkCmdSetViewport"
+     fid="f7"
+     lineno="4106"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstViewport" type="U32"/>
+       <usearg name="viewportCount" type="U32"/>
+       <usearg name="pViewports" type="NullablePointer[VkViewport]"/>
+     </useargs>
+  </use>
+  <use id="_831" name="vkCmdSetScissor"
+     ponyname="vkCmdSetScissor"
+     fid="f7"
+     lineno="4112"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstScissor" type="U32"/>
+       <usearg name="scissorCount" type="U32"/>
+       <usearg name="pScissors" type="NullablePointer[VkRect2D]"/>
+     </useargs>
+  </use>
+  <use id="_832" name="vkCmdSetLineWidth"
+     ponyname="vkCmdSetLineWidth"
+     fid="f7"
+     lineno="4118"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="lineWidth" type="F32"/>
+     </useargs>
+  </use>
+  <use id="_833" name="vkCmdSetDepthBias"
+     ponyname="vkCmdSetDepthBias"
+     fid="f7"
+     lineno="4122"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="depthBiasConstantFactor" type="F32"/>
+       <usearg name="depthBiasClamp" type="F32"/>
+       <usearg name="depthBiasSlopeFactor" type="F32"/>
+     </useargs>
+  </use>
+  <use id="_834" name="vkCmdSetBlendConstants"
+     ponyname="vkCmdSetBlendConstants"
+     fid="f7"
+     lineno="4128"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="blendConstants" type="Pointer[F32]"/>
+     </useargs>
+  </use>
+  <use id="_835" name="vkCmdSetDepthBounds"
+     ponyname="vkCmdSetDepthBounds"
+     fid="f7"
+     lineno="4132"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="minDepthBounds" type="F32"/>
+       <usearg name="maxDepthBounds" type="F32"/>
+     </useargs>
+  </use>
+  <use id="_836" name="vkCmdSetStencilCompareMask"
+     ponyname="vkCmdSetStencilCompareMask"
+     fid="f7"
+     lineno="4137"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="faceMask" type="U32"/>
+       <usearg name="compareMask" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_837" name="vkCmdSetStencilWriteMask"
+     ponyname="vkCmdSetStencilWriteMask"
+     fid="f7"
+     lineno="4142"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="faceMask" type="U32"/>
+       <usearg name="writeMask" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_838" name="vkCmdSetStencilReference"
+     ponyname="vkCmdSetStencilReference"
+     fid="f7"
+     lineno="4147"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="faceMask" type="U32"/>
+       <usearg name="reference" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_839" name="vkCmdBindDescriptorSets"
+     ponyname="vkCmdBindDescriptorSets"
+     fid="f7"
+     lineno="4152"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pipelineBindPoint" type="I32"/>
+       <usearg name="layout" type="NullablePointer[VkPipelineLayoutT]"/>
+       <usearg name="firstSet" type="U32"/>
+       <usearg name="descriptorSetCount" type="U32"/>
+       <usearg name="pDescriptorSets" type="Array[NullablePointer[VkDescriptorSetT]]"/>
+       <usearg name="dynamicOffsetCount" type="U32"/>
+       <usearg name="pDynamicOffsets" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_840" name="vkCmdBindIndexBuffer"
+     ponyname="vkCmdBindIndexBuffer"
+     fid="f7"
+     lineno="4162"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="indexType" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_841" name="vkCmdBindVertexBuffers"
+     ponyname="vkCmdBindVertexBuffers"
+     fid="f7"
+     lineno="4168"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstBinding" type="U32"/>
+       <usearg name="bindingCount" type="U32"/>
+       <usearg name="pBuffers" type="Array[NullablePointer[VkBufferT]]"/>
+       <usearg name="pOffsets" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_842" name="vkCmdDraw"
+     ponyname="vkCmdDraw"
+     fid="f7"
+     lineno="4175"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="vertexCount" type="U32"/>
+       <usearg name="instanceCount" type="U32"/>
+       <usearg name="firstVertex" type="U32"/>
+       <usearg name="firstInstance" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_843" name="vkCmdDrawIndexed"
+     ponyname="vkCmdDrawIndexed"
+     fid="f7"
+     lineno="4182"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="indexCount" type="U32"/>
+       <usearg name="instanceCount" type="U32"/>
+       <usearg name="firstIndex" type="U32"/>
+       <usearg name="vertexOffset" type="I32"/>
+       <usearg name="firstInstance" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_844" name="vkCmdDrawIndirect"
+     ponyname="vkCmdDrawIndirect"
+     fid="f7"
+     lineno="4190"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="drawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_845" name="vkCmdDrawIndexedIndirect"
+     ponyname="vkCmdDrawIndexedIndirect"
+     fid="f7"
+     lineno="4197"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="drawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_846" name="vkCmdDispatch"
+     ponyname="vkCmdDispatch"
+     fid="f7"
+     lineno="4204"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="groupCountX" type="U32"/>
+       <usearg name="groupCountY" type="U32"/>
+       <usearg name="groupCountZ" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_847" name="vkCmdDispatchIndirect"
+     ponyname="vkCmdDispatchIndirect"
+     fid="f7"
+     lineno="4210"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_848" name="vkCmdCopyBuffer"
+     ponyname="vkCmdCopyBuffer"
+     fid="f7"
+     lineno="4215"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="srcBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="dstBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="regionCount" type="U32"/>
+       <usearg name="pRegions" type="NullablePointer[VkBufferCopy]"/>
+     </useargs>
+  </use>
+  <use id="_849" name="vkCmdCopyImage"
+     ponyname="vkCmdCopyImage"
+     fid="f7"
+     lineno="4222"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="srcImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="srcImageLayout" type="I32"/>
+       <usearg name="dstImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="dstImageLayout" type="I32"/>
+       <usearg name="regionCount" type="U32"/>
+       <usearg name="pRegions" type="NullablePointer[VkImageCopy]"/>
+     </useargs>
+  </use>
+  <use id="_850" name="vkCmdBlitImage"
+     ponyname="vkCmdBlitImage"
+     fid="f7"
+     lineno="4231"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="srcImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="srcImageLayout" type="I32"/>
+       <usearg name="dstImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="dstImageLayout" type="I32"/>
+       <usearg name="regionCount" type="U32"/>
+       <usearg name="pRegions" type="NullablePointer[VkImageBlit]"/>
+       <usearg name="filter" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_851" name="vkCmdCopyBufferToImage"
+     ponyname="vkCmdCopyBufferToImage"
+     fid="f7"
+     lineno="4241"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="srcBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="dstImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="dstImageLayout" type="I32"/>
+       <usearg name="regionCount" type="U32"/>
+       <usearg name="pRegions" type="NullablePointer[VkBufferImageCopy]"/>
+     </useargs>
+  </use>
+  <use id="_852" name="vkCmdCopyImageToBuffer"
+     ponyname="vkCmdCopyImageToBuffer"
+     fid="f7"
+     lineno="4249"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="srcImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="srcImageLayout" type="I32"/>
+       <usearg name="dstBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="regionCount" type="U32"/>
+       <usearg name="pRegions" type="NullablePointer[VkBufferImageCopy]"/>
+     </useargs>
+  </use>
+  <use id="_853" name="vkCmdUpdateBuffer"
+     ponyname="vkCmdUpdateBuffer"
+     fid="f7"
+     lineno="4257"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="dstBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="dstOffset" type="U64"/>
+       <usearg name="dataSize" type="U64"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_854" name="vkCmdFillBuffer"
+     ponyname="vkCmdFillBuffer"
+     fid="f7"
+     lineno="4264"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="dstBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="dstOffset" type="U64"/>
+       <usearg name="size" type="U64"/>
+       <usearg name="data" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_855" name="vkCmdClearColorImage"
+     ponyname="vkCmdClearColorImage"
+     fid="f7"
+     lineno="4271"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="imageLayout" type="I32"/>
+       <usearg name="pColor" type="Pointer[None]"/>
+       <usearg name="rangeCount" type="U32"/>
+       <usearg name="pRanges" type="NullablePointer[VkImageSubresourceRange]"/>
+     </useargs>
+  </use>
+  <use id="_856" name="vkCmdClearDepthStencilImage"
+     ponyname="vkCmdClearDepthStencilImage"
+     fid="f7"
+     lineno="4279"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="imageLayout" type="I32"/>
+       <usearg name="pDepthStencil" type="NullablePointer[VkClearDepthStencilValue]"/>
+       <usearg name="rangeCount" type="U32"/>
+       <usearg name="pRanges" type="NullablePointer[VkImageSubresourceRange]"/>
+     </useargs>
+  </use>
+  <use id="_857" name="vkCmdClearAttachments"
+     ponyname="vkCmdClearAttachments"
+     fid="f7"
+     lineno="4287"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="attachmentCount" type="U32"/>
+       <usearg name="pAttachments" type="NullablePointer[VkClearAttachment]"/>
+       <usearg name="rectCount" type="U32"/>
+       <usearg name="pRects" type="NullablePointer[VkClearRect]"/>
+     </useargs>
+  </use>
+  <use id="_858" name="vkCmdResolveImage"
+     ponyname="vkCmdResolveImage"
+     fid="f7"
+     lineno="4294"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="srcImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="srcImageLayout" type="I32"/>
+       <usearg name="dstImage" type="NullablePointer[VkImageT]"/>
+       <usearg name="dstImageLayout" type="I32"/>
+       <usearg name="regionCount" type="U32"/>
+       <usearg name="pRegions" type="NullablePointer[VkImageResolve]"/>
+     </useargs>
+  </use>
+  <use id="_859" name="vkCmdSetEvent"
+     ponyname="vkCmdSetEvent"
+     fid="f7"
+     lineno="4303"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+       <usearg name="stageMask" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_860" name="vkCmdResetEvent"
+     ponyname="vkCmdResetEvent"
+     fid="f7"
+     lineno="4308"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+       <usearg name="stageMask" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_861" name="vkCmdWaitEvents"
+     ponyname="vkCmdWaitEvents"
+     fid="f7"
+     lineno="4313"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="eventCount" type="U32"/>
+       <usearg name="pEvents" type="Array[NullablePointer[VkEventT]]"/>
+       <usearg name="srcStageMask" type="U32"/>
+       <usearg name="dstStageMask" type="U32"/>
+       <usearg name="memoryBarrierCount" type="U32"/>
+       <usearg name="pMemoryBarriers" type="NullablePointer[VkMemoryBarrier]"/>
+       <usearg name="bufferMemoryBarrierCount" type="U32"/>
+       <usearg name="pBufferMemoryBarriers" type="NullablePointer[VkBufferMemoryBarrier]"/>
+       <usearg name="imageMemoryBarrierCount" type="U32"/>
+       <usearg name="pImageMemoryBarriers" type="NullablePointer[VkImageMemoryBarrier]"/>
+     </useargs>
+  </use>
+  <use id="_862" name="vkCmdPipelineBarrier"
+     ponyname="vkCmdPipelineBarrier"
+     fid="f7"
+     lineno="4326"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="srcStageMask" type="U32"/>
+       <usearg name="dstStageMask" type="U32"/>
+       <usearg name="dependencyFlags" type="U32"/>
+       <usearg name="memoryBarrierCount" type="U32"/>
+       <usearg name="pMemoryBarriers" type="NullablePointer[VkMemoryBarrier]"/>
+       <usearg name="bufferMemoryBarrierCount" type="U32"/>
+       <usearg name="pBufferMemoryBarriers" type="NullablePointer[VkBufferMemoryBarrier]"/>
+       <usearg name="imageMemoryBarrierCount" type="U32"/>
+       <usearg name="pImageMemoryBarriers" type="NullablePointer[VkImageMemoryBarrier]"/>
+     </useargs>
+  </use>
+  <use id="_863" name="vkCmdBeginQuery"
+     ponyname="vkCmdBeginQuery"
+     fid="f7"
+     lineno="4338"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="query" type="U32"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_864" name="vkCmdEndQuery"
+     ponyname="vkCmdEndQuery"
+     fid="f7"
+     lineno="4344"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="query" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_865" name="vkCmdResetQueryPool"
+     ponyname="vkCmdResetQueryPool"
+     fid="f7"
+     lineno="4349"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="firstQuery" type="U32"/>
+       <usearg name="queryCount" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_866" name="vkCmdWriteTimestamp"
+     ponyname="vkCmdWriteTimestamp"
+     fid="f7"
+     lineno="4355"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pipelineStage" type="I32"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="query" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_867" name="vkCmdCopyQueryPoolResults"
+     ponyname="vkCmdCopyQueryPoolResults"
+     fid="f7"
+     lineno="4361"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="firstQuery" type="U32"/>
+       <usearg name="queryCount" type="U32"/>
+       <usearg name="dstBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="dstOffset" type="U64"/>
+       <usearg name="stride" type="U64"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_868" name="vkCmdPushConstants"
+     ponyname="vkCmdPushConstants"
+     fid="f7"
+     lineno="4371"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="layout" type="NullablePointer[VkPipelineLayoutT]"/>
+       <usearg name="stageFlags" type="U32"/>
+       <usearg name="offset" type="U32"/>
+       <usearg name="size" type="U32"/>
+       <usearg name="pValues" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_869" name="vkCmdBeginRenderPass"
+     ponyname="vkCmdBeginRenderPass"
+     fid="f7"
+     lineno="4379"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pRenderPassBegin" type="NullablePointer[VkRenderPassBeginInfo]"/>
+       <usearg name="contents" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_870" name="vkCmdNextSubpass"
+     ponyname="vkCmdNextSubpass"
+     fid="f7"
+     lineno="4384"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="contents" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_871" name="vkCmdEndRenderPass"
+     ponyname="vkCmdEndRenderPass"
+     fid="f7"
+     lineno="4388"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+     </useargs>
+  </use>
+  <use id="_872" name="vkCmdExecuteCommands"
+     ponyname="vkCmdExecuteCommands"
+     fid="f7"
+     lineno="4391"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="commandBufferCount" type="U32"/>
+       <usearg name="pCommandBuffers" type="Array[NullablePointer[VkCommandBufferT]]"/>
+     </useargs>
+  </use>
+  <use id="_1090" name="vkEnumerateInstanceVersion"
+     ponyname="vkEnumerateInstanceVersion"
+     fid="f7"
+     lineno="5116"
+     rv="I32">
+     <useargs>
+       <usearg name="pApiVersion" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1091" name="vkBindBufferMemory2"
+     ponyname="vkBindBufferMemory2"
+     fid="f7"
+     lineno="5119"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="bindInfoCount" type="U32"/>
+       <usearg name="pBindInfos" type="NullablePointer[VkBindBufferMemoryInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1092" name="vkBindImageMemory2"
+     ponyname="vkBindImageMemory2"
+     fid="f7"
+     lineno="5124"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="bindInfoCount" type="U32"/>
+       <usearg name="pBindInfos" type="NullablePointer[VkBindImageMemoryInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1093" name="vkGetDeviceGroupPeerMemoryFeatures"
+     ponyname="vkGetDeviceGroupPeerMemoryFeatures"
+     fid="f7"
+     lineno="5129"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="heapIndex" type="U32"/>
+       <usearg name="localDeviceIndex" type="U32"/>
+       <usearg name="remoteDeviceIndex" type="U32"/>
+       <usearg name="pPeerMemoryFeatures" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1094" name="vkCmdSetDeviceMask"
+     ponyname="vkCmdSetDeviceMask"
+     fid="f7"
+     lineno="5136"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="deviceMask" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1095" name="vkCmdDispatchBase"
+     ponyname="vkCmdDispatchBase"
+     fid="f7"
+     lineno="5140"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="baseGroupX" type="U32"/>
+       <usearg name="baseGroupY" type="U32"/>
+       <usearg name="baseGroupZ" type="U32"/>
+       <usearg name="groupCountX" type="U32"/>
+       <usearg name="groupCountY" type="U32"/>
+       <usearg name="groupCountZ" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1096" name="vkEnumeratePhysicalDeviceGroups"
+     ponyname="vkEnumeratePhysicalDeviceGroups"
+     fid="f7"
+     lineno="5149"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pPhysicalDeviceGroupCount" type="Pointer[U32]"/>
+       <usearg name="pPhysicalDeviceGroupProperties" type="NullablePointer[VkPhysicalDeviceGroupProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1097" name="vkGetImageMemoryRequirements2"
+     ponyname="vkGetImageMemoryRequirements2"
+     fid="f7"
+     lineno="5154"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkImageMemoryRequirementsInfo2]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_1098" name="vkGetBufferMemoryRequirements2"
+     ponyname="vkGetBufferMemoryRequirements2"
+     fid="f7"
+     lineno="5159"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkBufferMemoryRequirementsInfo2]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_1099" name="vkGetImageSparseMemoryRequirements2"
+     ponyname="vkGetImageSparseMemoryRequirements2"
+     fid="f7"
+     lineno="5164"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkImageSparseMemoryRequirementsInfo2]"/>
+       <usearg name="pSparseMemoryRequirementCount" type="Pointer[U32]"/>
+       <usearg name="pSparseMemoryRequirements" type="NullablePointer[VkSparseImageMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_1100" name="vkGetPhysicalDeviceFeatures2"
+     ponyname="vkGetPhysicalDeviceFeatures2"
+     fid="f7"
+     lineno="5170"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pFeatures" type="NullablePointer[VkPhysicalDeviceFeatures2]"/>
+     </useargs>
+  </use>
+  <use id="_1101" name="vkGetPhysicalDeviceProperties2"
+     ponyname="vkGetPhysicalDeviceProperties2"
+     fid="f7"
+     lineno="5174"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pProperties" type="NullablePointer[VkPhysicalDeviceProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1102" name="vkGetPhysicalDeviceFormatProperties2"
+     ponyname="vkGetPhysicalDeviceFormatProperties2"
+     fid="f7"
+     lineno="5178"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="pFormatProperties" type="NullablePointer[VkFormatProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1103" name="vkGetPhysicalDeviceImageFormatProperties2"
+     ponyname="vkGetPhysicalDeviceImageFormatProperties2"
+     fid="f7"
+     lineno="5183"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pImageFormatInfo" type="NullablePointer[VkPhysicalDeviceImageFormatInfo2]"/>
+       <usearg name="pImageFormatProperties" type="NullablePointer[VkImageFormatProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1104" name="vkGetPhysicalDeviceQueueFamilyProperties2"
+     ponyname="vkGetPhysicalDeviceQueueFamilyProperties2"
+     fid="f7"
+     lineno="5188"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pQueueFamilyPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pQueueFamilyProperties" type="NullablePointer[VkQueueFamilyProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1105" name="vkGetPhysicalDeviceMemoryProperties2"
+     ponyname="vkGetPhysicalDeviceMemoryProperties2"
+     fid="f7"
+     lineno="5193"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pMemoryProperties" type="NullablePointer[VkPhysicalDeviceMemoryProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1106" name="vkGetPhysicalDeviceSparseImageFormatProperties2"
+     ponyname="vkGetPhysicalDeviceSparseImageFormatProperties2"
+     fid="f7"
+     lineno="5197"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pFormatInfo" type="NullablePointer[VkPhysicalDeviceSparseImageFormatInfo2]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkSparseImageFormatProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1107" name="vkTrimCommandPool"
+     ponyname="vkTrimCommandPool"
+     fid="f7"
+     lineno="5203"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="commandPool" type="NullablePointer[VkCommandPoolT]"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1108" name="vkGetDeviceQueue2"
+     ponyname="vkGetDeviceQueue2"
+     fid="f7"
+     lineno="5208"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pQueueInfo" type="NullablePointer[VkDeviceQueueInfo2]"/>
+       <usearg name="pQueue" type="Array[NullablePointer[VkQueueT]]"/>
+     </useargs>
+  </use>
+  <use id="_1109" name="vkCreateSamplerYcbcrConversion"
+     ponyname="vkCreateSamplerYcbcrConversion"
+     fid="f7"
+     lineno="5213"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkSamplerYcbcrConversionCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pYcbcrConversion" type="Array[NullablePointer[VkSamplerYcbcrConversionT]]"/>
+     </useargs>
+  </use>
+  <use id="_1110" name="vkDestroySamplerYcbcrConversion"
+     ponyname="vkDestroySamplerYcbcrConversion"
+     fid="f7"
+     lineno="5219"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="ycbcrConversion" type="NullablePointer[VkSamplerYcbcrConversionT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1111" name="vkCreateDescriptorUpdateTemplate"
+     ponyname="vkCreateDescriptorUpdateTemplate"
+     fid="f7"
+     lineno="5224"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDescriptorUpdateTemplateCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pDescriptorUpdateTemplate" type="Array[NullablePointer[VkDescriptorUpdateTemplateT]]"/>
+     </useargs>
+  </use>
+  <use id="_1112" name="vkDestroyDescriptorUpdateTemplate"
+     ponyname="vkDestroyDescriptorUpdateTemplate"
+     fid="f7"
+     lineno="5230"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorUpdateTemplate" type="NullablePointer[VkDescriptorUpdateTemplateT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1113" name="vkUpdateDescriptorSetWithTemplate"
+     ponyname="vkUpdateDescriptorSetWithTemplate"
+     fid="f7"
+     lineno="5235"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorSet" type="NullablePointer[VkDescriptorSetT]"/>
+       <usearg name="descriptorUpdateTemplate" type="NullablePointer[VkDescriptorUpdateTemplateT]"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1114" name="vkGetPhysicalDeviceExternalBufferProperties"
+     ponyname="vkGetPhysicalDeviceExternalBufferProperties"
+     fid="f7"
+     lineno="5241"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pExternalBufferInfo" type="NullablePointer[VkPhysicalDeviceExternalBufferInfo]"/>
+       <usearg name="pExternalBufferProperties" type="NullablePointer[VkExternalBufferProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1115" name="vkGetPhysicalDeviceExternalFenceProperties"
+     ponyname="vkGetPhysicalDeviceExternalFenceProperties"
+     fid="f7"
+     lineno="5246"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pExternalFenceInfo" type="NullablePointer[VkPhysicalDeviceExternalFenceInfo]"/>
+       <usearg name="pExternalFenceProperties" type="NullablePointer[VkExternalFenceProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1116" name="vkGetPhysicalDeviceExternalSemaphoreProperties"
+     ponyname="vkGetPhysicalDeviceExternalSemaphoreProperties"
+     fid="f7"
+     lineno="5251"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pExternalSemaphoreInfo" type="NullablePointer[VkPhysicalDeviceExternalSemaphoreInfo]"/>
+       <usearg name="pExternalSemaphoreProperties" type="NullablePointer[VkExternalSemaphoreProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1117" name="vkGetDescriptorSetLayoutSupport"
+     ponyname="vkGetDescriptorSetLayoutSupport"
+     fid="f7"
+     lineno="5256"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDescriptorSetLayoutCreateInfo]"/>
+       <usearg name="pSupport" type="NullablePointer[VkDescriptorSetLayoutSupport]"/>
+     </useargs>
+  </use>
+  <use id="_1250" name="vkCmdDrawIndirectCount"
+     ponyname="vkCmdDrawIndirectCount"
+     fid="f7"
+     lineno="5937"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="countBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="countBufferOffset" type="U64"/>
+       <usearg name="maxDrawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1251" name="vkCmdDrawIndexedIndirectCount"
+     ponyname="vkCmdDrawIndexedIndirectCount"
+     fid="f7"
+     lineno="5946"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="countBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="countBufferOffset" type="U64"/>
+       <usearg name="maxDrawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1252" name="vkCreateRenderPass2"
+     ponyname="vkCreateRenderPass2"
+     fid="f7"
+     lineno="5955"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkRenderPassCreateInfo2]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pRenderPass" type="Array[NullablePointer[VkRenderPassT]]"/>
+     </useargs>
+  </use>
+  <use id="_1253" name="vkCmdBeginRenderPass2"
+     ponyname="vkCmdBeginRenderPass2"
+     fid="f7"
+     lineno="5961"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pRenderPassBegin" type="NullablePointer[VkRenderPassBeginInfo]"/>
+       <usearg name="pSubpassBeginInfo" type="NullablePointer[VkSubpassBeginInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1254" name="vkCmdNextSubpass2"
+     ponyname="vkCmdNextSubpass2"
+     fid="f7"
+     lineno="5966"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pSubpassBeginInfo" type="NullablePointer[VkSubpassBeginInfo]"/>
+       <usearg name="pSubpassEndInfo" type="NullablePointer[VkSubpassEndInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1255" name="vkCmdEndRenderPass2"
+     ponyname="vkCmdEndRenderPass2"
+     fid="f7"
+     lineno="5971"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pSubpassEndInfo" type="NullablePointer[VkSubpassEndInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1256" name="vkResetQueryPool"
+     ponyname="vkResetQueryPool"
+     fid="f7"
+     lineno="5975"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="firstQuery" type="U32"/>
+       <usearg name="queryCount" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1257" name="vkGetSemaphoreCounterValue"
+     ponyname="vkGetSemaphoreCounterValue"
+     fid="f7"
+     lineno="5981"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="semaphore" type="NullablePointer[VkSemaphoreT]"/>
+       <usearg name="pValue" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_1258" name="vkWaitSemaphores"
+     ponyname="vkWaitSemaphores"
+     fid="f7"
+     lineno="5986"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pWaitInfo" type="NullablePointer[VkSemaphoreWaitInfo]"/>
+       <usearg name="timeout" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_1259" name="vkSignalSemaphore"
+     ponyname="vkSignalSemaphore"
+     fid="f7"
+     lineno="5991"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pSignalInfo" type="NullablePointer[VkSemaphoreSignalInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1260" name="vkGetBufferDeviceAddress"
+     ponyname="vkGetBufferDeviceAddress"
+     fid="f7"
+     lineno="5995"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkBufferDeviceAddressInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1261" name="vkGetBufferOpaqueCaptureAddress"
+     ponyname="vkGetBufferOpaqueCaptureAddress"
+     fid="f7"
+     lineno="5999"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkBufferDeviceAddressInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1262" name="vkGetDeviceMemoryOpaqueCaptureAddress"
+     ponyname="vkGetDeviceMemoryOpaqueCaptureAddress"
+     fid="f7"
+     lineno="6003"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkDeviceMemoryOpaqueCaptureAddressInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1284" name="vkDestroySurfaceKHR"
+     ponyname="vkDestroySurfaceKHR"
+     fid="f7"
+     lineno="6093"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1285" name="vkGetPhysicalDeviceSurfaceSupportKHR"
+     ponyname="vkGetPhysicalDeviceSurfaceSupportKHR"
+     fid="f7"
+     lineno="6098"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="queueFamilyIndex" type="U32"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pSupported" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1286" name="vkGetPhysicalDeviceSurfaceCapabilitiesKHR"
+     ponyname="vkGetPhysicalDeviceSurfaceCapabilitiesKHR"
+     fid="f7"
+     lineno="6104"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pSurfaceCapabilities" type="NullablePointer[VkSurfaceCapabilitiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1287" name="vkGetPhysicalDeviceSurfaceFormatsKHR"
+     ponyname="vkGetPhysicalDeviceSurfaceFormatsKHR"
+     fid="f7"
+     lineno="6109"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pSurfaceFormatCount" type="Pointer[U32]"/>
+       <usearg name="pSurfaceFormats" type="NullablePointer[VkSurfaceFormatKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1288" name="vkGetPhysicalDeviceSurfacePresentModesKHR"
+     ponyname="vkGetPhysicalDeviceSurfacePresentModesKHR"
+     fid="f7"
+     lineno="6115"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pPresentModeCount" type="Pointer[U32]"/>
+       <usearg name="pPresentModes" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_1322" name="vkCreateSwapchainKHR"
+     ponyname="vkCreateSwapchainKHR"
+     fid="f7"
+     lineno="6231"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkSwapchainCreateInfoKHR]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pSwapchain" type="Array[NullablePointer[VkSwapchainKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_1323" name="vkDestroySwapchainKHR"
+     ponyname="vkDestroySwapchainKHR"
+     fid="f7"
+     lineno="6237"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1324" name="vkGetSwapchainImagesKHR"
+     ponyname="vkGetSwapchainImagesKHR"
+     fid="f7"
+     lineno="6242"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="pSwapchainImageCount" type="Pointer[U32]"/>
+       <usearg name="pSwapchainImages" type="Array[NullablePointer[VkImageT]]"/>
+     </useargs>
+  </use>
+  <use id="_1325" name="vkAcquireNextImageKHR"
+     ponyname="vkAcquireNextImageKHR"
+     fid="f7"
+     lineno="6248"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="timeout" type="U64"/>
+       <usearg name="semaphore" type="NullablePointer[VkSemaphoreT]"/>
+       <usearg name="fence" type="NullablePointer[VkFenceT]"/>
+       <usearg name="pImageIndex" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1326" name="vkQueuePresentKHR"
+     ponyname="vkQueuePresentKHR"
+     fid="f7"
+     lineno="6256"
+     rv="I32">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="pPresentInfo" type="NullablePointer[VkPresentInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1327" name="vkGetDeviceGroupPresentCapabilitiesKHR"
+     ponyname="vkGetDeviceGroupPresentCapabilitiesKHR"
+     fid="f7"
+     lineno="6260"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pDeviceGroupPresentCapabilities" type="NullablePointer[VkDeviceGroupPresentCapabilitiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1328" name="vkGetDeviceGroupSurfacePresentModesKHR"
+     ponyname="vkGetDeviceGroupSurfacePresentModesKHR"
+     fid="f7"
+     lineno="6264"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pModes" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1329" name="vkGetPhysicalDevicePresentRectanglesKHR"
+     ponyname="vkGetPhysicalDevicePresentRectanglesKHR"
+     fid="f7"
+     lineno="6269"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pRectCount" type="Pointer[U32]"/>
+       <usearg name="pRects" type="NullablePointer[VkRect2D]"/>
+     </useargs>
+  </use>
+  <use id="_1330" name="vkAcquireNextImage2KHR"
+     ponyname="vkAcquireNextImage2KHR"
+     fid="f7"
+     lineno="6275"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pAcquireInfo" type="NullablePointer[VkAcquireNextImageInfoKHR]"/>
+       <usearg name="pImageIndex" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1361" name="vkGetPhysicalDeviceDisplayPropertiesKHR"
+     ponyname="vkGetPhysicalDeviceDisplayPropertiesKHR"
+     fid="f7"
+     lineno="6364"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkDisplayPropertiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1362" name="vkGetPhysicalDeviceDisplayPlanePropertiesKHR"
+     ponyname="vkGetPhysicalDeviceDisplayPlanePropertiesKHR"
+     fid="f7"
+     lineno="6369"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkDisplayPlanePropertiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1363" name="vkGetDisplayPlaneSupportedDisplaysKHR"
+     ponyname="vkGetDisplayPlaneSupportedDisplaysKHR"
+     fid="f7"
+     lineno="6374"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="planeIndex" type="U32"/>
+       <usearg name="pDisplayCount" type="Pointer[U32]"/>
+       <usearg name="pDisplays" type="Array[NullablePointer[VkDisplayKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_1364" name="vkGetDisplayModePropertiesKHR"
+     ponyname="vkGetDisplayModePropertiesKHR"
+     fid="f7"
+     lineno="6380"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkDisplayModePropertiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1365" name="vkCreateDisplayModeKHR"
+     ponyname="vkCreateDisplayModeKHR"
+     fid="f7"
+     lineno="6386"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDisplayModeCreateInfoKHR]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pMode" type="Array[NullablePointer[VkDisplayModeKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_1366" name="vkGetDisplayPlaneCapabilitiesKHR"
+     ponyname="vkGetDisplayPlaneCapabilitiesKHR"
+     fid="f7"
+     lineno="6393"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="mode" type="NullablePointer[VkDisplayModeKHRT]"/>
+       <usearg name="planeIndex" type="U32"/>
+       <usearg name="pCapabilities" type="NullablePointer[VkDisplayPlaneCapabilitiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1367" name="vkCreateDisplayPlaneSurfaceKHR"
+     ponyname="vkCreateDisplayPlaneSurfaceKHR"
+     fid="f7"
+     lineno="6399"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDisplaySurfaceCreateInfoKHR]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pSurface" type="Array[NullablePointer[VkSurfaceKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_1371" name="vkCreateSharedSwapchainsKHR"
+     ponyname="vkCreateSharedSwapchainsKHR"
+     fid="f7"
+     lineno="6421"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchainCount" type="U32"/>
+       <usearg name="pCreateInfos" type="NullablePointer[VkSwapchainCreateInfoKHR]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pSwapchains" type="Array[NullablePointer[VkSwapchainKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_1391" name="vkGetPhysicalDeviceFeatures2KHR"
+     ponyname="vkGetPhysicalDeviceFeatures2KHR"
+     fid="f7"
+     lineno="6476"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pFeatures" type="NullablePointer[VkPhysicalDeviceFeatures2]"/>
+     </useargs>
+  </use>
+  <use id="_1392" name="vkGetPhysicalDeviceProperties2KHR"
+     ponyname="vkGetPhysicalDeviceProperties2KHR"
+     fid="f7"
+     lineno="6480"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pProperties" type="NullablePointer[VkPhysicalDeviceProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1393" name="vkGetPhysicalDeviceFormatProperties2KHR"
+     ponyname="vkGetPhysicalDeviceFormatProperties2KHR"
+     fid="f7"
+     lineno="6484"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="pFormatProperties" type="NullablePointer[VkFormatProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1394" name="vkGetPhysicalDeviceImageFormatProperties2KHR"
+     ponyname="vkGetPhysicalDeviceImageFormatProperties2KHR"
+     fid="f7"
+     lineno="6489"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pImageFormatInfo" type="NullablePointer[VkPhysicalDeviceImageFormatInfo2]"/>
+       <usearg name="pImageFormatProperties" type="NullablePointer[VkImageFormatProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1395" name="vkGetPhysicalDeviceQueueFamilyProperties2KHR"
+     ponyname="vkGetPhysicalDeviceQueueFamilyProperties2KHR"
+     fid="f7"
+     lineno="6494"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pQueueFamilyPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pQueueFamilyProperties" type="NullablePointer[VkQueueFamilyProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1396" name="vkGetPhysicalDeviceMemoryProperties2KHR"
+     ponyname="vkGetPhysicalDeviceMemoryProperties2KHR"
+     fid="f7"
+     lineno="6499"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pMemoryProperties" type="NullablePointer[VkPhysicalDeviceMemoryProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1397" name="vkGetPhysicalDeviceSparseImageFormatProperties2KHR"
+     ponyname="vkGetPhysicalDeviceSparseImageFormatProperties2KHR"
+     fid="f7"
+     lineno="6503"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pFormatInfo" type="NullablePointer[VkPhysicalDeviceSparseImageFormatInfo2]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkSparseImageFormatProperties2]"/>
+     </useargs>
+  </use>
+  <use id="_1412" name="vkGetDeviceGroupPeerMemoryFeaturesKHR"
+     ponyname="vkGetDeviceGroupPeerMemoryFeaturesKHR"
+     fid="f7"
+     lineno="6541"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="heapIndex" type="U32"/>
+       <usearg name="localDeviceIndex" type="U32"/>
+       <usearg name="remoteDeviceIndex" type="U32"/>
+       <usearg name="pPeerMemoryFeatures" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1413" name="vkCmdSetDeviceMaskKHR"
+     ponyname="vkCmdSetDeviceMaskKHR"
+     fid="f7"
+     lineno="6548"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="deviceMask" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1414" name="vkCmdDispatchBaseKHR"
+     ponyname="vkCmdDispatchBaseKHR"
+     fid="f7"
+     lineno="6552"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="baseGroupX" type="U32"/>
+       <usearg name="baseGroupY" type="U32"/>
+       <usearg name="baseGroupZ" type="U32"/>
+       <usearg name="groupCountX" type="U32"/>
+       <usearg name="groupCountY" type="U32"/>
+       <usearg name="groupCountZ" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1417" name="vkTrimCommandPoolKHR"
+     ponyname="vkTrimCommandPoolKHR"
+     fid="f7"
+     lineno="6576"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="commandPool" type="NullablePointer[VkCommandPoolT]"/>
+       <usearg name="flags" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1421" name="vkEnumeratePhysicalDeviceGroupsKHR"
+     ponyname="vkEnumeratePhysicalDeviceGroupsKHR"
+     fid="f7"
+     lineno="6594"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pPhysicalDeviceGroupCount" type="Pointer[U32]"/>
+       <usearg name="pPhysicalDeviceGroupProperties" type="NullablePointer[VkPhysicalDeviceGroupProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1433" name="vkGetPhysicalDeviceExternalBufferPropertiesKHR"
+     ponyname="vkGetPhysicalDeviceExternalBufferPropertiesKHR"
+     fid="f7"
+     lineno="6628"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pExternalBufferInfo" type="NullablePointer[VkPhysicalDeviceExternalBufferInfo]"/>
+       <usearg name="pExternalBufferProperties" type="NullablePointer[VkExternalBufferProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1445" name="vkGetMemoryFdKHR"
+     ponyname="vkGetMemoryFdKHR"
+     fid="f7"
+     lineno="6674"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pGetFdInfo" type="NullablePointer[VkMemoryGetFdInfoKHR]"/>
+       <usearg name="pFd" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_1446" name="vkGetMemoryFdPropertiesKHR"
+     ponyname="vkGetMemoryFdPropertiesKHR"
+     fid="f7"
+     lineno="6679"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="handleType" type="I32"/>
+       <usearg name="fd" type="I32"/>
+       <usearg name="pMemoryFdProperties" type="NullablePointer[VkMemoryFdPropertiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1454" name="vkGetPhysicalDeviceExternalSemaphorePropertiesKHR"
+     ponyname="vkGetPhysicalDeviceExternalSemaphorePropertiesKHR"
+     fid="f7"
+     lineno="6705"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pExternalSemaphoreInfo" type="NullablePointer[VkPhysicalDeviceExternalSemaphoreInfo]"/>
+       <usearg name="pExternalSemaphoreProperties" type="NullablePointer[VkExternalSemaphoreProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1464" name="vkImportSemaphoreFdKHR"
+     ponyname="vkImportSemaphoreFdKHR"
+     fid="f7"
+     lineno="6746"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pImportSemaphoreFdInfo" type="NullablePointer[VkImportSemaphoreFdInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1465" name="vkGetSemaphoreFdKHR"
+     ponyname="vkGetSemaphoreFdKHR"
+     fid="f7"
+     lineno="6750"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pGetFdInfo" type="NullablePointer[VkSemaphoreGetFdInfoKHR]"/>
+       <usearg name="pFd" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_1470" name="vkCmdPushDescriptorSetKHR"
+     ponyname="vkCmdPushDescriptorSetKHR"
+     fid="f7"
+     lineno="6770"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pipelineBindPoint" type="I32"/>
+       <usearg name="layout" type="NullablePointer[VkPipelineLayoutT]"/>
+       <usearg name="set" type="U32"/>
+       <usearg name="descriptorWriteCount" type="U32"/>
+       <usearg name="pDescriptorWrites" type="NullablePointer[VkWriteDescriptorSet]"/>
+     </useargs>
+  </use>
+  <use id="_1471" name="vkCmdPushDescriptorSetWithTemplateKHR"
+     ponyname="vkCmdPushDescriptorSetWithTemplateKHR"
+     fid="f7"
+     lineno="6778"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="descriptorUpdateTemplate" type="NullablePointer[VkDescriptorUpdateTemplateT]"/>
+       <usearg name="layout" type="NullablePointer[VkPipelineLayoutT]"/>
+       <usearg name="set" type="U32"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1489" name="vkCreateDescriptorUpdateTemplateKHR"
+     ponyname="vkCreateDescriptorUpdateTemplateKHR"
+     fid="f7"
+     lineno="6844"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDescriptorUpdateTemplateCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pDescriptorUpdateTemplate" type="Array[NullablePointer[VkDescriptorUpdateTemplateT]]"/>
+     </useargs>
+  </use>
+  <use id="_1490" name="vkDestroyDescriptorUpdateTemplateKHR"
+     ponyname="vkDestroyDescriptorUpdateTemplateKHR"
+     fid="f7"
+     lineno="6850"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorUpdateTemplate" type="NullablePointer[VkDescriptorUpdateTemplateT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1491" name="vkUpdateDescriptorSetWithTemplateKHR"
+     ponyname="vkUpdateDescriptorSetWithTemplateKHR"
+     fid="f7"
+     lineno="6855"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="descriptorSet" type="NullablePointer[VkDescriptorSetT]"/>
+       <usearg name="descriptorUpdateTemplate" type="NullablePointer[VkDescriptorUpdateTemplateT]"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_1507" name="vkCreateRenderPass2KHR"
+     ponyname="vkCreateRenderPass2KHR"
+     fid="f7"
+     lineno="6899"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkRenderPassCreateInfo2]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pRenderPass" type="Array[NullablePointer[VkRenderPassT]]"/>
+     </useargs>
+  </use>
+  <use id="_1508" name="vkCmdBeginRenderPass2KHR"
+     ponyname="vkCmdBeginRenderPass2KHR"
+     fid="f7"
+     lineno="6905"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pRenderPassBegin" type="NullablePointer[VkRenderPassBeginInfo]"/>
+       <usearg name="pSubpassBeginInfo" type="NullablePointer[VkSubpassBeginInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1509" name="vkCmdNextSubpass2KHR"
+     ponyname="vkCmdNextSubpass2KHR"
+     fid="f7"
+     lineno="6910"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pSubpassBeginInfo" type="NullablePointer[VkSubpassBeginInfo]"/>
+       <usearg name="pSubpassEndInfo" type="NullablePointer[VkSubpassEndInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1510" name="vkCmdEndRenderPass2KHR"
+     ponyname="vkCmdEndRenderPass2KHR"
+     fid="f7"
+     lineno="6915"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pSubpassEndInfo" type="NullablePointer[VkSubpassEndInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1514" name="vkGetSwapchainStatusKHR"
+     ponyname="vkGetSwapchainStatusKHR"
+     fid="f7"
+     lineno="6933"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+     </useargs>
+  </use>
+  <use id="_1522" name="vkGetPhysicalDeviceExternalFencePropertiesKHR"
+     ponyname="vkGetPhysicalDeviceExternalFencePropertiesKHR"
+     fid="f7"
+     lineno="6957"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pExternalFenceInfo" type="NullablePointer[VkPhysicalDeviceExternalFenceInfo]"/>
+       <usearg name="pExternalFenceProperties" type="NullablePointer[VkExternalFenceProperties]"/>
+     </useargs>
+  </use>
+  <use id="_1532" name="vkImportFenceFdKHR"
+     ponyname="vkImportFenceFdKHR"
+     fid="f7"
+     lineno="6998"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pImportFenceFdInfo" type="NullablePointer[VkImportFenceFdInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1533" name="vkGetFenceFdKHR"
+     ponyname="vkGetFenceFdKHR"
+     fid="f7"
+     lineno="7002"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pGetFdInfo" type="NullablePointer[VkFenceGetFdInfoKHR]"/>
+       <usearg name="pFd" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_1566" name="vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR"
+     ponyname="vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR"
+     fid="f7"
+     lineno="7128"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="queueFamilyIndex" type="U32"/>
+       <usearg name="pCounterCount" type="Pointer[U32]"/>
+       <usearg name="pCounters" type="NullablePointer[VkPerformanceCounterKHR]"/>
+       <usearg name="pCounterDescriptions" type="NullablePointer[VkPerformanceCounterDescriptionKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1567" name="vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR"
+     ponyname="vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR"
+     fid="f7"
+     lineno="7135"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pPerformanceQueryCreateInfo" type="NullablePointer[VkQueryPoolPerformanceCreateInfoKHR]"/>
+       <usearg name="pNumPasses" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_1568" name="vkAcquireProfilingLockKHR"
+     ponyname="vkAcquireProfilingLockKHR"
+     fid="f7"
+     lineno="7140"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkAcquireProfilingLockInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1569" name="vkReleaseProfilingLockKHR"
+     ponyname="vkReleaseProfilingLockKHR"
+     fid="f7"
+     lineno="7144"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+     </useargs>
+  </use>
+  <use id="_1585" name="vkGetPhysicalDeviceSurfaceCapabilities2KHR"
+     ponyname="vkGetPhysicalDeviceSurfaceCapabilities2KHR"
+     fid="f7"
+     lineno="7193"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pSurfaceInfo" type="NullablePointer[VkPhysicalDeviceSurfaceInfo2KHR]"/>
+       <usearg name="pSurfaceCapabilities" type="NullablePointer[VkSurfaceCapabilities2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1586" name="vkGetPhysicalDeviceSurfaceFormats2KHR"
+     ponyname="vkGetPhysicalDeviceSurfaceFormats2KHR"
+     fid="f7"
+     lineno="7198"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pSurfaceInfo" type="NullablePointer[VkPhysicalDeviceSurfaceInfo2KHR]"/>
+       <usearg name="pSurfaceFormatCount" type="Pointer[U32]"/>
+       <usearg name="pSurfaceFormats" type="NullablePointer[VkSurfaceFormat2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1603" name="vkGetPhysicalDeviceDisplayProperties2KHR"
+     ponyname="vkGetPhysicalDeviceDisplayProperties2KHR"
+     fid="f7"
+     lineno="7255"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkDisplayProperties2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1604" name="vkGetPhysicalDeviceDisplayPlaneProperties2KHR"
+     ponyname="vkGetPhysicalDeviceDisplayPlaneProperties2KHR"
+     fid="f7"
+     lineno="7260"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkDisplayPlaneProperties2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1605" name="vkGetDisplayModeProperties2KHR"
+     ponyname="vkGetDisplayModeProperties2KHR"
+     fid="f7"
+     lineno="7265"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkDisplayModeProperties2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1606" name="vkGetDisplayPlaneCapabilities2KHR"
+     ponyname="vkGetDisplayPlaneCapabilities2KHR"
+     fid="f7"
+     lineno="7271"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pDisplayPlaneInfo" type="NullablePointer[VkDisplayPlaneInfo2KHR]"/>
+       <usearg name="pCapabilities" type="NullablePointer[VkDisplayPlaneCapabilities2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1617" name="vkGetImageMemoryRequirements2KHR"
+     ponyname="vkGetImageMemoryRequirements2KHR"
+     fid="f7"
+     lineno="7315"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkImageMemoryRequirementsInfo2]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_1618" name="vkGetBufferMemoryRequirements2KHR"
+     ponyname="vkGetBufferMemoryRequirements2KHR"
+     fid="f7"
+     lineno="7320"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkBufferMemoryRequirementsInfo2]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_1619" name="vkGetImageSparseMemoryRequirements2KHR"
+     ponyname="vkGetImageSparseMemoryRequirements2KHR"
+     fid="f7"
+     lineno="7325"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkImageSparseMemoryRequirementsInfo2]"/>
+       <usearg name="pSparseMemoryRequirementCount" type="Pointer[U32]"/>
+       <usearg name="pSparseMemoryRequirements" type="NullablePointer[VkSparseImageMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_1633" name="vkCreateSamplerYcbcrConversionKHR"
+     ponyname="vkCreateSamplerYcbcrConversionKHR"
+     fid="f7"
+     lineno="7367"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkSamplerYcbcrConversionCreateInfo]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pYcbcrConversion" type="Array[NullablePointer[VkSamplerYcbcrConversionT]]"/>
+     </useargs>
+  </use>
+  <use id="_1634" name="vkDestroySamplerYcbcrConversionKHR"
+     ponyname="vkDestroySamplerYcbcrConversionKHR"
+     fid="f7"
+     lineno="7373"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="ycbcrConversion" type="NullablePointer[VkSamplerYcbcrConversionT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1639" name="vkBindBufferMemory2KHR"
+     ponyname="vkBindBufferMemory2KHR"
+     fid="f7"
+     lineno="7391"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="bindInfoCount" type="U32"/>
+       <usearg name="pBindInfos" type="NullablePointer[VkBindBufferMemoryInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1640" name="vkBindImageMemory2KHR"
+     ponyname="vkBindImageMemory2KHR"
+     fid="f7"
+     lineno="7396"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="bindInfoCount" type="U32"/>
+       <usearg name="pBindInfos" type="NullablePointer[VkBindImageMemoryInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1644" name="vkGetDescriptorSetLayoutSupportKHR"
+     ponyname="vkGetDescriptorSetLayoutSupportKHR"
+     fid="f7"
+     lineno="7413"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDescriptorSetLayoutCreateInfo]"/>
+       <usearg name="pSupport" type="NullablePointer[VkDescriptorSetLayoutSupport]"/>
+     </useargs>
+  </use>
+  <use id="_1647" name="vkCmdDrawIndirectCountKHR"
+     ponyname="vkCmdDrawIndirectCountKHR"
+     fid="f7"
+     lineno="7427"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="countBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="countBufferOffset" type="U64"/>
+       <usearg name="maxDrawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1648" name="vkCmdDrawIndexedIndirectCountKHR"
+     ponyname="vkCmdDrawIndexedIndirectCountKHR"
+     fid="f7"
+     lineno="7436"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="countBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="countBufferOffset" type="U64"/>
+       <usearg name="maxDrawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1675" name="vkGetSemaphoreCounterValueKHR"
+     ponyname="vkGetSemaphoreCounterValueKHR"
+     fid="f7"
+     lineno="7546"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="semaphore" type="NullablePointer[VkSemaphoreT]"/>
+       <usearg name="pValue" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_1676" name="vkWaitSemaphoresKHR"
+     ponyname="vkWaitSemaphoresKHR"
+     fid="f7"
+     lineno="7551"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pWaitInfo" type="NullablePointer[VkSemaphoreWaitInfo]"/>
+       <usearg name="timeout" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_1677" name="vkSignalSemaphoreKHR"
+     ponyname="vkSignalSemaphoreKHR"
+     fid="f7"
+     lineno="7556"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pSignalInfo" type="NullablePointer[VkSemaphoreSignalInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1695" name="vkGetPhysicalDeviceFragmentShadingRatesKHR"
+     ponyname="vkGetPhysicalDeviceFragmentShadingRatesKHR"
+     fid="f7"
+     lineno="7647"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pFragmentShadingRateCount" type="Pointer[U32]"/>
+       <usearg name="pFragmentShadingRates" type="NullablePointer[VkPhysicalDeviceFragmentShadingRateKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1696" name="vkCmdSetFragmentShadingRateKHR"
+     ponyname="vkCmdSetFragmentShadingRateKHR"
+     fid="f7"
+     lineno="7652"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pFragmentSize" type="NullablePointer[VkExtent2D]"/>
+       <usearg name="combinerOps" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_1705" name="vkWaitForPresentKHR"
+     ponyname="vkWaitForPresentKHR"
+     fid="f7"
+     lineno="7698"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="presentId" type="U64"/>
+       <usearg name="timeout" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_1715" name="vkGetBufferDeviceAddressKHR"
+     ponyname="vkGetBufferDeviceAddressKHR"
+     fid="f7"
+     lineno="7731"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkBufferDeviceAddressInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1716" name="vkGetBufferOpaqueCaptureAddressKHR"
+     ponyname="vkGetBufferOpaqueCaptureAddressKHR"
+     fid="f7"
+     lineno="7735"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkBufferDeviceAddressInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1717" name="vkGetDeviceMemoryOpaqueCaptureAddressKHR"
+     ponyname="vkGetDeviceMemoryOpaqueCaptureAddressKHR"
+     fid="f7"
+     lineno="7739"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkDeviceMemoryOpaqueCaptureAddressInfo]"/>
+     </useargs>
+  </use>
+  <use id="_1725" name="vkCreateDeferredOperationKHR"
+     ponyname="vkCreateDeferredOperationKHR"
+     fid="f7"
+     lineno="7756"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pDeferredOperation" type="Array[NullablePointer[VkDeferredOperationKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_1726" name="vkDestroyDeferredOperationKHR"
+     ponyname="vkDestroyDeferredOperationKHR"
+     fid="f7"
+     lineno="7761"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="operation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1727" name="vkGetDeferredOperationMaxConcurrencyKHR"
+     ponyname="vkGetDeferredOperationMaxConcurrencyKHR"
+     fid="f7"
+     lineno="7766"
+     rv="U32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="operation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+     </useargs>
+  </use>
+  <use id="_1728" name="vkGetDeferredOperationResultKHR"
+     ponyname="vkGetDeferredOperationResultKHR"
+     fid="f7"
+     lineno="7770"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="operation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+     </useargs>
+  </use>
+  <use id="_1729" name="vkDeferredOperationJoinKHR"
+     ponyname="vkDeferredOperationJoinKHR"
+     fid="f7"
+     lineno="7774"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="operation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+     </useargs>
+  </use>
+  <use id="_1749" name="vkGetPipelineExecutablePropertiesKHR"
+     ponyname="vkGetPipelineExecutablePropertiesKHR"
+     fid="f7"
+     lineno="7850"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pPipelineInfo" type="NullablePointer[VkPipelineInfoKHR]"/>
+       <usearg name="pExecutableCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkPipelineExecutablePropertiesKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1750" name="vkGetPipelineExecutableStatisticsKHR"
+     ponyname="vkGetPipelineExecutableStatisticsKHR"
+     fid="f7"
+     lineno="7856"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pExecutableInfo" type="NullablePointer[VkPipelineExecutableInfoKHR]"/>
+       <usearg name="pStatisticCount" type="Pointer[U32]"/>
+       <usearg name="pStatistics" type="NullablePointer[VkPipelineExecutableStatisticKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1751" name="vkGetPipelineExecutableInternalRepresentationsKHR"
+     ponyname="vkGetPipelineExecutableInternalRepresentationsKHR"
+     fid="f7"
+     lineno="7862"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pExecutableInfo" type="NullablePointer[VkPipelineExecutableInfoKHR]"/>
+       <usearg name="pInternalRepresentationCount" type="Pointer[U32]"/>
+       <usearg name="pInternalRepresentations" type="NullablePointer[VkPipelineExecutableInternalRepresentationKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1870" name="vkCmdSetEvent2KHR"
+     ponyname="vkCmdSetEvent2KHR"
+     fid="f7"
+     lineno="8126"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+       <usearg name="pDependencyInfo" type="NullablePointer[VkDependencyInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1871" name="vkCmdResetEvent2KHR"
+     ponyname="vkCmdResetEvent2KHR"
+     fid="f7"
+     lineno="8131"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="event" type="NullablePointer[VkEventT]"/>
+       <usearg name="stageMask" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_1872" name="vkCmdWaitEvents2KHR"
+     ponyname="vkCmdWaitEvents2KHR"
+     fid="f7"
+     lineno="8136"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="eventCount" type="U32"/>
+       <usearg name="pEvents" type="Array[NullablePointer[VkEventT]]"/>
+       <usearg name="pDependencyInfos" type="NullablePointer[VkDependencyInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1873" name="vkCmdPipelineBarrier2KHR"
+     ponyname="vkCmdPipelineBarrier2KHR"
+     fid="f7"
+     lineno="8142"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pDependencyInfo" type="NullablePointer[VkDependencyInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_1874" name="vkCmdWriteTimestamp2KHR"
+     ponyname="vkCmdWriteTimestamp2KHR"
+     fid="f7"
+     lineno="8146"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="stage" type="U64"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="query" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1875" name="vkQueueSubmit2KHR"
+     ponyname="vkQueueSubmit2KHR"
+     fid="f7"
+     lineno="8152"
+     rv="I32">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="submitCount" type="U32"/>
+       <usearg name="pSubmits" type="NullablePointer[VkSubmitInfo2KHR]"/>
+       <usearg name="fence" type="NullablePointer[VkFenceT]"/>
+     </useargs>
+  </use>
+  <use id="_1876" name="vkCmdWriteBufferMarker2AMD"
+     ponyname="vkCmdWriteBufferMarker2AMD"
+     fid="f7"
+     lineno="8158"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="stage" type="U64"/>
+       <usearg name="dstBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="dstOffset" type="U64"/>
+       <usearg name="marker" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1877" name="vkGetQueueCheckpointData2NV"
+     ponyname="vkGetQueueCheckpointData2NV"
+     fid="f7"
+     lineno="8165"
+     rv="None">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="pCheckpointDataCount" type="Pointer[U32]"/>
+       <usearg name="pCheckpointData" type="NullablePointer[VkCheckpointData2NV]"/>
+     </useargs>
+  </use>
+  <use id="_1912" name="vkCmdCopyBuffer2KHR"
+     ponyname="vkCmdCopyBuffer2KHR"
+     fid="f7"
+     lineno="8330"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pCopyBufferInfo" type="NullablePointer[VkCopyBufferInfo2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1913" name="vkCmdCopyImage2KHR"
+     ponyname="vkCmdCopyImage2KHR"
+     fid="f7"
+     lineno="8334"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pCopyImageInfo" type="NullablePointer[VkCopyImageInfo2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1914" name="vkCmdCopyBufferToImage2KHR"
+     ponyname="vkCmdCopyBufferToImage2KHR"
+     fid="f7"
+     lineno="8338"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pCopyBufferToImageInfo" type="NullablePointer[VkCopyBufferToImageInfo2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1915" name="vkCmdCopyImageToBuffer2KHR"
+     ponyname="vkCmdCopyImageToBuffer2KHR"
+     fid="f7"
+     lineno="8342"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pCopyImageToBufferInfo" type="NullablePointer[VkCopyImageToBufferInfo2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1916" name="vkCmdBlitImage2KHR"
+     ponyname="vkCmdBlitImage2KHR"
+     fid="f7"
+     lineno="8346"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pBlitImageInfo" type="NullablePointer[VkBlitImageInfo2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1917" name="vkCmdResolveImage2KHR"
+     ponyname="vkCmdResolveImage2KHR"
+     fid="f7"
+     lineno="8350"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pResolveImageInfo" type="NullablePointer[VkResolveImageInfo2KHR]"/>
+     </useargs>
+  </use>
+  <use id="_1931" name="vkCreateDebugReportCallbackEXT"
+     ponyname="vkCreateDebugReportCallbackEXT"
+     fid="f7"
+     lineno="8439"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDebugReportCallbackCreateInfoEXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pCallback" type="Array[NullablePointer[VkDebugReportCallbackEXTT]]"/>
+     </useargs>
+  </use>
+  <use id="_1932" name="vkDestroyDebugReportCallbackEXT"
+     ponyname="vkDestroyDebugReportCallbackEXT"
+     fid="f7"
+     lineno="8445"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="callback" type="NullablePointer[VkDebugReportCallbackEXTT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1933" name="vkDebugReportMessageEXT"
+     ponyname="vkDebugReportMessageEXT"
+     fid="f7"
+     lineno="8450"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="flags" type="U32"/>
+       <usearg name="objectType" type="I32"/>
+       <usearg name="pobject" type="U64"/>
+       <usearg name="location" type="U64"/>
+       <usearg name="messageCode" type="I32"/>
+       <usearg name="pLayerPrefix" type="String"/>
+       <usearg name="pMessage" type="String"/>
+     </useargs>
+  </use>
+  <use id="_1949" name="vkDebugMarkerSetObjectTagEXT"
+     ponyname="vkDebugMarkerSetObjectTagEXT"
+     fid="f7"
+     lineno="8539"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pTagInfo" type="NullablePointer[VkDebugMarkerObjectTagInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_1950" name="vkDebugMarkerSetObjectNameEXT"
+     ponyname="vkDebugMarkerSetObjectNameEXT"
+     fid="f7"
+     lineno="8543"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pNameInfo" type="NullablePointer[VkDebugMarkerObjectNameInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_1951" name="vkCmdDebugMarkerBeginEXT"
+     ponyname="vkCmdDebugMarkerBeginEXT"
+     fid="f7"
+     lineno="8547"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pMarkerInfo" type="NullablePointer[VkDebugMarkerMarkerInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_1952" name="vkCmdDebugMarkerEndEXT"
+     ponyname="vkCmdDebugMarkerEndEXT"
+     fid="f7"
+     lineno="8551"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+     </useargs>
+  </use>
+  <use id="_1953" name="vkCmdDebugMarkerInsertEXT"
+     ponyname="vkCmdDebugMarkerInsertEXT"
+     fid="f7"
+     lineno="8554"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pMarkerInfo" type="NullablePointer[VkDebugMarkerMarkerInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_1973" name="vkCmdBindTransformFeedbackBuffersEXT"
+     ponyname="vkCmdBindTransformFeedbackBuffersEXT"
+     fid="f7"
+     lineno="8630"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstBinding" type="U32"/>
+       <usearg name="bindingCount" type="U32"/>
+       <usearg name="pBuffers" type="Array[NullablePointer[VkBufferT]]"/>
+       <usearg name="pOffsets" type="Pointer[U64]"/>
+       <usearg name="pSizes" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_1974" name="vkCmdBeginTransformFeedbackEXT"
+     ponyname="vkCmdBeginTransformFeedbackEXT"
+     fid="f7"
+     lineno="8638"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstCounterBuffer" type="U32"/>
+       <usearg name="counterBufferCount" type="U32"/>
+       <usearg name="pCounterBuffers" type="Array[NullablePointer[VkBufferT]]"/>
+       <usearg name="pCounterBufferOffsets" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_1975" name="vkCmdEndTransformFeedbackEXT"
+     ponyname="vkCmdEndTransformFeedbackEXT"
+     fid="f7"
+     lineno="8645"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstCounterBuffer" type="U32"/>
+       <usearg name="counterBufferCount" type="U32"/>
+       <usearg name="pCounterBuffers" type="Array[NullablePointer[VkBufferT]]"/>
+       <usearg name="pCounterBufferOffsets" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_1976" name="vkCmdBeginQueryIndexedEXT"
+     ponyname="vkCmdBeginQueryIndexedEXT"
+     fid="f7"
+     lineno="8652"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="query" type="U32"/>
+       <usearg name="flags" type="U32"/>
+       <usearg name="index" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1977" name="vkCmdEndQueryIndexedEXT"
+     ponyname="vkCmdEndQueryIndexedEXT"
+     fid="f7"
+     lineno="8659"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="query" type="U32"/>
+       <usearg name="index" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1978" name="vkCmdDrawIndirectByteCountEXT"
+     ponyname="vkCmdDrawIndirectByteCountEXT"
+     fid="f7"
+     lineno="8665"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="instanceCount" type="U32"/>
+       <usearg name="firstInstance" type="U32"/>
+       <usearg name="counterBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="counterBufferOffset" type="U64"/>
+       <usearg name="counterOffset" type="U32"/>
+       <usearg name="vertexStride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_1994" name="vkCreateCuModuleNVX"
+     ponyname="vkCreateCuModuleNVX"
+     fid="f7"
+     lineno="8719"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkCuModuleCreateInfoNVX]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pModule" type="Array[NullablePointer[VkCuModuleNVXT]]"/>
+     </useargs>
+  </use>
+  <use id="_1995" name="vkCreateCuFunctionNVX"
+     ponyname="vkCreateCuFunctionNVX"
+     fid="f7"
+     lineno="8725"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkCuFunctionCreateInfoNVX]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pFunction" type="Array[NullablePointer[VkCuFunctionNVXT]]"/>
+     </useargs>
+  </use>
+  <use id="_1996" name="vkDestroyCuModuleNVX"
+     ponyname="vkDestroyCuModuleNVX"
+     fid="f7"
+     lineno="8731"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="module" type="NullablePointer[VkCuModuleNVXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1997" name="vkDestroyCuFunctionNVX"
+     ponyname="vkDestroyCuFunctionNVX"
+     fid="f7"
+     lineno="8736"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="function" type="NullablePointer[VkCuFunctionNVXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_1998" name="vkCmdCuLaunchKernelNVX"
+     ponyname="vkCmdCuLaunchKernelNVX"
+     fid="f7"
+     lineno="8741"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pLaunchInfo" type="NullablePointer[VkCuLaunchInfoNVX]"/>
+     </useargs>
+  </use>
+  <use id="_2005" name="vkGetImageViewHandleNVX"
+     ponyname="vkGetImageViewHandleNVX"
+     fid="f7"
+     lineno="8769"
+     rv="U32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkImageViewHandleInfoNVX]"/>
+     </useargs>
+  </use>
+  <use id="_2006" name="vkGetImageViewAddressNVX"
+     ponyname="vkGetImageViewAddressNVX"
+     fid="f7"
+     lineno="8773"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="imageView" type="NullablePointer[VkImageViewT]"/>
+       <usearg name="pProperties" type="NullablePointer[VkImageViewAddressPropertiesNVX]"/>
+     </useargs>
+  </use>
+  <use id="_2009" name="vkCmdDrawIndirectCountAMD"
+     ponyname="vkCmdDrawIndirectCountAMD"
+     fid="f7"
+     lineno="8787"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="countBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="countBufferOffset" type="U64"/>
+       <usearg name="maxDrawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2010" name="vkCmdDrawIndexedIndirectCountAMD"
+     ponyname="vkCmdDrawIndexedIndirectCountAMD"
+     fid="f7"
+     lineno="8796"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="countBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="countBufferOffset" type="U64"/>
+       <usearg name="maxDrawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2020" name="vkGetShaderInfoAMD"
+     ponyname="vkGetShaderInfoAMD"
+     fid="f7"
+     lineno="8864"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="shaderStage" type="I32"/>
+       <usearg name="infoType" type="I32"/>
+       <usearg name="pInfoSize" type="Pointer[U64]"/>
+       <usearg name="pInfo" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_2032" name="vkGetPhysicalDeviceExternalImageFormatPropertiesNV"
+     ponyname="vkGetPhysicalDeviceExternalImageFormatPropertiesNV"
+     fid="f7"
+     lineno="8925"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="format" type="I32"/>
+       <usearg name="ptype" type="I32"/>
+       <usearg name="tiling" type="I32"/>
+       <usearg name="usage" type="U32"/>
+       <usearg name="flags" type="U32"/>
+       <usearg name="externalHandleType" type="U32"/>
+       <usearg name="pExternalImageFormatProperties" type="NullablePointer[VkExternalImageFormatPropertiesNV]"/>
+     </useargs>
+  </use>
+  <use id="_2058" name="vkCmdBeginConditionalRenderingEXT"
+     ponyname="vkCmdBeginConditionalRenderingEXT"
+     fid="f7"
+     lineno="9044"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pConditionalRenderingBegin" type="NullablePointer[VkConditionalRenderingBeginInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2059" name="vkCmdEndConditionalRenderingEXT"
+     ponyname="vkCmdEndConditionalRenderingEXT"
+     fid="f7"
+     lineno="9048"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+     </useargs>
+  </use>
+  <use id="_2065" name="vkCmdSetViewportWScalingNV"
+     ponyname="vkCmdSetViewportWScalingNV"
+     fid="f7"
+     lineno="9072"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstViewport" type="U32"/>
+       <usearg name="viewportCount" type="U32"/>
+       <usearg name="pViewportWScalings" type="NullablePointer[VkViewportWScalingNV]"/>
+     </useargs>
+  </use>
+  <use id="_2067" name="vkReleaseDisplayEXT"
+     ponyname="vkReleaseDisplayEXT"
+     fid="f7"
+     lineno="9086"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+     </useargs>
+  </use>
+  <use id="_2074" name="vkGetPhysicalDeviceSurfaceCapabilities2EXT"
+     ponyname="vkGetPhysicalDeviceSurfaceCapabilities2EXT"
+     fid="f7"
+     lineno="9121"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="surface" type="NullablePointer[VkSurfaceKHRT]"/>
+       <usearg name="pSurfaceCapabilities" type="NullablePointer[VkSurfaceCapabilities2EXT]"/>
+     </useargs>
+  </use>
+  <use id="_2093" name="vkDisplayPowerControlEXT"
+     ponyname="vkDisplayPowerControlEXT"
+     fid="f7"
+     lineno="9178"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+       <usearg name="pDisplayPowerInfo" type="NullablePointer[VkDisplayPowerInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2094" name="vkRegisterDeviceEventEXT"
+     ponyname="vkRegisterDeviceEventEXT"
+     fid="f7"
+     lineno="9183"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pDeviceEventInfo" type="NullablePointer[VkDeviceEventInfoEXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pFence" type="Array[NullablePointer[VkFenceT]]"/>
+     </useargs>
+  </use>
+  <use id="_2095" name="vkRegisterDisplayEventEXT"
+     ponyname="vkRegisterDisplayEventEXT"
+     fid="f7"
+     lineno="9189"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+       <usearg name="pDisplayEventInfo" type="NullablePointer[VkDisplayEventInfoEXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pFence" type="Array[NullablePointer[VkFenceT]]"/>
+     </useargs>
+  </use>
+  <use id="_2096" name="vkGetSwapchainCounterEXT"
+     ponyname="vkGetSwapchainCounterEXT"
+     fid="f7"
+     lineno="9196"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="counter" type="I32"/>
+       <usearg name="pCounterValue" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_2107" name="vkGetRefreshCycleDurationGOOGLE"
+     ponyname="vkGetRefreshCycleDurationGOOGLE"
+     fid="f7"
+     lineno="9235"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="pDisplayTimingProperties" type="NullablePointer[VkRefreshCycleDurationGOOGLE]"/>
+     </useargs>
+  </use>
+  <use id="_2108" name="vkGetPastPresentationTimingGOOGLE"
+     ponyname="vkGetPastPresentationTimingGOOGLE"
+     fid="f7"
+     lineno="9240"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="pPresentationTimingCount" type="Pointer[U32]"/>
+       <usearg name="pPresentationTimings" type="NullablePointer[VkPastPresentationTimingGOOGLE]"/>
+     </useargs>
+  </use>
+  <use id="_2126" name="vkCmdSetDiscardRectangleEXT"
+     ponyname="vkCmdSetDiscardRectangleEXT"
+     fid="f7"
+     lineno="9335"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstDiscardRectangle" type="U32"/>
+       <usearg name="discardRectangleCount" type="U32"/>
+       <usearg name="pDiscardRectangles" type="NullablePointer[VkRect2D]"/>
+     </useargs>
+  </use>
+  <use id="_2144" name="vkSetHdrMetadataEXT"
+     ponyname="vkSetHdrMetadataEXT"
+     fid="f7"
+     lineno="9426"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapchainCount" type="U32"/>
+       <usearg name="pSwapchains" type="Array[NullablePointer[VkSwapchainKHRT]]"/>
+       <usearg name="pMetadata" type="NullablePointer[VkHdrMetadataEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2177" name="vkSetDebugUtilsObjectNameEXT"
+     ponyname="vkSetDebugUtilsObjectNameEXT"
+     fid="f7"
+     lineno="9537"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pNameInfo" type="NullablePointer[VkDebugUtilsObjectNameInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2178" name="vkSetDebugUtilsObjectTagEXT"
+     ponyname="vkSetDebugUtilsObjectTagEXT"
+     fid="f7"
+     lineno="9541"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pTagInfo" type="NullablePointer[VkDebugUtilsObjectTagInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2179" name="vkQueueBeginDebugUtilsLabelEXT"
+     ponyname="vkQueueBeginDebugUtilsLabelEXT"
+     fid="f7"
+     lineno="9545"
+     rv="None">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="pLabelInfo" type="NullablePointer[VkDebugUtilsLabelEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2180" name="vkQueueEndDebugUtilsLabelEXT"
+     ponyname="vkQueueEndDebugUtilsLabelEXT"
+     fid="f7"
+     lineno="9549"
+     rv="None">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+     </useargs>
+  </use>
+  <use id="_2181" name="vkQueueInsertDebugUtilsLabelEXT"
+     ponyname="vkQueueInsertDebugUtilsLabelEXT"
+     fid="f7"
+     lineno="9552"
+     rv="None">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="pLabelInfo" type="NullablePointer[VkDebugUtilsLabelEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2182" name="vkCmdBeginDebugUtilsLabelEXT"
+     ponyname="vkCmdBeginDebugUtilsLabelEXT"
+     fid="f7"
+     lineno="9556"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pLabelInfo" type="NullablePointer[VkDebugUtilsLabelEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2183" name="vkCmdEndDebugUtilsLabelEXT"
+     ponyname="vkCmdEndDebugUtilsLabelEXT"
+     fid="f7"
+     lineno="9560"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+     </useargs>
+  </use>
+  <use id="_2184" name="vkCmdInsertDebugUtilsLabelEXT"
+     ponyname="vkCmdInsertDebugUtilsLabelEXT"
+     fid="f7"
+     lineno="9563"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pLabelInfo" type="NullablePointer[VkDebugUtilsLabelEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2185" name="vkCreateDebugUtilsMessengerEXT"
+     ponyname="vkCreateDebugUtilsMessengerEXT"
+     fid="f7"
+     lineno="9567"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkDebugUtilsMessengerCreateInfoEXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pMessenger" type="Array[NullablePointer[VkDebugUtilsMessengerEXTT]]"/>
+     </useargs>
+  </use>
+  <use id="_2186" name="vkDestroyDebugUtilsMessengerEXT"
+     ponyname="vkDestroyDebugUtilsMessengerEXT"
+     fid="f7"
+     lineno="9573"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="messenger" type="NullablePointer[VkDebugUtilsMessengerEXTT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_2187" name="vkSubmitDebugUtilsMessageEXT"
+     ponyname="vkSubmitDebugUtilsMessageEXT"
+     fid="f7"
+     lineno="9578"
+     rv="None">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="messageSeverity" type="I32"/>
+       <usearg name="messageTypes" type="U32"/>
+       <usearg name="pCallbackData" type="NullablePointer[VkDebugUtilsMessengerCallbackDataEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2217" name="vkCmdSetSampleLocationsEXT"
+     ponyname="vkCmdSetSampleLocationsEXT"
+     fid="f7"
+     lineno="9715"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pSampleLocationsInfo" type="NullablePointer[VkSampleLocationsInfoEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2218" name="vkGetPhysicalDeviceMultisamplePropertiesEXT"
+     ponyname="vkGetPhysicalDeviceMultisamplePropertiesEXT"
+     fid="f7"
+     lineno="9719"
+     rv="None">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="samples" type="I32"/>
+       <usearg name="pMultisampleProperties" type="NullablePointer[VkMultisamplePropertiesEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2252" name="vkGetImageDrmFormatModifierPropertiesEXT"
+     ponyname="vkGetImageDrmFormatModifierPropertiesEXT"
+     fid="f7"
+     lineno="9878"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="image" type="NullablePointer[VkImageT]"/>
+       <usearg name="pProperties" type="NullablePointer[VkImageDrmFormatModifierPropertiesEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2266" name="vkCreateValidationCacheEXT"
+     ponyname="vkCreateValidationCacheEXT"
+     fid="f7"
+     lineno="9915"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkValidationCacheCreateInfoEXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pValidationCache" type="Array[NullablePointer[VkValidationCacheEXTT]]"/>
+     </useargs>
+  </use>
+  <use id="_2267" name="vkDestroyValidationCacheEXT"
+     ponyname="vkDestroyValidationCacheEXT"
+     fid="f7"
+     lineno="9921"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="validationCache" type="NullablePointer[VkValidationCacheEXTT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_2268" name="vkMergeValidationCachesEXT"
+     ponyname="vkMergeValidationCachesEXT"
+     fid="f7"
+     lineno="9926"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="dstCache" type="NullablePointer[VkValidationCacheEXTT]"/>
+       <usearg name="srcCacheCount" type="U32"/>
+       <usearg name="pSrcCaches" type="Array[NullablePointer[VkValidationCacheEXTT]]"/>
+     </useargs>
+  </use>
+  <use id="_2269" name="vkGetValidationCacheDataEXT"
+     ponyname="vkGetValidationCacheDataEXT"
+     fid="f7"
+     lineno="9932"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="validationCache" type="NullablePointer[VkValidationCacheEXTT]"/>
+       <usearg name="pDataSize" type="Pointer[U64]"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_2298" name="vkCmdBindShadingRateImageNV"
+     ponyname="vkCmdBindShadingRateImageNV"
+     fid="f7"
+     lineno="10045"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="imageView" type="NullablePointer[VkImageViewT]"/>
+       <usearg name="imageLayout" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2299" name="vkCmdSetViewportShadingRatePaletteNV"
+     ponyname="vkCmdSetViewportShadingRatePaletteNV"
+     fid="f7"
+     lineno="10050"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstViewport" type="U32"/>
+       <usearg name="viewportCount" type="U32"/>
+       <usearg name="pShadingRatePalettes" type="NullablePointer[VkShadingRatePaletteNV]"/>
+     </useargs>
+  </use>
+  <use id="_2300" name="vkCmdSetCoarseSampleOrderNV"
+     ponyname="vkCmdSetCoarseSampleOrderNV"
+     fid="f7"
+     lineno="10056"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="sampleOrderType" type="I32"/>
+       <usearg name="customSampleOrderCount" type="U32"/>
+       <usearg name="pCustomSampleOrders" type="NullablePointer[VkCoarseSampleOrderCustomNV]"/>
+     </useargs>
+  </use>
+  <use id="_2378" name="vkCreateAccelerationStructureNV"
+     ponyname="vkCreateAccelerationStructureNV"
+     fid="f7"
+     lineno="10333"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkAccelerationStructureCreateInfoNV]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pAccelerationStructure" type="Array[NullablePointer[VkAccelerationStructureNVT]]"/>
+     </useargs>
+  </use>
+  <use id="_2379" name="vkDestroyAccelerationStructureNV"
+     ponyname="vkDestroyAccelerationStructureNV"
+     fid="f7"
+     lineno="10339"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="accelerationStructure" type="NullablePointer[VkAccelerationStructureNVT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_2380" name="vkGetAccelerationStructureMemoryRequirementsNV"
+     ponyname="vkGetAccelerationStructureMemoryRequirementsNV"
+     fid="f7"
+     lineno="10344"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkAccelerationStructureMemoryRequirementsInfoNV]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_2381" name="vkBindAccelerationStructureMemoryNV"
+     ponyname="vkBindAccelerationStructureMemoryNV"
+     fid="f7"
+     lineno="10349"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="bindInfoCount" type="U32"/>
+       <usearg name="pBindInfos" type="NullablePointer[VkBindAccelerationStructureMemoryInfoNV]"/>
+     </useargs>
+  </use>
+  <use id="_2382" name="vkCmdBuildAccelerationStructureNV"
+     ponyname="vkCmdBuildAccelerationStructureNV"
+     fid="f7"
+     lineno="10354"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkAccelerationStructureInfoNV]"/>
+       <usearg name="instanceData" type="NullablePointer[VkBufferT]"/>
+       <usearg name="instanceOffset" type="U64"/>
+       <usearg name="update" type="U32"/>
+       <usearg name="dst" type="NullablePointer[VkAccelerationStructureNVT]"/>
+       <usearg name="src" type="NullablePointer[VkAccelerationStructureNVT]"/>
+       <usearg name="scratch" type="NullablePointer[VkBufferT]"/>
+       <usearg name="scratchOffset" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_2383" name="vkCmdCopyAccelerationStructureNV"
+     ponyname="vkCmdCopyAccelerationStructureNV"
+     fid="f7"
+     lineno="10365"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="dst" type="NullablePointer[VkAccelerationStructureNVT]"/>
+       <usearg name="src" type="NullablePointer[VkAccelerationStructureNVT]"/>
+       <usearg name="mode" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2384" name="vkCmdTraceRaysNV"
+     ponyname="vkCmdTraceRaysNV"
+     fid="f7"
+     lineno="10371"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="raygenShaderBindingTableBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="raygenShaderBindingOffset" type="U64"/>
+       <usearg name="missShaderBindingTableBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="missShaderBindingOffset" type="U64"/>
+       <usearg name="missShaderBindingStride" type="U64"/>
+       <usearg name="hitShaderBindingTableBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="hitShaderBindingOffset" type="U64"/>
+       <usearg name="hitShaderBindingStride" type="U64"/>
+       <usearg name="callableShaderBindingTableBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="callableShaderBindingOffset" type="U64"/>
+       <usearg name="callableShaderBindingStride" type="U64"/>
+       <usearg name="width" type="U32"/>
+       <usearg name="height" type="U32"/>
+       <usearg name="depth" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2385" name="vkCreateRayTracingPipelinesNV"
+     ponyname="vkCreateRayTracingPipelinesNV"
+     fid="f7"
+     lineno="10388"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipelineCache" type="NullablePointer[VkPipelineCacheT]"/>
+       <usearg name="createInfoCount" type="U32"/>
+       <usearg name="pCreateInfos" type="NullablePointer[VkRayTracingPipelineCreateInfoNV]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pPipelines" type="Array[NullablePointer[VkPipelineT]]"/>
+     </useargs>
+  </use>
+  <use id="_2386" name="vkGetRayTracingShaderGroupHandlesKHR"
+     ponyname="vkGetRayTracingShaderGroupHandlesKHR"
+     fid="f7"
+     lineno="10396"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="firstGroup" type="U32"/>
+       <usearg name="groupCount" type="U32"/>
+       <usearg name="dataSize" type="U64"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_2387" name="vkGetRayTracingShaderGroupHandlesNV"
+     ponyname="vkGetRayTracingShaderGroupHandlesNV"
+     fid="f7"
+     lineno="10404"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="firstGroup" type="U32"/>
+       <usearg name="groupCount" type="U32"/>
+       <usearg name="dataSize" type="U64"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_2388" name="vkGetAccelerationStructureHandleNV"
+     ponyname="vkGetAccelerationStructureHandleNV"
+     fid="f7"
+     lineno="10412"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="accelerationStructure" type="NullablePointer[VkAccelerationStructureNVT]"/>
+       <usearg name="dataSize" type="U64"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_2389" name="vkCmdWriteAccelerationStructuresPropertiesNV"
+     ponyname="vkCmdWriteAccelerationStructuresPropertiesNV"
+     fid="f7"
+     lineno="10418"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="accelerationStructureCount" type="U32"/>
+       <usearg name="pAccelerationStructures" type="Array[NullablePointer[VkAccelerationStructureNVT]]"/>
+       <usearg name="queryType" type="I32"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="firstQuery" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2390" name="vkCompileDeferredNV"
+     ponyname="vkCompileDeferredNV"
+     fid="f7"
+     lineno="10426"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="shader" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2410" name="vkGetMemoryHostPointerPropertiesEXT"
+     ponyname="vkGetMemoryHostPointerPropertiesEXT"
+     fid="f7"
+     lineno="10517"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="handleType" type="I32"/>
+       <usearg name="pHostPointer" type="Pointer[None]"/>
+       <usearg name="pMemoryHostPointerProperties" type="NullablePointer[VkMemoryHostPointerPropertiesEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2412" name="vkCmdWriteBufferMarkerAMD"
+     ponyname="vkCmdWriteBufferMarkerAMD"
+     fid="f7"
+     lineno="10531"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pipelineStage" type="I32"/>
+       <usearg name="dstBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="dstOffset" type="U64"/>
+       <usearg name="marker" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2424" name="vkGetPhysicalDeviceCalibrateableTimeDomainsEXT"
+     ponyname="vkGetPhysicalDeviceCalibrateableTimeDomainsEXT"
+     fid="f7"
+     lineno="10577"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pTimeDomainCount" type="Pointer[U32]"/>
+       <usearg name="pTimeDomains" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_2425" name="vkGetCalibratedTimestampsEXT"
+     ponyname="vkGetCalibratedTimestampsEXT"
+     fid="f7"
+     lineno="10582"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="timestampCount" type="U32"/>
+       <usearg name="pTimestampInfos" type="NullablePointer[VkCalibratedTimestampInfoEXT]"/>
+       <usearg name="pTimestamps" type="Pointer[U64]"/>
+       <usearg name="pMaxDeviation" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_2458" name="vkCmdDrawMeshTasksNV"
+     ponyname="vkCmdDrawMeshTasksNV"
+     fid="f7"
+     lineno="10744"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="taskCount" type="U32"/>
+       <usearg name="firstTask" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2459" name="vkCmdDrawMeshTasksIndirectNV"
+     ponyname="vkCmdDrawMeshTasksIndirectNV"
+     fid="f7"
+     lineno="10749"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="drawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2460" name="vkCmdDrawMeshTasksIndirectCountNV"
+     ponyname="vkCmdDrawMeshTasksIndirectCountNV"
+     fid="f7"
+     lineno="10756"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="buffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="offset" type="U64"/>
+       <usearg name="countBuffer" type="NullablePointer[VkBufferT]"/>
+       <usearg name="countBufferOffset" type="U64"/>
+       <usearg name="maxDrawCount" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2470" name="vkCmdSetExclusiveScissorNV"
+     ponyname="vkCmdSetExclusiveScissorNV"
+     fid="f7"
+     lineno="10808"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstExclusiveScissor" type="U32"/>
+       <usearg name="exclusiveScissorCount" type="U32"/>
+       <usearg name="pExclusiveScissors" type="NullablePointer[VkRect2D]"/>
+     </useargs>
+  </use>
+  <use id="_2477" name="vkCmdSetCheckpointNV"
+     ponyname="vkCmdSetCheckpointNV"
+     fid="f7"
+     lineno="10836"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pCheckpointMarker" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_2478" name="vkGetQueueCheckpointDataNV"
+     ponyname="vkGetQueueCheckpointDataNV"
+     fid="f7"
+     lineno="10840"
+     rv="None">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="pCheckpointDataCount" type="Pointer[U32]"/>
+       <usearg name="pCheckpointData" type="NullablePointer[VkCheckpointDataNV]"/>
+     </useargs>
+  </use>
+  <use id="_2519" name="vkInitializePerformanceApiINTEL"
+     ponyname="vkInitializePerformanceApiINTEL"
+     fid="f7"
+     lineno="10957"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInitializeInfo" type="NullablePointer[VkInitializePerformanceApiInfoINTEL]"/>
+     </useargs>
+  </use>
+  <use id="_2520" name="vkUninitializePerformanceApiINTEL"
+     ponyname="vkUninitializePerformanceApiINTEL"
+     fid="f7"
+     lineno="10961"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+     </useargs>
+  </use>
+  <use id="_2521" name="vkCmdSetPerformanceMarkerINTEL"
+     ponyname="vkCmdSetPerformanceMarkerINTEL"
+     fid="f7"
+     lineno="10964"
+     rv="I32">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pMarkerInfo" type="NullablePointer[VkPerformanceMarkerInfoINTEL]"/>
+     </useargs>
+  </use>
+  <use id="_2522" name="vkCmdSetPerformanceStreamMarkerINTEL"
+     ponyname="vkCmdSetPerformanceStreamMarkerINTEL"
+     fid="f7"
+     lineno="10968"
+     rv="I32">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pMarkerInfo" type="NullablePointer[VkPerformanceStreamMarkerInfoINTEL]"/>
+     </useargs>
+  </use>
+  <use id="_2523" name="vkCmdSetPerformanceOverrideINTEL"
+     ponyname="vkCmdSetPerformanceOverrideINTEL"
+     fid="f7"
+     lineno="10972"
+     rv="I32">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pOverrideInfo" type="NullablePointer[VkPerformanceOverrideInfoINTEL]"/>
+     </useargs>
+  </use>
+  <use id="_2524" name="vkAcquirePerformanceConfigurationINTEL"
+     ponyname="vkAcquirePerformanceConfigurationINTEL"
+     fid="f7"
+     lineno="10976"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pAcquireInfo" type="NullablePointer[VkPerformanceConfigurationAcquireInfoINTEL]"/>
+       <usearg name="pConfiguration" type="Array[NullablePointer[VkPerformanceConfigurationINTELT]]"/>
+     </useargs>
+  </use>
+  <use id="_2525" name="vkReleasePerformanceConfigurationINTEL"
+     ponyname="vkReleasePerformanceConfigurationINTEL"
+     fid="f7"
+     lineno="10981"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="configuration" type="NullablePointer[VkPerformanceConfigurationINTELT]"/>
+     </useargs>
+  </use>
+  <use id="_2526" name="vkQueueSetPerformanceConfigurationINTEL"
+     ponyname="vkQueueSetPerformanceConfigurationINTEL"
+     fid="f7"
+     lineno="10985"
+     rv="I32">
+     <useargs>
+       <usearg name="queue" type="NullablePointer[VkQueueT]"/>
+       <usearg name="configuration" type="NullablePointer[VkPerformanceConfigurationINTELT]"/>
+     </useargs>
+  </use>
+  <use id="_2527" name="vkGetPerformanceParameterINTEL"
+     ponyname="vkGetPerformanceParameterINTEL"
+     fid="f7"
+     lineno="10989"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="parameter" type="I32"/>
+       <usearg name="pValue" type="NullablePointer[VkPerformanceValueINTEL]"/>
+     </useargs>
+  </use>
+  <use id="_2535" name="vkSetLocalDimmingAMD"
+     ponyname="vkSetLocalDimmingAMD"
+     fid="f7"
+     lineno="11028"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="swapChain" type="NullablePointer[VkSwapchainKHRT]"/>
+       <usearg name="localDimmingEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2573" name="vkGetBufferDeviceAddressEXT"
+     ponyname="vkGetBufferDeviceAddressEXT"
+     fid="f7"
+     lineno="11210"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkBufferDeviceAddressInfo]"/>
+     </useargs>
+  </use>
+  <use id="_2580" name="vkGetPhysicalDeviceToolPropertiesEXT"
+     ponyname="vkGetPhysicalDeviceToolPropertiesEXT"
+     fid="f7"
+     lineno="11244"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pToolCount" type="Pointer[U32]"/>
+       <usearg name="pToolProperties" type="NullablePointer[VkPhysicalDeviceToolPropertiesEXT]"/>
+     </useargs>
+  </use>
+  <use id="_2599" name="vkGetPhysicalDeviceCooperativeMatrixPropertiesNV"
+     ponyname="vkGetPhysicalDeviceCooperativeMatrixPropertiesNV"
+     fid="f7"
+     lineno="11348"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pPropertyCount" type="Pointer[U32]"/>
+       <usearg name="pProperties" type="NullablePointer[VkCooperativeMatrixPropertiesNV]"/>
+     </useargs>
+  </use>
+  <use id="_2610" name="vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV"
+     ponyname="vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV"
+     fid="f7"
+     lineno="11390"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="pCombinationCount" type="Pointer[U32]"/>
+       <usearg name="pCombinations" type="NullablePointer[VkFramebufferMixedSamplesCombinationNV]"/>
+     </useargs>
+  </use>
+  <use id="_2627" name="vkCreateHeadlessSurfaceEXT"
+     ponyname="vkCreateHeadlessSurfaceEXT"
+     fid="f7"
+     lineno="11465"
+     rv="I32">
+     <useargs>
+       <usearg name="instance" type="NullablePointer[VkInstanceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkHeadlessSurfaceCreateInfoEXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pSurface" type="Array[NullablePointer[VkSurfaceKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_2637" name="vkCmdSetLineStippleEXT"
+     ponyname="vkCmdSetLineStippleEXT"
+     fid="f7"
+     lineno="11513"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="lineStippleFactor" type="U32"/>
+       <usearg name="lineStipplePattern" type="U16"/>
+     </useargs>
+  </use>
+  <use id="_2642" name="vkResetQueryPoolEXT"
+     ponyname="vkResetQueryPoolEXT"
+     fid="f7"
+     lineno="11550"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="firstQuery" type="U32"/>
+       <usearg name="queryCount" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2659" name="vkCmdSetCullModeEXT"
+     ponyname="vkCmdSetCullModeEXT"
+     fid="f7"
+     lineno="11592"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="cullMode" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2660" name="vkCmdSetFrontFaceEXT"
+     ponyname="vkCmdSetFrontFaceEXT"
+     fid="f7"
+     lineno="11596"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="frontFace" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2661" name="vkCmdSetPrimitiveTopologyEXT"
+     ponyname="vkCmdSetPrimitiveTopologyEXT"
+     fid="f7"
+     lineno="11600"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="primitiveTopology" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2662" name="vkCmdSetViewportWithCountEXT"
+     ponyname="vkCmdSetViewportWithCountEXT"
+     fid="f7"
+     lineno="11604"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="viewportCount" type="U32"/>
+       <usearg name="pViewports" type="NullablePointer[VkViewport]"/>
+     </useargs>
+  </use>
+  <use id="_2663" name="vkCmdSetScissorWithCountEXT"
+     ponyname="vkCmdSetScissorWithCountEXT"
+     fid="f7"
+     lineno="11609"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="scissorCount" type="U32"/>
+       <usearg name="pScissors" type="NullablePointer[VkRect2D]"/>
+     </useargs>
+  </use>
+  <use id="_2664" name="vkCmdBindVertexBuffers2EXT"
+     ponyname="vkCmdBindVertexBuffers2EXT"
+     fid="f7"
+     lineno="11614"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="firstBinding" type="U32"/>
+       <usearg name="bindingCount" type="U32"/>
+       <usearg name="pBuffers" type="Array[NullablePointer[VkBufferT]]"/>
+       <usearg name="pOffsets" type="Pointer[U64]"/>
+       <usearg name="pSizes" type="Pointer[U64]"/>
+       <usearg name="pStrides" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_2665" name="vkCmdSetDepthTestEnableEXT"
+     ponyname="vkCmdSetDepthTestEnableEXT"
+     fid="f7"
+     lineno="11623"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="depthTestEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2666" name="vkCmdSetDepthWriteEnableEXT"
+     ponyname="vkCmdSetDepthWriteEnableEXT"
+     fid="f7"
+     lineno="11627"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="depthWriteEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2667" name="vkCmdSetDepthCompareOpEXT"
+     ponyname="vkCmdSetDepthCompareOpEXT"
+     fid="f7"
+     lineno="11631"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="depthCompareOp" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2668" name="vkCmdSetDepthBoundsTestEnableEXT"
+     ponyname="vkCmdSetDepthBoundsTestEnableEXT"
+     fid="f7"
+     lineno="11635"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="depthBoundsTestEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2669" name="vkCmdSetStencilTestEnableEXT"
+     ponyname="vkCmdSetStencilTestEnableEXT"
+     fid="f7"
+     lineno="11639"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="stencilTestEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2670" name="vkCmdSetStencilOpEXT"
+     ponyname="vkCmdSetStencilOpEXT"
+     fid="f7"
+     lineno="11643"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="faceMask" type="U32"/>
+       <usearg name="failOp" type="I32"/>
+       <usearg name="passOp" type="I32"/>
+       <usearg name="depthFailOp" type="I32"/>
+       <usearg name="compareOp" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2717" name="vkGetGeneratedCommandsMemoryRequirementsNV"
+     ponyname="vkGetGeneratedCommandsMemoryRequirementsNV"
+     fid="f7"
+     lineno="11843"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkGeneratedCommandsMemoryRequirementsInfoNV]"/>
+       <usearg name="pMemoryRequirements" type="NullablePointer[VkMemoryRequirements2]"/>
+     </useargs>
+  </use>
+  <use id="_2718" name="vkCmdPreprocessGeneratedCommandsNV"
+     ponyname="vkCmdPreprocessGeneratedCommandsNV"
+     fid="f7"
+     lineno="11848"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pGeneratedCommandsInfo" type="NullablePointer[VkGeneratedCommandsInfoNV]"/>
+     </useargs>
+  </use>
+  <use id="_2719" name="vkCmdExecuteGeneratedCommandsNV"
+     ponyname="vkCmdExecuteGeneratedCommandsNV"
+     fid="f7"
+     lineno="11852"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="isPreprocessed" type="U32"/>
+       <usearg name="pGeneratedCommandsInfo" type="NullablePointer[VkGeneratedCommandsInfoNV]"/>
+     </useargs>
+  </use>
+  <use id="_2720" name="vkCmdBindPipelineShaderGroupNV"
+     ponyname="vkCmdBindPipelineShaderGroupNV"
+     fid="f7"
+     lineno="11857"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pipelineBindPoint" type="I32"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="groupIndex" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2721" name="vkCreateIndirectCommandsLayoutNV"
+     ponyname="vkCreateIndirectCommandsLayoutNV"
+     fid="f7"
+     lineno="11863"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkIndirectCommandsLayoutCreateInfoNV]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pIndirectCommandsLayout" type="Array[NullablePointer[VkIndirectCommandsLayoutNVT]]"/>
+     </useargs>
+  </use>
+  <use id="_2722" name="vkDestroyIndirectCommandsLayoutNV"
+     ponyname="vkDestroyIndirectCommandsLayoutNV"
+     fid="f7"
+     lineno="11869"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="indirectCommandsLayout" type="NullablePointer[VkIndirectCommandsLayoutNVT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_2747" name="vkAcquireDrmDisplayEXT"
+     ponyname="vkAcquireDrmDisplayEXT"
+     fid="f7"
+     lineno="11985"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="drmFd" type="I32"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+     </useargs>
+  </use>
+  <use id="_2748" name="vkGetDrmDisplayEXT"
+     ponyname="vkGetDrmDisplayEXT"
+     fid="f7"
+     lineno="11990"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="drmFd" type="I32"/>
+       <usearg name="connectorId" type="U32"/>
+       <usearg name="display" type="Array[NullablePointer[VkDisplayKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_2774" name="vkCreatePrivateDataSlotEXT"
+     ponyname="vkCreatePrivateDataSlotEXT"
+     fid="f7"
+     lineno="12081"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkPrivateDataSlotCreateInfoEXT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pPrivateDataSlot" type="Array[NullablePointer[VkPrivateDataSlotEXTT]]"/>
+     </useargs>
+  </use>
+  <use id="_2775" name="vkDestroyPrivateDataSlotEXT"
+     ponyname="vkDestroyPrivateDataSlotEXT"
+     fid="f7"
+     lineno="12087"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="privateDataSlot" type="NullablePointer[VkPrivateDataSlotEXTT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_2776" name="vkSetPrivateDataEXT"
+     ponyname="vkSetPrivateDataEXT"
+     fid="f7"
+     lineno="12092"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="objectType" type="I32"/>
+       <usearg name="objectHandle" type="U64"/>
+       <usearg name="privateDataSlot" type="NullablePointer[VkPrivateDataSlotEXTT]"/>
+       <usearg name="data" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_2777" name="vkGetPrivateDataEXT"
+     ponyname="vkGetPrivateDataEXT"
+     fid="f7"
+     lineno="12099"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="objectType" type="I32"/>
+       <usearg name="objectHandle" type="U64"/>
+       <usearg name="privateDataSlot" type="NullablePointer[VkPrivateDataSlotEXTT]"/>
+       <usearg name="pData" type="Pointer[U64]"/>
+     </useargs>
+  </use>
+  <use id="_2798" name="vkCmdSetFragmentShadingRateEnumNV"
+     ponyname="vkCmdSetFragmentShadingRateEnumNV"
+     fid="f7"
+     lineno="12199"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="shadingRate" type="I32"/>
+       <usearg name="combinerOps" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_2835" name="vkAcquireWinrtDisplayNV"
+     ponyname="vkAcquireWinrtDisplayNV"
+     fid="f7"
+     lineno="12368"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="display" type="NullablePointer[VkDisplayKHRT]"/>
+     </useargs>
+  </use>
+  <use id="_2836" name="vkGetWinrtDisplayNV"
+     ponyname="vkGetWinrtDisplayNV"
+     fid="f7"
+     lineno="12372"
+     rv="I32">
+     <useargs>
+       <usearg name="physicalDevice" type="NullablePointer[VkPhysicalDeviceT]"/>
+       <usearg name="deviceRelativeId" type="U32"/>
+       <usearg name="pDisplay" type="Array[NullablePointer[VkDisplayKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_2850" name="vkCmdSetVertexInputEXT"
+     ponyname="vkCmdSetVertexInputEXT"
+     fid="f7"
+     lineno="12432"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="vertexBindingDescriptionCount" type="U32"/>
+       <usearg name="pVertexBindingDescriptions" type="NullablePointer[VkVertexInputBindingDescription2EXT]"/>
+       <usearg name="vertexAttributeDescriptionCount" type="U32"/>
+       <usearg name="pVertexAttributeDescriptions" type="NullablePointer[VkVertexInputAttributeDescription2EXT]"/>
+     </useargs>
+  </use>
+  <use id="_2861" name="vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI"
+     ponyname="vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI"
+     fid="f7"
+     lineno="12483"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="renderpass" type="NullablePointer[VkRenderPassT]"/>
+       <usearg name="pMaxWorkgroupSize" type="NullablePointer[VkExtent2D]"/>
+     </useargs>
+  </use>
+  <use id="_2862" name="vkCmdSubpassShadingHUAWEI"
+     ponyname="vkCmdSubpassShadingHUAWEI"
+     fid="f7"
+     lineno="12488"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+     </useargs>
+  </use>
+  <use id="_2866" name="vkCmdBindInvocationMaskHUAWEI"
+     ponyname="vkCmdBindInvocationMaskHUAWEI"
+     fid="f7"
+     lineno="12505"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="imageView" type="NullablePointer[VkImageViewT]"/>
+       <usearg name="imageLayout" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2873" name="vkGetMemoryRemoteAddressNV"
+     ponyname="vkGetMemoryRemoteAddressNV"
+     fid="f7"
+     lineno="12532"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pMemoryGetRemoteAddressInfo" type="NullablePointer[VkMemoryGetRemoteAddressInfoNV]"/>
+       <usearg name="pAddress" type="NullablePointer[Pointer[None]]"/>
+     </useargs>
+  </use>
+  <use id="_2881" name="vkCmdSetPatchControlPointsEXT"
+     ponyname="vkCmdSetPatchControlPointsEXT"
+     fid="f7"
+     lineno="12557"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="patchControlPoints" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2882" name="vkCmdSetRasterizerDiscardEnableEXT"
+     ponyname="vkCmdSetRasterizerDiscardEnableEXT"
+     fid="f7"
+     lineno="12561"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="rasterizerDiscardEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2883" name="vkCmdSetDepthBiasEnableEXT"
+     ponyname="vkCmdSetDepthBiasEnableEXT"
+     fid="f7"
+     lineno="12565"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="depthBiasEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2884" name="vkCmdSetLogicOpEXT"
+     ponyname="vkCmdSetLogicOpEXT"
+     fid="f7"
+     lineno="12569"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="logicOp" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_2885" name="vkCmdSetPrimitiveRestartEnableEXT"
+     ponyname="vkCmdSetPrimitiveRestartEnableEXT"
+     fid="f7"
+     lineno="12573"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="primitiveRestartEnable" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2891" name="vkCmdSetColorWriteEnableEXT"
+     ponyname="vkCmdSetColorWriteEnableEXT"
+     fid="f7"
+     lineno="12598"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="attachmentCount" type="U32"/>
+       <usearg name="pColorWriteEnables" type="Pointer[U32]"/>
+     </useargs>
+  </use>
+  <use id="_2906" name="vkCmdDrawMultiEXT"
+     ponyname="vkCmdDrawMultiEXT"
+     fid="f7"
+     lineno="12654"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="drawCount" type="U32"/>
+       <usearg name="pVertexInfo" type="NullablePointer[VkMultiDrawInfoEXT]"/>
+       <usearg name="instanceCount" type="U32"/>
+       <usearg name="firstInstance" type="U32"/>
+       <usearg name="stride" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2907" name="vkCmdDrawMultiIndexedEXT"
+     ponyname="vkCmdDrawMultiIndexedEXT"
+     fid="f7"
+     lineno="12662"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="drawCount" type="U32"/>
+       <usearg name="pIndexInfo" type="NullablePointer[VkMultiDrawIndexedInfoEXT]"/>
+       <usearg name="instanceCount" type="U32"/>
+       <usearg name="firstInstance" type="U32"/>
+       <usearg name="stride" type="U32"/>
+       <usearg name="pVertexOffset" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_2971" name="vkCreateAccelerationStructureKHR"
+     ponyname="vkCreateAccelerationStructureKHR"
+     fid="f7"
+     lineno="12877"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pCreateInfo" type="NullablePointer[VkAccelerationStructureCreateInfoKHR]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pAccelerationStructure" type="Array[NullablePointer[VkAccelerationStructureKHRT]]"/>
+     </useargs>
+  </use>
+  <use id="_2972" name="vkDestroyAccelerationStructureKHR"
+     ponyname="vkDestroyAccelerationStructureKHR"
+     fid="f7"
+     lineno="12883"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="accelerationStructure" type="NullablePointer[VkAccelerationStructureKHRT]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+     </useargs>
+  </use>
+  <use id="_2973" name="vkCmdBuildAccelerationStructuresKHR"
+     ponyname="vkCmdBuildAccelerationStructuresKHR"
+     fid="f7"
+     lineno="12888"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="infoCount" type="U32"/>
+       <usearg name="pInfos" type="NullablePointer[VkAccelerationStructureBuildGeometryInfoKHR]"/>
+       <usearg name="ppBuildRangeInfos" type="Array[NullablePointer[VkAccelerationStructureBuildRangeInfoKHR]]"/>
+     </useargs>
+  </use>
+  <use id="_2974" name="vkCmdBuildAccelerationStructuresIndirectKHR"
+     ponyname="vkCmdBuildAccelerationStructuresIndirectKHR"
+     fid="f7"
+     lineno="12894"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="infoCount" type="U32"/>
+       <usearg name="pInfos" type="NullablePointer[VkAccelerationStructureBuildGeometryInfoKHR]"/>
+       <usearg name="pIndirectDeviceAddresses" type="Pointer[U64]"/>
+       <usearg name="pIndirectStrides" type="Pointer[U32]"/>
+       <usearg name="ppMaxPrimitiveCounts" type="NullablePointer[Pointer[U32]]"/>
+     </useargs>
+  </use>
+  <use id="_2975" name="vkBuildAccelerationStructuresKHR"
+     ponyname="vkBuildAccelerationStructuresKHR"
+     fid="f7"
+     lineno="12902"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="deferredOperation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+       <usearg name="infoCount" type="U32"/>
+       <usearg name="pInfos" type="NullablePointer[VkAccelerationStructureBuildGeometryInfoKHR]"/>
+       <usearg name="ppBuildRangeInfos" type="Array[NullablePointer[VkAccelerationStructureBuildRangeInfoKHR]]"/>
+     </useargs>
+  </use>
+  <use id="_2976" name="vkCopyAccelerationStructureKHR"
+     ponyname="vkCopyAccelerationStructureKHR"
+     fid="f7"
+     lineno="12909"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="deferredOperation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkCopyAccelerationStructureInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_2977" name="vkCopyAccelerationStructureToMemoryKHR"
+     ponyname="vkCopyAccelerationStructureToMemoryKHR"
+     fid="f7"
+     lineno="12914"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="deferredOperation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkCopyAccelerationStructureToMemoryInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_2978" name="vkCopyMemoryToAccelerationStructureKHR"
+     ponyname="vkCopyMemoryToAccelerationStructureKHR"
+     fid="f7"
+     lineno="12919"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="deferredOperation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkCopyMemoryToAccelerationStructureInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_2979" name="vkWriteAccelerationStructuresPropertiesKHR"
+     ponyname="vkWriteAccelerationStructuresPropertiesKHR"
+     fid="f7"
+     lineno="12924"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="accelerationStructureCount" type="U32"/>
+       <usearg name="pAccelerationStructures" type="Array[NullablePointer[VkAccelerationStructureKHRT]]"/>
+       <usearg name="queryType" type="I32"/>
+       <usearg name="dataSize" type="U64"/>
+       <usearg name="pData" type="Pointer[None]"/>
+       <usearg name="stride" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_2980" name="vkCmdCopyAccelerationStructureKHR"
+     ponyname="vkCmdCopyAccelerationStructureKHR"
+     fid="f7"
+     lineno="12933"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkCopyAccelerationStructureInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_2981" name="vkCmdCopyAccelerationStructureToMemoryKHR"
+     ponyname="vkCmdCopyAccelerationStructureToMemoryKHR"
+     fid="f7"
+     lineno="12937"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkCopyAccelerationStructureToMemoryInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_2982" name="vkCmdCopyMemoryToAccelerationStructureKHR"
+     ponyname="vkCmdCopyMemoryToAccelerationStructureKHR"
+     fid="f7"
+     lineno="12941"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkCopyMemoryToAccelerationStructureInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_2983" name="vkGetAccelerationStructureDeviceAddressKHR"
+     ponyname="vkGetAccelerationStructureDeviceAddressKHR"
+     fid="f7"
+     lineno="12945"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pInfo" type="NullablePointer[VkAccelerationStructureDeviceAddressInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_2984" name="vkCmdWriteAccelerationStructuresPropertiesKHR"
+     ponyname="vkCmdWriteAccelerationStructuresPropertiesKHR"
+     fid="f7"
+     lineno="12949"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="accelerationStructureCount" type="U32"/>
+       <usearg name="pAccelerationStructures" type="Array[NullablePointer[VkAccelerationStructureKHRT]]"/>
+       <usearg name="queryType" type="I32"/>
+       <usearg name="queryPool" type="NullablePointer[VkQueryPoolT]"/>
+       <usearg name="firstQuery" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_2985" name="vkGetDeviceAccelerationStructureCompatibilityKHR"
+     ponyname="vkGetDeviceAccelerationStructureCompatibilityKHR"
+     fid="f7"
+     lineno="12957"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pVersionInfo" type="NullablePointer[VkAccelerationStructureVersionInfoKHR]"/>
+       <usearg name="pCompatibility" type="Pointer[I32]"/>
+     </useargs>
+  </use>
+  <use id="_2986" name="vkGetAccelerationStructureBuildSizesKHR"
+     ponyname="vkGetAccelerationStructureBuildSizesKHR"
+     fid="f7"
+     lineno="12962"
+     rv="None">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="buildType" type="I32"/>
+       <usearg name="pBuildInfo" type="NullablePointer[VkAccelerationStructureBuildGeometryInfoKHR]"/>
+       <usearg name="pMaxPrimitiveCounts" type="Pointer[U32]"/>
+       <usearg name="pSizeInfo" type="NullablePointer[VkAccelerationStructureBuildSizesInfoKHR]"/>
+     </useargs>
+  </use>
+  <use id="_3009" name="vkCmdTraceRaysKHR"
+     ponyname="vkCmdTraceRaysKHR"
+     fid="f7"
+     lineno="13060"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pRaygenShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="pMissShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="pHitShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="pCallableShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="width" type="U32"/>
+       <usearg name="height" type="U32"/>
+       <usearg name="depth" type="U32"/>
+     </useargs>
+  </use>
+  <use id="_3010" name="vkCreateRayTracingPipelinesKHR"
+     ponyname="vkCreateRayTracingPipelinesKHR"
+     fid="f7"
+     lineno="13070"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="deferredOperation" type="NullablePointer[VkDeferredOperationKHRT]"/>
+       <usearg name="pipelineCache" type="NullablePointer[VkPipelineCacheT]"/>
+       <usearg name="createInfoCount" type="U32"/>
+       <usearg name="pCreateInfos" type="NullablePointer[VkRayTracingPipelineCreateInfoKHR]"/>
+       <usearg name="pAllocator" type="NullablePointer[VkAllocationCallbacks]"/>
+       <usearg name="pPipelines" type="Array[NullablePointer[VkPipelineT]]"/>
+     </useargs>
+  </use>
+  <use id="_3011" name="vkGetRayTracingCaptureReplayShaderGroupHandlesKHR"
+     ponyname="vkGetRayTracingCaptureReplayShaderGroupHandlesKHR"
+     fid="f7"
+     lineno="13079"
+     rv="I32">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="firstGroup" type="U32"/>
+       <usearg name="groupCount" type="U32"/>
+       <usearg name="dataSize" type="U64"/>
+       <usearg name="pData" type="Pointer[None]"/>
+     </useargs>
+  </use>
+  <use id="_3012" name="vkCmdTraceRaysIndirectKHR"
+     ponyname="vkCmdTraceRaysIndirectKHR"
+     fid="f7"
+     lineno="13087"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pRaygenShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="pMissShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="pHitShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="pCallableShaderBindingTable" type="NullablePointer[VkStridedDeviceAddressRegionKHR]"/>
+       <usearg name="indirectDeviceAddress" type="U64"/>
+     </useargs>
+  </use>
+  <use id="_3013" name="vkGetRayTracingShaderGroupStackSizeKHR"
+     ponyname="vkGetRayTracingShaderGroupStackSizeKHR"
+     fid="f7"
+     lineno="13095"
+     rv="U64">
+     <useargs>
+       <usearg name="device" type="NullablePointer[VkDeviceT]"/>
+       <usearg name="pipeline" type="NullablePointer[VkPipelineT]"/>
+       <usearg name="group" type="U32"/>
+       <usearg name="groupShader" type="I32"/>
+     </useargs>
+  </use>
+  <use id="_3014" name="vkCmdSetRayTracingPipelineStackSizeKHR"
+     ponyname="vkCmdSetRayTracingPipelineStackSizeKHR"
+     fid="f7"
+     lineno="13101"
+     rv="None">
+     <useargs>
+       <usearg name="commandBuffer" type="NullablePointer[VkCommandBufferT]"/>
+       <usearg name="pipelineStackSize" type="U32"/>
+     </useargs>
+  </use></uses>
+</castxml2pony>
+

@@ -1,0 +1,1686 @@
+<typedefs>
+  <typedef name="String"
+    ponytypein="String"
+    ponytypeinconv=".cstring()"
+    ponytypeout="String"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]">
+    <ponytypeconvout>
+      <prefixs>
+        <prefix>var pcstring: Pointer[U8] = </prefix>
+      </prefixs>
+      <suffixes>
+        <suffix>let p: String iso = String.from_cstring(pcstring).clone()</suffix>
+        <suffix>consume p</suffix>
+      </suffixes>
+    </ponytypeconvout>
+  </typedef>
+
+  <typedef name="Array[String]"
+    ponytypein="Array[String]"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[U8]]"
+    structtype="Pointer[Pointer[U8]]"
+    structdef="Pointer[Pointer[U8]]"
+    argtype="Pointer[Pointer[U8]] tag"
+    rvtype="Pointer[Pointer[U8]]"/>
+
+  <typedef name="NullablePointer[VkCommandPoolT]"
+    ponytypein="NullablePointer[VkCommandPoolT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCommandPoolT]"
+    structtype="NullablePointer[VkCommandPoolT]"
+    structdef="NullablePointer[VkCommandPoolT].none()"
+    argtype="NullablePointer[VkCommandPoolT] tag"
+    rvtype="NullablePointer[VkCommandPoolT]"/>
+
+  <typedef name="NullablePointer[VkAttachmentReference2]"
+    ponytypein="NullablePointer[VkAttachmentReference2] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAttachmentReference2]"
+    structtype="NullablePointer[VkAttachmentReference2]"
+    structdef="NullablePointer[VkAttachmentReference2].none()"
+    argtype="NullablePointer[VkAttachmentReference2] tag"
+    rvtype="NullablePointer[VkAttachmentReference2]"/>
+
+  <typedef name="VkDisplayPropertiesKHR"
+    ponytypein="VkDisplayPropertiesKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkDisplayPropertiesKHR"
+    structtype="VkDisplayPropertiesKHR"
+    structdef="VkDisplayPropertiesKHR"
+    argtype="VkDisplayPropertiesKHR tag"
+    rvtype="VkDisplayPropertiesKHR"/>
+
+  <typedef name="NullablePointer[VkSpecializationMapEntry]"
+    ponytypein="NullablePointer[VkSpecializationMapEntry] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSpecializationMapEntry]"
+    structtype="NullablePointer[VkSpecializationMapEntry]"
+    structdef="NullablePointer[VkSpecializationMapEntry].none()"
+    argtype="NullablePointer[VkSpecializationMapEntry] tag"
+    rvtype="NullablePointer[VkSpecializationMapEntry]"/>
+
+  <typedef name="NullablePointer[VkDescriptorPoolSize]"
+    ponytypein="NullablePointer[VkDescriptorPoolSize] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorPoolSize]"
+    structtype="NullablePointer[VkDescriptorPoolSize]"
+    structdef="NullablePointer[VkDescriptorPoolSize].none()"
+    argtype="NullablePointer[VkDescriptorPoolSize] tag"
+    rvtype="NullablePointer[VkDescriptorPoolSize]"/>
+
+  <typedef name="NullablePointer[VkMemoryBarrier2KHR]"
+    ponytypein="NullablePointer[VkMemoryBarrier2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkMemoryBarrier2KHR]"
+    structtype="NullablePointer[VkMemoryBarrier2KHR]"
+    structdef="NullablePointer[VkMemoryBarrier2KHR].none()"
+    argtype="NullablePointer[VkMemoryBarrier2KHR] tag"
+    rvtype="NullablePointer[VkMemoryBarrier2KHR]"/>
+
+  <typedef name="NullablePointer[VkGraphicsShaderGroupCreateInfoNV]"
+    ponytypein="NullablePointer[VkGraphicsShaderGroupCreateInfoNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkGraphicsShaderGroupCreateInfoNV]"
+    structtype="NullablePointer[VkGraphicsShaderGroupCreateInfoNV]"
+    structdef="NullablePointer[VkGraphicsShaderGroupCreateInfoNV].none()"
+    argtype="NullablePointer[VkGraphicsShaderGroupCreateInfoNV] tag"
+    rvtype="NullablePointer[VkGraphicsShaderGroupCreateInfoNV]"/>
+
+  <typedef name="VkSurfaceFormatKHR"
+    ponytypein="VkSurfaceFormatKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkSurfaceFormatKHR"
+    structtype="VkSurfaceFormatKHR"
+    structdef="VkSurfaceFormatKHR"
+    argtype="VkSurfaceFormatKHR tag"
+    rvtype="VkSurfaceFormatKHR"/>
+
+  <typedef name="NullablePointer[VkAccelerationStructureGeometryKHR]"
+    ponytypein="NullablePointer[VkAccelerationStructureGeometryKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAccelerationStructureGeometryKHR]"
+    structtype="NullablePointer[VkAccelerationStructureGeometryKHR]"
+    structdef="NullablePointer[VkAccelerationStructureGeometryKHR].none()"
+    argtype="NullablePointer[VkAccelerationStructureGeometryKHR] tag"
+    rvtype="NullablePointer[VkAccelerationStructureGeometryKHR]"/>
+
+  <typedef name="I64"
+    ponytypein="I64"
+    ponytypeinconv=""
+    ponytypeout="I64"
+    structtype="I64"
+    structdef="I64(0)"
+    argtype="I64"
+    rvtype="I64"/>
+
+  <typedef name="NullablePointer[VkBaseOutStructure]"
+    ponytypein="NullablePointer[VkBaseOutStructure] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkBaseOutStructure]"
+    structtype="NullablePointer[VkBaseOutStructure]"
+    structdef="NullablePointer[VkBaseOutStructure].none()"
+    argtype="NullablePointer[VkBaseOutStructure] tag"
+    rvtype="NullablePointer[VkBaseOutStructure]"/>
+
+  <typedef name="VkExtent2D"
+    ponytypein="VkExtent2D tag"
+    ponytypeinconv=""
+    ponytypeout="VkExtent2D"
+    structtype="VkExtent2D"
+    structdef="VkExtent2D"
+    argtype="VkExtent2D tag"
+    rvtype="VkExtent2D"/>
+
+  <typedef name="NullablePointer[VkPipelineVertexInputStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineVertexInputStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineVertexInputStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineVertexInputStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineVertexInputStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineVertexInputStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineVertexInputStateCreateInfo]"/>
+
+  <typedef name="NullablePointer[VkBaseInStructure]"
+    ponytypein="NullablePointer[VkBaseInStructure] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkBaseInStructure]"
+    structtype="NullablePointer[VkBaseInStructure]"
+    structdef="NullablePointer[VkBaseInStructure].none()"
+    argtype="NullablePointer[VkBaseInStructure] tag"
+    rvtype="NullablePointer[VkBaseInStructure]"/>
+
+  <typedef name="VkMemoryRequirements"
+    ponytypein="VkMemoryRequirements tag"
+    ponytypeinconv=""
+    ponytypeout="VkMemoryRequirements"
+    structtype="VkMemoryRequirements"
+    structdef="VkMemoryRequirements"
+    argtype="VkMemoryRequirements tag"
+    rvtype="VkMemoryRequirements"/>
+
+  <typedef name="VkExternalMemoryProperties"
+    ponytypein="VkExternalMemoryProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkExternalMemoryProperties"
+    structtype="VkExternalMemoryProperties"
+    structdef="VkExternalMemoryProperties"
+    argtype="VkExternalMemoryProperties tag"
+    rvtype="VkExternalMemoryProperties"/>
+
+  <typedef name="Array[NullablePointer[VkBufferViewT]]"
+    ponytypein="Array[NullablePointer[VkBufferViewT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkBufferViewT]]"
+    structtype="Array[NullablePointer[VkBufferViewT]]"
+    structdef="Array[NullablePointer[VkBufferViewT]]"
+    argtype="Array[NullablePointer[VkBufferViewT]] tag"
+    rvtype="Array[NullablePointer[VkBufferViewT]]"/>
+
+  <typedef name="F128"
+    ponytypein="F128"
+    ponytypeinconv=""
+    ponytypeout="F128"
+    structtype="F128"
+    structdef="F128(0)"
+    argtype="F128"
+    rvtype="F128"/>
+
+  <typedef name="NullablePointer[VkImageT]"
+    ponytypein="NullablePointer[VkImageT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkImageT]"
+    structtype="NullablePointer[VkImageT]"
+    structdef="NullablePointer[VkImageT].none()"
+    argtype="NullablePointer[VkImageT] tag"
+    rvtype="NullablePointer[VkImageT]"/>
+
+  <typedef name="NullablePointer[VkSparseImageOpaqueMemoryBindInfo]"
+    ponytypein="NullablePointer[VkSparseImageOpaqueMemoryBindInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSparseImageOpaqueMemoryBindInfo]"
+    structtype="NullablePointer[VkSparseImageOpaqueMemoryBindInfo]"
+    structdef="NullablePointer[VkSparseImageOpaqueMemoryBindInfo].none()"
+    argtype="NullablePointer[VkSparseImageOpaqueMemoryBindInfo] tag"
+    rvtype="NullablePointer[VkSparseImageOpaqueMemoryBindInfo]"/>
+
+  <typedef name="VkRect2D"
+    ponytypein="VkRect2D tag"
+    ponytypeinconv=""
+    ponytypeout="VkRect2D"
+    structtype="VkRect2D"
+    structdef="VkRect2D"
+    argtype="VkRect2D tag"
+    rvtype="VkRect2D"/>
+
+  <typedef name="NullablePointer[VkAccelerationStructureNVT]"
+    ponytypein="NullablePointer[VkAccelerationStructureNVT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAccelerationStructureNVT]"
+    structtype="NullablePointer[VkAccelerationStructureNVT]"
+    structdef="NullablePointer[VkAccelerationStructureNVT].none()"
+    argtype="NullablePointer[VkAccelerationStructureNVT] tag"
+    rvtype="NullablePointer[VkAccelerationStructureNVT]"/>
+
+  <typedef name="VkTransformMatrixKHR"
+    ponytypein="VkTransformMatrixKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkTransformMatrixKHR"
+    structtype="VkTransformMatrixKHR"
+    structdef="VkTransformMatrixKHR"
+    argtype="VkTransformMatrixKHR tag"
+    rvtype="VkTransformMatrixKHR"/>
+
+  <typedef name="NullablePointer[VkAttachmentDescription2]"
+    ponytypein="NullablePointer[VkAttachmentDescription2] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAttachmentDescription2]"
+    structtype="NullablePointer[VkAttachmentDescription2]"
+    structdef="NullablePointer[VkAttachmentDescription2].none()"
+    argtype="NullablePointer[VkAttachmentDescription2] tag"
+    rvtype="NullablePointer[VkAttachmentDescription2]"/>
+
+  <typedef name="NullablePointer[VkSurfaceKHRT]"
+    ponytypein="NullablePointer[VkSurfaceKHRT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSurfaceKHRT]"
+    structtype="NullablePointer[VkSurfaceKHRT]"
+    structdef="NullablePointer[VkSurfaceKHRT].none()"
+    argtype="NullablePointer[VkSurfaceKHRT] tag"
+    rvtype="NullablePointer[VkSurfaceKHRT]"/>
+
+  <typedef name="VkPhysicalDeviceFeatures"
+    ponytypein="VkPhysicalDeviceFeatures tag"
+    ponytypeinconv=""
+    ponytypeout="VkPhysicalDeviceFeatures"
+    structtype="VkPhysicalDeviceFeatures"
+    structdef="VkPhysicalDeviceFeatures"
+    argtype="VkPhysicalDeviceFeatures tag"
+    rvtype="VkPhysicalDeviceFeatures"/>
+
+  <typedef name="NullablePointer[VkPhysicalDeviceFeatures]"
+    ponytypein="NullablePointer[VkPhysicalDeviceFeatures] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPhysicalDeviceFeatures]"
+    structtype="NullablePointer[VkPhysicalDeviceFeatures]"
+    structdef="NullablePointer[VkPhysicalDeviceFeatures].none()"
+    argtype="NullablePointer[VkPhysicalDeviceFeatures] tag"
+    rvtype="NullablePointer[VkPhysicalDeviceFeatures]"/>
+
+  <typedef name="Pointer[U64]"
+    ponytypein="Pointer[U64] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U64]"
+    structtype="Pointer[U64]"
+    structdef="Pointer[U64]"
+    argtype="Pointer[U64] tag"
+    rvtype="Pointer[U64]"/>
+
+  <typedef name="NullablePointer[VkPipelineLayoutT]"
+    ponytypein="NullablePointer[VkPipelineLayoutT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineLayoutT]"
+    structtype="NullablePointer[VkPipelineLayoutT]"
+    structdef="NullablePointer[VkPipelineLayoutT].none()"
+    argtype="NullablePointer[VkPipelineLayoutT] tag"
+    rvtype="NullablePointer[VkPipelineLayoutT]"/>
+
+  <typedef name="NullablePointer[FUNCTIONTYPE]"
+    ponytypein="Pointer[None] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[None]"
+    structtype="Pointer[None]"
+    structdef="Pointer[None]"
+    argtype="Pointer[None] tag"
+    rvtype="Pointer[None]"/>
+
+  <typedef name="NullablePointer[VkCommandBufferInheritanceInfo]"
+    ponytypein="NullablePointer[VkCommandBufferInheritanceInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCommandBufferInheritanceInfo]"
+    structtype="NullablePointer[VkCommandBufferInheritanceInfo]"
+    structdef="NullablePointer[VkCommandBufferInheritanceInfo].none()"
+    argtype="NullablePointer[VkCommandBufferInheritanceInfo] tag"
+    rvtype="NullablePointer[VkCommandBufferInheritanceInfo]"/>
+
+  <typedef name="VkPhysicalDeviceProperties"
+    ponytypein="VkPhysicalDeviceProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkPhysicalDeviceProperties"
+    structtype="VkPhysicalDeviceProperties"
+    structdef="VkPhysicalDeviceProperties"
+    argtype="VkPhysicalDeviceProperties tag"
+    rvtype="VkPhysicalDeviceProperties"/>
+
+  <typedef name="NullablePointer[VkSparseMemoryBind]"
+    ponytypein="NullablePointer[VkSparseMemoryBind] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSparseMemoryBind]"
+    structtype="NullablePointer[VkSparseMemoryBind]"
+    structdef="NullablePointer[VkSparseMemoryBind].none()"
+    argtype="NullablePointer[VkSparseMemoryBind] tag"
+    rvtype="NullablePointer[VkSparseMemoryBind]"/>
+
+  <typedef name="VkQueueFamilyProperties"
+    ponytypein="VkQueueFamilyProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkQueueFamilyProperties"
+    structtype="VkQueueFamilyProperties"
+    structdef="VkQueueFamilyProperties"
+    argtype="VkQueueFamilyProperties tag"
+    rvtype="VkQueueFamilyProperties"/>
+
+  <typedef name="VkAccelerationStructureInfoNV"
+    ponytypein="VkAccelerationStructureInfoNV tag"
+    ponytypeinconv=""
+    ponytypeout="VkAccelerationStructureInfoNV"
+    structtype="VkAccelerationStructureInfoNV"
+    structdef="VkAccelerationStructureInfoNV"
+    argtype="VkAccelerationStructureInfoNV tag"
+    rvtype="VkAccelerationStructureInfoNV"/>
+
+  <typedef name="VkDisplayModeParametersKHR"
+    ponytypein="VkDisplayModeParametersKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkDisplayModeParametersKHR"
+    structtype="VkDisplayModeParametersKHR"
+    structdef="VkDisplayModeParametersKHR"
+    argtype="VkDisplayModeParametersKHR tag"
+    rvtype="VkDisplayModeParametersKHR"/>
+
+  <typedef name="NullablePointer[VkPipelineViewportStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineViewportStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineViewportStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineViewportStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineViewportStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineViewportStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineViewportStateCreateInfo]"/>
+
+  <typedef name="VkPhysicalDeviceMemoryProperties"
+    ponytypein="VkPhysicalDeviceMemoryProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkPhysicalDeviceMemoryProperties"
+    structtype="VkPhysicalDeviceMemoryProperties"
+    structdef="VkPhysicalDeviceMemoryProperties"
+    argtype="VkPhysicalDeviceMemoryProperties tag"
+    rvtype="VkPhysicalDeviceMemoryProperties"/>
+
+  <typedef name="VkSampleLocationsInfoEXT"
+    ponytypein="VkSampleLocationsInfoEXT tag"
+    ponytypeinconv=""
+    ponytypeout="VkSampleLocationsInfoEXT"
+    structtype="VkSampleLocationsInfoEXT"
+    structdef="VkSampleLocationsInfoEXT"
+    argtype="VkSampleLocationsInfoEXT tag"
+    rvtype="VkSampleLocationsInfoEXT"/>
+
+  <typedef name="Array[NullablePointer[VkSamplerT]]"
+    ponytypein="Array[NullablePointer[VkSamplerT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkSamplerT]]"
+    structtype="Array[NullablePointer[VkSamplerT]]"
+    structdef="Array[NullablePointer[VkSamplerT]]"
+    argtype="Array[NullablePointer[VkSamplerT]] tag"
+    rvtype="Array[NullablePointer[VkSamplerT]]"/>
+
+  <typedef name="NullablePointer[VkRayTracingPipelineInterfaceCreateInfoKHR]"
+    ponytypein="NullablePointer[VkRayTracingPipelineInterfaceCreateInfoKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkRayTracingPipelineInterfaceCreateInfoKHR]"
+    structtype="NullablePointer[VkRayTracingPipelineInterfaceCreateInfoKHR]"
+    structdef="NullablePointer[VkRayTracingPipelineInterfaceCreateInfoKHR].none()"
+    argtype="NullablePointer[VkRayTracingPipelineInterfaceCreateInfoKHR] tag"
+    rvtype="NullablePointer[VkRayTracingPipelineInterfaceCreateInfoKHR]"/>
+
+  <typedef name="NullablePointer[VkViewport]"
+    ponytypein="NullablePointer[VkViewport] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkViewport]"
+    structtype="NullablePointer[VkViewport]"
+    structdef="NullablePointer[VkViewport].none()"
+    argtype="NullablePointer[VkViewport] tag"
+    rvtype="NullablePointer[VkViewport]"/>
+
+  <typedef name="NullablePointer[VkFramebufferAttachmentImageInfo]"
+    ponytypein="NullablePointer[VkFramebufferAttachmentImageInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkFramebufferAttachmentImageInfo]"
+    structtype="NullablePointer[VkFramebufferAttachmentImageInfo]"
+    structdef="NullablePointer[VkFramebufferAttachmentImageInfo].none()"
+    argtype="NullablePointer[VkFramebufferAttachmentImageInfo] tag"
+    rvtype="NullablePointer[VkFramebufferAttachmentImageInfo]"/>
+
+  <typedef name="VkComponentMapping"
+    ponytypein="VkComponentMapping tag"
+    ponytypeinconv=""
+    ponytypeout="VkComponentMapping"
+    structtype="VkComponentMapping"
+    structdef="VkComponentMapping"
+    argtype="VkComponentMapping tag"
+    rvtype="VkComponentMapping"/>
+
+  <typedef name="NullablePointer[VkSubpassDescription]"
+    ponytypein="NullablePointer[VkSubpassDescription] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSubpassDescription]"
+    structtype="NullablePointer[VkSubpassDescription]"
+    structdef="NullablePointer[VkSubpassDescription].none()"
+    argtype="NullablePointer[VkSubpassDescription] tag"
+    rvtype="NullablePointer[VkSubpassDescription]"/>
+
+  <typedef name="Pointer[F32]"
+    ponytypein="Pointer[F32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[F32]"
+    structtype="Pointer[F32]"
+    structdef="Pointer[F32]"
+    argtype="Pointer[F32] tag"
+    rvtype="Pointer[F32]"/>
+
+  <typedef name="NullablePointer[VkDescriptorBufferInfo]"
+    ponytypein="NullablePointer[VkDescriptorBufferInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorBufferInfo]"
+    structtype="NullablePointer[VkDescriptorBufferInfo]"
+    structdef="NullablePointer[VkDescriptorBufferInfo].none()"
+    argtype="NullablePointer[VkDescriptorBufferInfo] tag"
+    rvtype="NullablePointer[VkDescriptorBufferInfo]"/>
+
+  <typedef name="Pointer[None]"
+    ponytypein="Pointer[None] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[None]"
+    structtype="Pointer[None]"
+    structdef="Pointer[None]"
+    argtype="Pointer[None] tag"
+    rvtype="Pointer[None]"/>
+
+  <typedef name="NullablePointer[VkIndirectCommandsStreamNV]"
+    ponytypein="NullablePointer[VkIndirectCommandsStreamNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkIndirectCommandsStreamNV]"
+    structtype="NullablePointer[VkIndirectCommandsStreamNV]"
+    structdef="NullablePointer[VkIndirectCommandsStreamNV].none()"
+    argtype="NullablePointer[VkIndirectCommandsStreamNV] tag"
+    rvtype="NullablePointer[VkIndirectCommandsStreamNV]"/>
+
+  <typedef name="NullablePointer[VkCuFunctionNVXT]"
+    ponytypein="NullablePointer[VkCuFunctionNVXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCuFunctionNVXT]"
+    structtype="NullablePointer[VkCuFunctionNVXT]"
+    structdef="NullablePointer[VkCuFunctionNVXT].none()"
+    argtype="NullablePointer[VkCuFunctionNVXT] tag"
+    rvtype="NullablePointer[VkCuFunctionNVXT]"/>
+
+  <typedef name="I32"
+    ponytypein="I32"
+    ponytypeinconv=""
+    ponytypeout="I32"
+    structtype="I32"
+    structdef="I32(0)"
+    argtype="I32"
+    rvtype="I32"/>
+
+  <typedef name="NullablePointer[VkCoarseSampleLocationNV]"
+    ponytypein="NullablePointer[VkCoarseSampleLocationNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCoarseSampleLocationNV]"
+    structtype="NullablePointer[VkCoarseSampleLocationNV]"
+    structdef="NullablePointer[VkCoarseSampleLocationNV].none()"
+    argtype="NullablePointer[VkCoarseSampleLocationNV] tag"
+    rvtype="NullablePointer[VkCoarseSampleLocationNV]"/>
+
+  <typedef name="Pointer[U32]"
+    ponytypein="Pointer[U32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U32]"
+    structtype="Pointer[U32]"
+    structdef="Pointer[U32]"
+    argtype="Pointer[U32] tag"
+    rvtype="Pointer[U32]"/>
+
+  <typedef name="NullablePointer[VkPipelineTessellationStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineTessellationStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineTessellationStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineTessellationStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineTessellationStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineTessellationStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineTessellationStateCreateInfo]"/>
+
+  <typedef name="Pointer[VkMemoryHeap]"
+    ponytypein="Pointer[VkMemoryHeap] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[VkMemoryHeap]"
+    structtype="Pointer[VkMemoryHeap]"
+    structdef="Pointer[VkMemoryHeap]"
+    argtype="Pointer[VkMemoryHeap] tag"
+    rvtype="Pointer[VkMemoryHeap]"/>
+
+  <typedef name="NullablePointer[VkDebugUtilsObjectNameInfoEXT]"
+    ponytypein="NullablePointer[VkDebugUtilsObjectNameInfoEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDebugUtilsObjectNameInfoEXT]"
+    structtype="NullablePointer[VkDebugUtilsObjectNameInfoEXT]"
+    structdef="NullablePointer[VkDebugUtilsObjectNameInfoEXT].none()"
+    argtype="NullablePointer[VkDebugUtilsObjectNameInfoEXT] tag"
+    rvtype="NullablePointer[VkDebugUtilsObjectNameInfoEXT]"/>
+
+  <typedef name="NullablePointer[VkValidationCacheEXTT]"
+    ponytypein="NullablePointer[VkValidationCacheEXTT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkValidationCacheEXTT]"
+    structtype="NullablePointer[VkValidationCacheEXTT]"
+    structdef="NullablePointer[VkValidationCacheEXTT].none()"
+    argtype="NullablePointer[VkValidationCacheEXTT] tag"
+    rvtype="NullablePointer[VkValidationCacheEXTT]"/>
+
+  <typedef name="NullablePointer[Pointer[None]]"
+    ponytypein="NullablePointer[Pointer[None]] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[Pointer[None]]"
+    structtype="NullablePointer[Pointer[None]]"
+    structdef="NullablePointer[Pointer[None]].none()"
+    argtype="NullablePointer[Pointer[None]] tag"
+    rvtype="NullablePointer[Pointer[None]]"/>
+
+  <typedef name="NullablePointer[VkCuModuleNVXT]"
+    ponytypein="NullablePointer[VkCuModuleNVXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCuModuleNVXT]"
+    structtype="NullablePointer[VkCuModuleNVXT]"
+    structdef="NullablePointer[VkCuModuleNVXT].none()"
+    argtype="NullablePointer[VkCuModuleNVXT] tag"
+    rvtype="NullablePointer[VkCuModuleNVXT]"/>
+
+  <typedef name="VkSparseImageFormatProperties"
+    ponytypein="VkSparseImageFormatProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkSparseImageFormatProperties"
+    structtype="VkSparseImageFormatProperties"
+    structdef="VkSparseImageFormatProperties"
+    argtype="VkSparseImageFormatProperties tag"
+    rvtype="VkSparseImageFormatProperties"/>
+
+  <typedef name="NullablePointer[VkSparseImageMemoryBindInfo]"
+    ponytypein="NullablePointer[VkSparseImageMemoryBindInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSparseImageMemoryBindInfo]"
+    structtype="NullablePointer[VkSparseImageMemoryBindInfo]"
+    structdef="NullablePointer[VkSparseImageMemoryBindInfo].none()"
+    argtype="NullablePointer[VkSparseImageMemoryBindInfo] tag"
+    rvtype="NullablePointer[VkSparseImageMemoryBindInfo]"/>
+
+  <typedef name="NullablePointer[VkSubpassSampleLocationsEXT]"
+    ponytypein="NullablePointer[VkSubpassSampleLocationsEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSubpassSampleLocationsEXT]"
+    structtype="NullablePointer[VkSubpassSampleLocationsEXT]"
+    structdef="NullablePointer[VkSubpassSampleLocationsEXT].none()"
+    argtype="NullablePointer[VkSubpassSampleLocationsEXT] tag"
+    rvtype="NullablePointer[VkSubpassSampleLocationsEXT]"/>
+
+  <typedef name="VkSRTDataNV"
+    ponytypein="VkSRTDataNV tag"
+    ponytypeinconv=""
+    ponytypeout="VkSRTDataNV"
+    structtype="VkSRTDataNV"
+    structdef="VkSRTDataNV"
+    argtype="VkSRTDataNV tag"
+    rvtype="VkSRTDataNV"/>
+
+  <typedef name="NullablePointer[VkDebugUtilsLabelEXT]"
+    ponytypein="NullablePointer[VkDebugUtilsLabelEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDebugUtilsLabelEXT]"
+    structtype="NullablePointer[VkDebugUtilsLabelEXT]"
+    structdef="NullablePointer[VkDebugUtilsLabelEXT].none()"
+    argtype="NullablePointer[VkDebugUtilsLabelEXT] tag"
+    rvtype="NullablePointer[VkDebugUtilsLabelEXT]"/>
+
+  <typedef name="VkShaderResourceUsageAMD"
+    ponytypein="VkShaderResourceUsageAMD tag"
+    ponytypeinconv=""
+    ponytypeout="VkShaderResourceUsageAMD"
+    structtype="VkShaderResourceUsageAMD"
+    structdef="VkShaderResourceUsageAMD"
+    argtype="VkShaderResourceUsageAMD tag"
+    rvtype="VkShaderResourceUsageAMD"/>
+
+  <typedef name="U16"
+    ponytypein="U16"
+    ponytypeinconv=""
+    ponytypeout="U16"
+    structtype="U16"
+    structdef="U16(0)"
+    argtype="U16"
+    rvtype="U16"/>
+
+  <typedef name="None"
+    ponytypein="None tag"
+    ponytypeinconv=""
+    ponytypeout="None"
+    structtype="None"
+    structdef="None"
+    argtype="None tag"
+    rvtype="None"/>
+
+  <typedef name="NullablePointer[VkImageCopy2KHR]"
+    ponytypein="NullablePointer[VkImageCopy2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkImageCopy2KHR]"
+    structtype="NullablePointer[VkImageCopy2KHR]"
+    structdef="NullablePointer[VkImageCopy2KHR].none()"
+    argtype="NullablePointer[VkImageCopy2KHR] tag"
+    rvtype="NullablePointer[VkImageCopy2KHR]"/>
+
+  <typedef name="NullablePointer[VkVertexInputAttributeDescription]"
+    ponytypein="NullablePointer[VkVertexInputAttributeDescription] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkVertexInputAttributeDescription]"
+    structtype="NullablePointer[VkVertexInputAttributeDescription]"
+    structdef="NullablePointer[VkVertexInputAttributeDescription].none()"
+    argtype="NullablePointer[VkVertexInputAttributeDescription] tag"
+    rvtype="NullablePointer[VkVertexInputAttributeDescription]"/>
+
+  <typedef name="NullablePointer[VkPresentTimeGOOGLE]"
+    ponytypein="NullablePointer[VkPresentTimeGOOGLE] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPresentTimeGOOGLE]"
+    structtype="NullablePointer[VkPresentTimeGOOGLE]"
+    structdef="NullablePointer[VkPresentTimeGOOGLE].none()"
+    argtype="NullablePointer[VkPresentTimeGOOGLE] tag"
+    rvtype="NullablePointer[VkPresentTimeGOOGLE]"/>
+
+  <typedef name="NullablePointer[VkBufferCopy2KHR]"
+    ponytypein="NullablePointer[VkBufferCopy2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkBufferCopy2KHR]"
+    structtype="NullablePointer[VkBufferCopy2KHR]"
+    structdef="NullablePointer[VkBufferCopy2KHR].none()"
+    argtype="NullablePointer[VkBufferCopy2KHR] tag"
+    rvtype="NullablePointer[VkBufferCopy2KHR]"/>
+
+  <typedef name="VkPhysicalDeviceLimits"
+    ponytypein="VkPhysicalDeviceLimits tag"
+    ponytypeinconv=""
+    ponytypeout="VkPhysicalDeviceLimits"
+    structtype="VkPhysicalDeviceLimits"
+    structdef="VkPhysicalDeviceLimits"
+    argtype="VkPhysicalDeviceLimits tag"
+    rvtype="VkPhysicalDeviceLimits"/>
+
+  <typedef name="NullablePointer[VkSparseBufferMemoryBindInfo]"
+    ponytypein="NullablePointer[VkSparseBufferMemoryBindInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSparseBufferMemoryBindInfo]"
+    structtype="NullablePointer[VkSparseBufferMemoryBindInfo]"
+    structdef="NullablePointer[VkSparseBufferMemoryBindInfo].none()"
+    argtype="NullablePointer[VkSparseBufferMemoryBindInfo] tag"
+    rvtype="NullablePointer[VkSparseBufferMemoryBindInfo]"/>
+
+  <typedef name="NullablePointer[VkPipelineCreationFeedbackEXT]"
+    ponytypein="NullablePointer[VkPipelineCreationFeedbackEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineCreationFeedbackEXT]"
+    structtype="NullablePointer[VkPipelineCreationFeedbackEXT]"
+    structdef="NullablePointer[VkPipelineCreationFeedbackEXT].none()"
+    argtype="NullablePointer[VkPipelineCreationFeedbackEXT] tag"
+    rvtype="NullablePointer[VkPipelineCreationFeedbackEXT]"/>
+
+  <typedef name="NullablePointer[VkPresentRegionKHR]"
+    ponytypein="NullablePointer[VkPresentRegionKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPresentRegionKHR]"
+    structtype="NullablePointer[VkPresentRegionKHR]"
+    structdef="NullablePointer[VkPresentRegionKHR].none()"
+    argtype="NullablePointer[VkPresentRegionKHR] tag"
+    rvtype="NullablePointer[VkPresentRegionKHR]"/>
+
+  <typedef name="NullablePointer[VkPipelineInputAssemblyStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineInputAssemblyStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineInputAssemblyStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineInputAssemblyStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineInputAssemblyStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineInputAssemblyStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineInputAssemblyStateCreateInfo]"/>
+
+  <typedef name="VkDisplayPlanePropertiesKHR"
+    ponytypein="VkDisplayPlanePropertiesKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkDisplayPlanePropertiesKHR"
+    structtype="VkDisplayPlanePropertiesKHR"
+    structdef="VkDisplayPlanePropertiesKHR"
+    argtype="VkDisplayPlanePropertiesKHR tag"
+    rvtype="VkDisplayPlanePropertiesKHR"/>
+
+  <typedef name="VkConformanceVersion"
+    ponytypein="VkConformanceVersion tag"
+    ponytypeinconv=""
+    ponytypeout="VkConformanceVersion"
+    structtype="VkConformanceVersion"
+    structdef="VkConformanceVersion"
+    argtype="VkConformanceVersion tag"
+    rvtype="VkConformanceVersion"/>
+
+  <typedef name="VkImageSubresource"
+    ponytypein="VkImageSubresource tag"
+    ponytypeinconv=""
+    ponytypeout="VkImageSubresource"
+    structtype="VkImageSubresource"
+    structdef="VkImageSubresource"
+    argtype="VkImageSubresource tag"
+    rvtype="VkImageSubresource"/>
+
+  <typedef name="NullablePointer[VkDisplayKHRT]"
+    ponytypein="NullablePointer[VkDisplayKHRT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDisplayKHRT]"
+    structtype="NullablePointer[VkDisplayKHRT]"
+    structdef="NullablePointer[VkDisplayKHRT].none()"
+    argtype="NullablePointer[VkDisplayKHRT] tag"
+    rvtype="NullablePointer[VkDisplayKHRT]"/>
+
+  <typedef name="NullablePointer[VkDescriptorSetLayoutBinding]"
+    ponytypein="NullablePointer[VkDescriptorSetLayoutBinding] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorSetLayoutBinding]"
+    structtype="NullablePointer[VkDescriptorSetLayoutBinding]"
+    structdef="NullablePointer[VkDescriptorSetLayoutBinding].none()"
+    argtype="NullablePointer[VkDescriptorSetLayoutBinding] tag"
+    rvtype="NullablePointer[VkDescriptorSetLayoutBinding]"/>
+
+  <typedef name="NullablePointer[VkAttachmentReference]"
+    ponytypein="NullablePointer[VkAttachmentReference] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAttachmentReference]"
+    structtype="NullablePointer[VkAttachmentReference]"
+    structdef="NullablePointer[VkAttachmentReference].none()"
+    argtype="NullablePointer[VkAttachmentReference] tag"
+    rvtype="NullablePointer[VkAttachmentReference]"/>
+
+  <typedef name="VkDisplayModePropertiesKHR"
+    ponytypein="VkDisplayModePropertiesKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkDisplayModePropertiesKHR"
+    structtype="VkDisplayModePropertiesKHR"
+    structdef="VkDisplayModePropertiesKHR"
+    argtype="VkDisplayModePropertiesKHR tag"
+    rvtype="VkDisplayModePropertiesKHR"/>
+
+  <typedef name="NullablePointer[VkSamplerT]"
+    ponytypein="NullablePointer[VkSamplerT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSamplerT]"
+    structtype="NullablePointer[VkSamplerT]"
+    structdef="NullablePointer[VkSamplerT].none()"
+    argtype="NullablePointer[VkSamplerT] tag"
+    rvtype="NullablePointer[VkSamplerT]"/>
+
+  <typedef name="NullablePointer[VkImageViewT]"
+    ponytypein="NullablePointer[VkImageViewT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkImageViewT]"
+    structtype="NullablePointer[VkImageViewT]"
+    structdef="NullablePointer[VkImageViewT].none()"
+    argtype="NullablePointer[VkImageViewT] tag"
+    rvtype="NullablePointer[VkImageViewT]"/>
+
+  <typedef name="NullablePointer[VkSemaphoreSubmitInfoKHR]"
+    ponytypein="NullablePointer[VkSemaphoreSubmitInfoKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSemaphoreSubmitInfoKHR]"
+    structtype="NullablePointer[VkSemaphoreSubmitInfoKHR]"
+    structdef="NullablePointer[VkSemaphoreSubmitInfoKHR].none()"
+    argtype="NullablePointer[VkSemaphoreSubmitInfoKHR] tag"
+    rvtype="NullablePointer[VkSemaphoreSubmitInfoKHR]"/>
+
+  <typedef name="VkGeometryAABBNV"
+    ponytypein="VkGeometryAABBNV tag"
+    ponytypeinconv=""
+    ponytypeout="VkGeometryAABBNV"
+    structtype="VkGeometryAABBNV"
+    structdef="VkGeometryAABBNV"
+    argtype="VkGeometryAABBNV tag"
+    rvtype="VkGeometryAABBNV"/>
+
+  <typedef name="NullablePointer[VkViewportSwizzleNV]"
+    ponytypein="NullablePointer[VkViewportSwizzleNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkViewportSwizzleNV]"
+    structtype="NullablePointer[VkViewportSwizzleNV]"
+    structdef="NullablePointer[VkViewportSwizzleNV].none()"
+    argtype="NullablePointer[VkViewportSwizzleNV] tag"
+    rvtype="NullablePointer[VkViewportSwizzleNV]"/>
+
+  <typedef name="NullablePointer[VkDeviceMemoryT]"
+    ponytypein="NullablePointer[VkDeviceMemoryT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDeviceMemoryT]"
+    structtype="NullablePointer[VkDeviceMemoryT]"
+    structdef="NullablePointer[VkDeviceMemoryT].none()"
+    argtype="NullablePointer[VkDeviceMemoryT] tag"
+    rvtype="NullablePointer[VkDeviceMemoryT]"/>
+
+  <typedef name="NullablePointer[VkRenderPassT]"
+    ponytypein="NullablePointer[VkRenderPassT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkRenderPassT]"
+    structtype="NullablePointer[VkRenderPassT]"
+    structdef="NullablePointer[VkRenderPassT].none()"
+    argtype="NullablePointer[VkRenderPassT] tag"
+    rvtype="NullablePointer[VkRenderPassT]"/>
+
+  <typedef name="VkExtent3D"
+    ponytypein="VkExtent3D tag"
+    ponytypeinconv=""
+    ponytypeout="VkExtent3D"
+    structtype="VkExtent3D"
+    structdef="VkExtent3D"
+    argtype="VkExtent3D tag"
+    rvtype="VkExtent3D"/>
+
+  <typedef name="NullablePointer[VkPushConstantRange]"
+    ponytypein="NullablePointer[VkPushConstantRange] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPushConstantRange]"
+    structtype="NullablePointer[VkPushConstantRange]"
+    structdef="NullablePointer[VkPushConstantRange].none()"
+    argtype="NullablePointer[VkPushConstantRange] tag"
+    rvtype="NullablePointer[VkPushConstantRange]"/>
+
+  <typedef name="NullablePointer[VkAttachmentDescription]"
+    ponytypein="NullablePointer[VkAttachmentDescription] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAttachmentDescription]"
+    structtype="NullablePointer[VkAttachmentDescription]"
+    structdef="NullablePointer[VkAttachmentDescription].none()"
+    argtype="NullablePointer[VkAttachmentDescription] tag"
+    rvtype="NullablePointer[VkAttachmentDescription]"/>
+
+  <typedef name="NullablePointer[VkShadingRatePaletteNV]"
+    ponytypein="NullablePointer[VkShadingRatePaletteNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkShadingRatePaletteNV]"
+    structtype="NullablePointer[VkShadingRatePaletteNV]"
+    structdef="NullablePointer[VkShadingRatePaletteNV].none()"
+    argtype="NullablePointer[VkShadingRatePaletteNV] tag"
+    rvtype="NullablePointer[VkShadingRatePaletteNV]"/>
+
+  <typedef name="Array[NullablePointer[VkCommandBufferT]]"
+    ponytypein="Array[NullablePointer[VkCommandBufferT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkCommandBufferT]]"
+    structtype="Array[NullablePointer[VkCommandBufferT]]"
+    structdef="Array[NullablePointer[VkCommandBufferT]]"
+    argtype="Array[NullablePointer[VkCommandBufferT]] tag"
+    rvtype="Array[NullablePointer[VkCommandBufferT]]"/>
+
+  <typedef name="Array[NullablePointer[VkImageViewT]]"
+    ponytypein="Array[NullablePointer[VkImageViewT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkImageViewT]]"
+    structtype="Array[NullablePointer[VkImageViewT]]"
+    structdef="Array[NullablePointer[VkImageViewT]]"
+    argtype="Array[NullablePointer[VkImageViewT]] tag"
+    rvtype="Array[NullablePointer[VkImageViewT]]"/>
+
+  <typedef name="NullablePointer[VkVertexInputBindingDivisorDescriptionEXT]"
+    ponytypein="NullablePointer[VkVertexInputBindingDivisorDescriptionEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkVertexInputBindingDivisorDescriptionEXT]"
+    structtype="NullablePointer[VkVertexInputBindingDivisorDescriptionEXT]"
+    structdef="NullablePointer[VkVertexInputBindingDivisorDescriptionEXT].none()"
+    argtype="NullablePointer[VkVertexInputBindingDivisorDescriptionEXT] tag"
+    rvtype="NullablePointer[VkVertexInputBindingDivisorDescriptionEXT]"/>
+
+  <typedef name="U32"
+    ponytypein="U32"
+    ponytypeinconv=""
+    ponytypeout="U32"
+    structtype="U32"
+    structdef="U32(0)"
+    argtype="U32"
+    rvtype="U32"/>
+
+  <typedef name="NullablePointer[VkDisplayModeKHRT]"
+    ponytypein="NullablePointer[VkDisplayModeKHRT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDisplayModeKHRT]"
+    structtype="NullablePointer[VkDisplayModeKHRT]"
+    structdef="NullablePointer[VkDisplayModeKHRT].none()"
+    argtype="NullablePointer[VkDisplayModeKHRT] tag"
+    rvtype="NullablePointer[VkDisplayModeKHRT]"/>
+
+  <typedef name="NullablePointer[VkImageBlit2KHR]"
+    ponytypein="NullablePointer[VkImageBlit2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkImageBlit2KHR]"
+    structtype="NullablePointer[VkImageBlit2KHR]"
+    structdef="NullablePointer[VkImageBlit2KHR].none()"
+    argtype="NullablePointer[VkImageBlit2KHR] tag"
+    rvtype="NullablePointer[VkImageBlit2KHR]"/>
+
+  <typedef name="NullablePointer[VkSubpassDescription2]"
+    ponytypein="NullablePointer[VkSubpassDescription2] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSubpassDescription2]"
+    structtype="NullablePointer[VkSubpassDescription2]"
+    structdef="NullablePointer[VkSubpassDescription2].none()"
+    argtype="NullablePointer[VkSubpassDescription2] tag"
+    rvtype="NullablePointer[VkSubpassDescription2]"/>
+
+  <typedef name="NullablePointer[VkImageMemoryBarrier2KHR]"
+    ponytypein="NullablePointer[VkImageMemoryBarrier2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkImageMemoryBarrier2KHR]"
+    structtype="NullablePointer[VkImageMemoryBarrier2KHR]"
+    structdef="NullablePointer[VkImageMemoryBarrier2KHR].none()"
+    argtype="NullablePointer[VkImageMemoryBarrier2KHR] tag"
+    rvtype="NullablePointer[VkImageMemoryBarrier2KHR]"/>
+
+  <typedef name="NullablePointer[VkPipelineLibraryCreateInfoKHR]"
+    ponytypein="NullablePointer[VkPipelineLibraryCreateInfoKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineLibraryCreateInfoKHR]"
+    structtype="NullablePointer[VkPipelineLibraryCreateInfoKHR]"
+    structdef="NullablePointer[VkPipelineLibraryCreateInfoKHR].none()"
+    argtype="NullablePointer[VkPipelineLibraryCreateInfoKHR] tag"
+    rvtype="NullablePointer[VkPipelineLibraryCreateInfoKHR]"/>
+
+  <typedef name="NullablePointer[VkDescriptorPoolT]"
+    ponytypein="NullablePointer[VkDescriptorPoolT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorPoolT]"
+    structtype="NullablePointer[VkDescriptorPoolT]"
+    structdef="NullablePointer[VkDescriptorPoolT].none()"
+    argtype="NullablePointer[VkDescriptorPoolT] tag"
+    rvtype="NullablePointer[VkDescriptorPoolT]"/>
+
+  <typedef name="NullablePointer[VkViewportWScalingNV]"
+    ponytypein="NullablePointer[VkViewportWScalingNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkViewportWScalingNV]"
+    structtype="NullablePointer[VkViewportWScalingNV]"
+    structdef="NullablePointer[VkViewportWScalingNV].none()"
+    argtype="NullablePointer[VkViewportWScalingNV] tag"
+    rvtype="NullablePointer[VkViewportWScalingNV]"/>
+
+  <typedef name="NullablePointer[VkPipelineShaderStageCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineShaderStageCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineShaderStageCreateInfo]"
+    structtype="NullablePointer[VkPipelineShaderStageCreateInfo]"
+    structdef="NullablePointer[VkPipelineShaderStageCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineShaderStageCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineShaderStageCreateInfo]"/>
+
+  <typedef name="VkStencilOpState"
+    ponytypein="VkStencilOpState tag"
+    ponytypeinconv=""
+    ponytypeout="VkStencilOpState"
+    structtype="VkStencilOpState"
+    structdef="VkStencilOpState"
+    argtype="VkStencilOpState tag"
+    rvtype="VkStencilOpState"/>
+
+  <typedef name="Pointer[VkMemoryType]"
+    ponytypein="Pointer[VkMemoryType] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[VkMemoryType]"
+    structtype="Pointer[VkMemoryType]"
+    structdef="Pointer[VkMemoryType]"
+    argtype="Pointer[VkMemoryType] tag"
+    rvtype="Pointer[VkMemoryType]"/>
+
+  <typedef name="VkSparseImageMemoryRequirements"
+    ponytypein="VkSparseImageMemoryRequirements tag"
+    ponytypeinconv=""
+    ponytypeout="VkSparseImageMemoryRequirements"
+    structtype="VkSparseImageMemoryRequirements"
+    structdef="VkSparseImageMemoryRequirements"
+    argtype="VkSparseImageMemoryRequirements tag"
+    rvtype="VkSparseImageMemoryRequirements"/>
+
+  <typedef name="VkSurfaceCapabilitiesKHR"
+    ponytypein="VkSurfaceCapabilitiesKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkSurfaceCapabilitiesKHR"
+    structtype="VkSurfaceCapabilitiesKHR"
+    structdef="VkSurfaceCapabilitiesKHR"
+    argtype="VkSurfaceCapabilitiesKHR tag"
+    rvtype="VkSurfaceCapabilitiesKHR"/>
+
+  <typedef name="NullablePointer[VkPipelineColorBlendAttachmentState]"
+    ponytypein="NullablePointer[VkPipelineColorBlendAttachmentState] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineColorBlendAttachmentState]"
+    structtype="NullablePointer[VkPipelineColorBlendAttachmentState]"
+    structdef="NullablePointer[VkPipelineColorBlendAttachmentState].none()"
+    argtype="NullablePointer[VkPipelineColorBlendAttachmentState] tag"
+    rvtype="NullablePointer[VkPipelineColorBlendAttachmentState]"/>
+
+  <typedef name="NullablePointer[VkSemaphoreT]"
+    ponytypein="NullablePointer[VkSemaphoreT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSemaphoreT]"
+    structtype="NullablePointer[VkSemaphoreT]"
+    structdef="NullablePointer[VkSemaphoreT].none()"
+    argtype="NullablePointer[VkSemaphoreT] tag"
+    rvtype="NullablePointer[VkSemaphoreT]"/>
+
+  <typedef name="VkAttachmentReference"
+    ponytypein="VkAttachmentReference tag"
+    ponytypeinconv=""
+    ponytypeout="VkAttachmentReference"
+    structtype="VkAttachmentReference"
+    structdef="VkAttachmentReference"
+    argtype="VkAttachmentReference tag"
+    rvtype="VkAttachmentReference"/>
+
+  <typedef name="NullablePointer[VkBufferMemoryBarrier2KHR]"
+    ponytypein="NullablePointer[VkBufferMemoryBarrier2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkBufferMemoryBarrier2KHR]"
+    structtype="NullablePointer[VkBufferMemoryBarrier2KHR]"
+    structdef="NullablePointer[VkBufferMemoryBarrier2KHR].none()"
+    argtype="NullablePointer[VkBufferMemoryBarrier2KHR] tag"
+    rvtype="NullablePointer[VkBufferMemoryBarrier2KHR]"/>
+
+  <typedef name="NullablePointer[VkCommandBufferSubmitInfoKHR]"
+    ponytypein="NullablePointer[VkCommandBufferSubmitInfoKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCommandBufferSubmitInfoKHR]"
+    structtype="NullablePointer[VkCommandBufferSubmitInfoKHR]"
+    structdef="NullablePointer[VkCommandBufferSubmitInfoKHR].none()"
+    argtype="NullablePointer[VkCommandBufferSubmitInfoKHR] tag"
+    rvtype="NullablePointer[VkCommandBufferSubmitInfoKHR]"/>
+
+  <typedef name="VkXYColorEXT"
+    ponytypein="VkXYColorEXT tag"
+    ponytypeinconv=""
+    ponytypeout="VkXYColorEXT"
+    structtype="VkXYColorEXT"
+    structdef="VkXYColorEXT"
+    argtype="VkXYColorEXT tag"
+    rvtype="VkXYColorEXT"/>
+
+  <typedef name="NullablePointer[VkVertexInputBindingDescription]"
+    ponytypein="NullablePointer[VkVertexInputBindingDescription] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkVertexInputBindingDescription]"
+    structtype="NullablePointer[VkVertexInputBindingDescription]"
+    structdef="NullablePointer[VkVertexInputBindingDescription].none()"
+    argtype="NullablePointer[VkVertexInputBindingDescription] tag"
+    rvtype="NullablePointer[VkVertexInputBindingDescription]"/>
+
+  <typedef name="NullablePointer[VkSampleLocationEXT]"
+    ponytypein="NullablePointer[VkSampleLocationEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSampleLocationEXT]"
+    structtype="NullablePointer[VkSampleLocationEXT]"
+    structdef="NullablePointer[VkSampleLocationEXT].none()"
+    argtype="NullablePointer[VkSampleLocationEXT] tag"
+    rvtype="NullablePointer[VkSampleLocationEXT]"/>
+
+  <typedef name="Array[NullablePointer[VkAccelerationStructureGeometryKHR]]"
+    ponytypein="Array[NullablePointer[VkAccelerationStructureGeometryKHR]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkAccelerationStructureGeometryKHR]]"
+    structtype="Array[NullablePointer[VkAccelerationStructureGeometryKHR]]"
+    structdef="Array[NullablePointer[VkAccelerationStructureGeometryKHR]]"
+    argtype="Array[NullablePointer[VkAccelerationStructureGeometryKHR]] tag"
+    rvtype="Array[NullablePointer[VkAccelerationStructureGeometryKHR]]"/>
+
+  <typedef name="VkImageSubresourceRange"
+    ponytypein="VkImageSubresourceRange tag"
+    ponytypeinconv=""
+    ponytypeout="VkImageSubresourceRange"
+    structtype="VkImageSubresourceRange"
+    structdef="VkImageSubresourceRange"
+    argtype="VkImageSubresourceRange tag"
+    rvtype="VkImageSubresourceRange"/>
+
+  <typedef name="NullablePointer[VkRect2D]"
+    ponytypein="NullablePointer[VkRect2D] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkRect2D]"
+    structtype="NullablePointer[VkRect2D]"
+    structdef="NullablePointer[VkRect2D].none()"
+    argtype="NullablePointer[VkRect2D] tag"
+    rvtype="NullablePointer[VkRect2D]"/>
+
+  <typedef name="NullablePointer[VkSubresourceLayout]"
+    ponytypein="NullablePointer[VkSubresourceLayout] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSubresourceLayout]"
+    structtype="NullablePointer[VkSubresourceLayout]"
+    structdef="NullablePointer[VkSubresourceLayout].none()"
+    argtype="NullablePointer[VkSubresourceLayout] tag"
+    rvtype="NullablePointer[VkSubresourceLayout]"/>
+
+  <typedef name="VkImageSubresourceLayers"
+    ponytypein="VkImageSubresourceLayers tag"
+    ponytypeinconv=""
+    ponytypeout="VkImageSubresourceLayers"
+    structtype="VkImageSubresourceLayers"
+    structdef="VkImageSubresourceLayers"
+    argtype="VkImageSubresourceLayers tag"
+    rvtype="VkImageSubresourceLayers"/>
+
+  <typedef name="Array[NullablePointer[VkPhysicalDeviceT]]"
+    ponytypein="Array[NullablePointer[VkPhysicalDeviceT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkPhysicalDeviceT]]"
+    structtype="Array[NullablePointer[VkPhysicalDeviceT]]"
+    structdef="Array[NullablePointer[VkPhysicalDeviceT]]"
+    argtype="Array[NullablePointer[VkPhysicalDeviceT]] tag"
+    rvtype="Array[NullablePointer[VkPhysicalDeviceT]]"/>
+
+  <typedef name="VkPhysicalDeviceSparseProperties"
+    ponytypein="VkPhysicalDeviceSparseProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkPhysicalDeviceSparseProperties"
+    structtype="VkPhysicalDeviceSparseProperties"
+    structdef="VkPhysicalDeviceSparseProperties"
+    argtype="VkPhysicalDeviceSparseProperties tag"
+    rvtype="VkPhysicalDeviceSparseProperties"/>
+
+  <typedef name="NullablePointer[VkSwapchainKHRT]"
+    ponytypein="NullablePointer[VkSwapchainKHRT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSwapchainKHRT]"
+    structtype="NullablePointer[VkSwapchainKHRT]"
+    structdef="NullablePointer[VkSwapchainKHRT].none()"
+    argtype="NullablePointer[VkSwapchainKHRT] tag"
+    rvtype="NullablePointer[VkSwapchainKHRT]"/>
+
+  <typedef name="NullablePointer[VkAttachmentSampleLocationsEXT]"
+    ponytypein="NullablePointer[VkAttachmentSampleLocationsEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAttachmentSampleLocationsEXT]"
+    structtype="NullablePointer[VkAttachmentSampleLocationsEXT]"
+    structdef="NullablePointer[VkAttachmentSampleLocationsEXT].none()"
+    argtype="NullablePointer[VkAttachmentSampleLocationsEXT] tag"
+    rvtype="NullablePointer[VkAttachmentSampleLocationsEXT]"/>
+
+  <typedef name="Array[NullablePointer[VkAccelerationStructureKHRT]]"
+    ponytypein="Array[NullablePointer[VkAccelerationStructureKHRT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkAccelerationStructureKHRT]]"
+    structtype="Array[NullablePointer[VkAccelerationStructureKHRT]]"
+    structdef="Array[NullablePointer[VkAccelerationStructureKHRT]]"
+    argtype="Array[NullablePointer[VkAccelerationStructureKHRT]] tag"
+    rvtype="Array[NullablePointer[VkAccelerationStructureKHRT]]"/>
+
+  <typedef name="NullablePointer[VkBufferT]"
+    ponytypein="NullablePointer[VkBufferT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkBufferT]"
+    structtype="NullablePointer[VkBufferT]"
+    structdef="NullablePointer[VkBufferT].none()"
+    argtype="NullablePointer[VkBufferT] tag"
+    rvtype="NullablePointer[VkBufferT]"/>
+
+  <typedef name="Array[NullablePointer[VkAccelerationStructureNVT]]"
+    ponytypein="Array[NullablePointer[VkAccelerationStructureNVT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkAccelerationStructureNVT]]"
+    structtype="Array[NullablePointer[VkAccelerationStructureNVT]]"
+    structdef="Array[NullablePointer[VkAccelerationStructureNVT]]"
+    argtype="Array[NullablePointer[VkAccelerationStructureNVT]] tag"
+    rvtype="Array[NullablePointer[VkAccelerationStructureNVT]]"/>
+
+  <typedef name="NullablePointer[VkAccelerationStructureKHRT]"
+    ponytypein="NullablePointer[VkAccelerationStructureKHRT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkAccelerationStructureKHRT]"
+    structtype="NullablePointer[VkAccelerationStructureKHRT]"
+    structdef="NullablePointer[VkAccelerationStructureKHRT].none()"
+    argtype="NullablePointer[VkAccelerationStructureKHRT] tag"
+    rvtype="NullablePointer[VkAccelerationStructureKHRT]"/>
+
+  <typedef name="Pointer[U8]"
+    ponytypein="Pointer[U8] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[U8]"
+    structtype="Pointer[U8]"
+    structdef="Pointer[U8]"
+    argtype="Pointer[U8] tag"
+    rvtype="Pointer[U8]"/>
+
+  <typedef name="VkOffset2D"
+    ponytypein="VkOffset2D tag"
+    ponytypeinconv=""
+    ponytypeout="VkOffset2D"
+    structtype="VkOffset2D"
+    structdef="VkOffset2D"
+    argtype="VkOffset2D tag"
+    rvtype="VkOffset2D"/>
+
+  <typedef name="NullablePointer[VkPipelineDynamicStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineDynamicStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineDynamicStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineDynamicStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineDynamicStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineDynamicStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineDynamicStateCreateInfo]"/>
+
+  <typedef name="VkImageFormatProperties"
+    ponytypein="VkImageFormatProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkImageFormatProperties"
+    structtype="VkImageFormatProperties"
+    structdef="VkImageFormatProperties"
+    argtype="VkImageFormatProperties tag"
+    rvtype="VkImageFormatProperties"/>
+
+  <typedef name="NullablePointer[VkSubpassDependency]"
+    ponytypein="NullablePointer[VkSubpassDependency] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSubpassDependency]"
+    structtype="NullablePointer[VkSubpassDependency]"
+    structdef="NullablePointer[VkSubpassDependency].none()"
+    argtype="NullablePointer[VkSubpassDependency] tag"
+    rvtype="NullablePointer[VkSubpassDependency]"/>
+
+  <typedef name="NullablePointer[VkRayTracingShaderGroupCreateInfoNV]"
+    ponytypein="NullablePointer[VkRayTracingShaderGroupCreateInfoNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkRayTracingShaderGroupCreateInfoNV]"
+    structtype="NullablePointer[VkRayTracingShaderGroupCreateInfoNV]"
+    structdef="NullablePointer[VkRayTracingShaderGroupCreateInfoNV].none()"
+    argtype="NullablePointer[VkRayTracingShaderGroupCreateInfoNV] tag"
+    rvtype="NullablePointer[VkRayTracingShaderGroupCreateInfoNV]"/>
+
+  <typedef name="NullablePointer[VkPipelineColorBlendStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineColorBlendStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineColorBlendStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineColorBlendStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineColorBlendStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineColorBlendStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineColorBlendStateCreateInfo]"/>
+
+  <typedef name="NullablePointer[VkRayTracingShaderGroupCreateInfoKHR]"
+    ponytypein="NullablePointer[VkRayTracingShaderGroupCreateInfoKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkRayTracingShaderGroupCreateInfoKHR]"
+    structtype="NullablePointer[VkRayTracingShaderGroupCreateInfoKHR]"
+    structdef="NullablePointer[VkRayTracingShaderGroupCreateInfoKHR].none()"
+    argtype="NullablePointer[VkRayTracingShaderGroupCreateInfoKHR] tag"
+    rvtype="NullablePointer[VkRayTracingShaderGroupCreateInfoKHR]"/>
+
+  <typedef name="NullablePointer[VkIndirectCommandsLayoutNVT]"
+    ponytypein="NullablePointer[VkIndirectCommandsLayoutNVT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkIndirectCommandsLayoutNVT]"
+    structtype="NullablePointer[VkIndirectCommandsLayoutNVT]"
+    structdef="NullablePointer[VkIndirectCommandsLayoutNVT].none()"
+    argtype="NullablePointer[VkIndirectCommandsLayoutNVT] tag"
+    rvtype="NullablePointer[VkIndirectCommandsLayoutNVT]"/>
+
+  <typedef name="NullablePointer[VkSamplerYcbcrConversionT]"
+    ponytypein="NullablePointer[VkSamplerYcbcrConversionT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSamplerYcbcrConversionT]"
+    structtype="NullablePointer[VkSamplerYcbcrConversionT]"
+    structdef="NullablePointer[VkSamplerYcbcrConversionT].none()"
+    argtype="NullablePointer[VkSamplerYcbcrConversionT] tag"
+    rvtype="NullablePointer[VkSamplerYcbcrConversionT]"/>
+
+  <typedef name="NullablePointer[VkDrmFormatModifierPropertiesEXT]"
+    ponytypein="NullablePointer[VkDrmFormatModifierPropertiesEXT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDrmFormatModifierPropertiesEXT]"
+    structtype="NullablePointer[VkDrmFormatModifierPropertiesEXT]"
+    structdef="NullablePointer[VkDrmFormatModifierPropertiesEXT].none()"
+    argtype="NullablePointer[VkDrmFormatModifierPropertiesEXT] tag"
+    rvtype="NullablePointer[VkDrmFormatModifierPropertiesEXT]"/>
+
+  <typedef name="VkGeometryTrianglesNV"
+    ponytypein="VkGeometryTrianglesNV tag"
+    ponytypeinconv=""
+    ponytypeout="VkGeometryTrianglesNV"
+    structtype="VkGeometryTrianglesNV"
+    structdef="VkGeometryTrianglesNV"
+    argtype="VkGeometryTrianglesNV tag"
+    rvtype="VkGeometryTrianglesNV"/>
+
+  <typedef name="Pointer[VkOffset3D]"
+    ponytypein="Pointer[VkOffset3D] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[VkOffset3D]"
+    structtype="Pointer[VkOffset3D]"
+    structdef="Pointer[VkOffset3D]"
+    argtype="Pointer[VkOffset3D] tag"
+    rvtype="Pointer[VkOffset3D]"/>
+
+  <typedef name="NullablePointer[VkPipelineRasterizationStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineRasterizationStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineRasterizationStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineRasterizationStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineRasterizationStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineRasterizationStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineRasterizationStateCreateInfo]"/>
+
+  <typedef name="U64"
+    ponytypein="U64"
+    ponytypeinconv=""
+    ponytypeout="U64"
+    structtype="U64"
+    structdef="U64(0)"
+    argtype="U64"
+    rvtype="U64"/>
+
+  <typedef name="Array[NullablePointer[VkSwapchainKHRT]]"
+    ponytypein="Array[NullablePointer[VkSwapchainKHRT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkSwapchainKHRT]]"
+    structtype="Array[NullablePointer[VkSwapchainKHRT]]"
+    structdef="Array[NullablePointer[VkSwapchainKHRT]]"
+    argtype="Array[NullablePointer[VkSwapchainKHRT]] tag"
+    rvtype="Array[NullablePointer[VkSwapchainKHRT]]"/>
+
+  <typedef name="NullablePointer[VkRectLayerKHR]"
+    ponytypein="NullablePointer[VkRectLayerKHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkRectLayerKHR]"
+    structtype="NullablePointer[VkRectLayerKHR]"
+    structdef="NullablePointer[VkRectLayerKHR].none()"
+    argtype="NullablePointer[VkRectLayerKHR] tag"
+    rvtype="NullablePointer[VkRectLayerKHR]"/>
+
+  <typedef name="NullablePointer[VkBufferImageCopy2KHR]"
+    ponytypein="NullablePointer[VkBufferImageCopy2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkBufferImageCopy2KHR]"
+    structtype="NullablePointer[VkBufferImageCopy2KHR]"
+    structdef="NullablePointer[VkBufferImageCopy2KHR].none()"
+    argtype="NullablePointer[VkBufferImageCopy2KHR] tag"
+    rvtype="NullablePointer[VkBufferImageCopy2KHR]"/>
+
+  <typedef name="NullablePointer[VkDescriptorSetT]"
+    ponytypein="NullablePointer[VkDescriptorSetT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorSetT]"
+    structtype="NullablePointer[VkDescriptorSetT]"
+    structdef="NullablePointer[VkDescriptorSetT].none()"
+    argtype="NullablePointer[VkDescriptorSetT] tag"
+    rvtype="NullablePointer[VkDescriptorSetT]"/>
+
+  <typedef name="NullablePointer[VkDescriptorImageInfo]"
+    ponytypein="NullablePointer[VkDescriptorImageInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorImageInfo]"
+    structtype="NullablePointer[VkDescriptorImageInfo]"
+    structdef="NullablePointer[VkDescriptorImageInfo].none()"
+    argtype="NullablePointer[VkDescriptorImageInfo] tag"
+    rvtype="NullablePointer[VkDescriptorImageInfo]"/>
+
+  <typedef name="VkPipelineShaderStageCreateInfo"
+    ponytypein="VkPipelineShaderStageCreateInfo tag"
+    ponytypeinconv=""
+    ponytypeout="VkPipelineShaderStageCreateInfo"
+    structtype="VkPipelineShaderStageCreateInfo"
+    structdef="VkPipelineShaderStageCreateInfo"
+    argtype="VkPipelineShaderStageCreateInfo tag"
+    rvtype="VkPipelineShaderStageCreateInfo"/>
+
+  <typedef name="NullablePointer[VkShaderModuleT]"
+    ponytypein="NullablePointer[VkShaderModuleT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkShaderModuleT]"
+    structtype="NullablePointer[VkShaderModuleT]"
+    structdef="NullablePointer[VkShaderModuleT].none()"
+    argtype="NullablePointer[VkShaderModuleT] tag"
+    rvtype="NullablePointer[VkShaderModuleT]"/>
+
+  <typedef name="Pointer[I32]"
+    ponytypein="Pointer[I32] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[I32]"
+    structtype="Pointer[I32]"
+    structdef="Pointer[I32]"
+    argtype="Pointer[I32] tag"
+    rvtype="Pointer[I32]"/>
+
+  <typedef name="VkGeometryDataNV"
+    ponytypein="VkGeometryDataNV tag"
+    ponytypeinconv=""
+    ponytypeout="VkGeometryDataNV"
+    structtype="VkGeometryDataNV"
+    structdef="VkGeometryDataNV"
+    argtype="VkGeometryDataNV tag"
+    rvtype="VkGeometryDataNV"/>
+
+  <typedef name="NullablePointer[VkPipelineT]"
+    ponytypein="NullablePointer[VkPipelineT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineT]"
+    structtype="NullablePointer[VkPipelineT]"
+    structdef="NullablePointer[VkPipelineT].none()"
+    argtype="NullablePointer[VkPipelineT] tag"
+    rvtype="NullablePointer[VkPipelineT]"/>
+
+  <typedef name="NullablePointer[VkInputAttachmentAspectReference]"
+    ponytypein="NullablePointer[VkInputAttachmentAspectReference] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkInputAttachmentAspectReference]"
+    structtype="NullablePointer[VkInputAttachmentAspectReference]"
+    structdef="NullablePointer[VkInputAttachmentAspectReference].none()"
+    argtype="NullablePointer[VkInputAttachmentAspectReference] tag"
+    rvtype="NullablePointer[VkInputAttachmentAspectReference]"/>
+
+  <typedef name="NullablePointer[VkDescriptorSetLayoutT]"
+    ponytypein="NullablePointer[VkDescriptorSetLayoutT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorSetLayoutT]"
+    structtype="NullablePointer[VkDescriptorSetLayoutT]"
+    structdef="NullablePointer[VkDescriptorSetLayoutT].none()"
+    argtype="NullablePointer[VkDescriptorSetLayoutT] tag"
+    rvtype="NullablePointer[VkDescriptorSetLayoutT]"/>
+
+  <typedef name="Pointer[Pointer[F32]]"
+    ponytypein="Pointer[Pointer[F32]] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[Pointer[F32]]"
+    structtype="Pointer[Pointer[F32]]"
+    structdef="Pointer[Pointer[F32]]"
+    argtype="Pointer[Pointer[F32]] tag"
+    rvtype="Pointer[Pointer[F32]]"/>
+
+  <typedef name="VkDisplayPlaneCapabilitiesKHR"
+    ponytypein="VkDisplayPlaneCapabilitiesKHR tag"
+    ponytypeinconv=""
+    ponytypeout="VkDisplayPlaneCapabilitiesKHR"
+    structtype="VkDisplayPlaneCapabilitiesKHR"
+    structdef="VkDisplayPlaneCapabilitiesKHR"
+    argtype="VkDisplayPlaneCapabilitiesKHR tag"
+    rvtype="VkDisplayPlaneCapabilitiesKHR"/>
+
+  <typedef name="NullablePointer[VkDescriptorUpdateTemplateEntry]"
+    ponytypein="NullablePointer[VkDescriptorUpdateTemplateEntry] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDescriptorUpdateTemplateEntry]"
+    structtype="NullablePointer[VkDescriptorUpdateTemplateEntry]"
+    structdef="NullablePointer[VkDescriptorUpdateTemplateEntry].none()"
+    argtype="NullablePointer[VkDescriptorUpdateTemplateEntry] tag"
+    rvtype="NullablePointer[VkDescriptorUpdateTemplateEntry]"/>
+
+  <typedef name="Array[NullablePointer[VkDescriptorSetLayoutT]]"
+    ponytypein="Array[NullablePointer[VkDescriptorSetLayoutT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkDescriptorSetLayoutT]]"
+    structtype="Array[NullablePointer[VkDescriptorSetLayoutT]]"
+    structdef="Array[NullablePointer[VkDescriptorSetLayoutT]]"
+    argtype="Array[NullablePointer[VkDescriptorSetLayoutT]] tag"
+    rvtype="Array[NullablePointer[VkDescriptorSetLayoutT]]"/>
+
+  <typedef name="F32"
+    ponytypein="F32"
+    ponytypeinconv=""
+    ponytypeout="F32"
+    structtype="F32"
+    structdef="F32(0)"
+    argtype="F32"
+    rvtype="F32"/>
+
+  <typedef name="NullablePointer[VkImageResolve2KHR]"
+    ponytypein="NullablePointer[VkImageResolve2KHR] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkImageResolve2KHR]"
+    structtype="NullablePointer[VkImageResolve2KHR]"
+    structdef="NullablePointer[VkImageResolve2KHR].none()"
+    argtype="NullablePointer[VkImageResolve2KHR] tag"
+    rvtype="NullablePointer[VkImageResolve2KHR]"/>
+
+  <typedef name="NullablePointer[VkSubpassDependency2]"
+    ponytypein="NullablePointer[VkSubpassDependency2] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSubpassDependency2]"
+    structtype="NullablePointer[VkSubpassDependency2]"
+    structdef="NullablePointer[VkSubpassDependency2].none()"
+    argtype="NullablePointer[VkSubpassDependency2] tag"
+    rvtype="NullablePointer[VkSubpassDependency2]"/>
+
+  <typedef name="Array[NullablePointer[VkPipelineT]]"
+    ponytypein="Array[NullablePointer[VkPipelineT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkPipelineT]]"
+    structtype="Array[NullablePointer[VkPipelineT]]"
+    structdef="Array[NullablePointer[VkPipelineT]]"
+    argtype="Array[NullablePointer[VkPipelineT]] tag"
+    rvtype="Array[NullablePointer[VkPipelineT]]"/>
+
+  <typedef name="NullablePointer[VkIndirectCommandsLayoutTokenNV]"
+    ponytypein="NullablePointer[VkIndirectCommandsLayoutTokenNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkIndirectCommandsLayoutTokenNV]"
+    structtype="NullablePointer[VkIndirectCommandsLayoutTokenNV]"
+    structdef="NullablePointer[VkIndirectCommandsLayoutTokenNV].none()"
+    argtype="NullablePointer[VkIndirectCommandsLayoutTokenNV] tag"
+    rvtype="NullablePointer[VkIndirectCommandsLayoutTokenNV]"/>
+
+  <typedef name="NullablePointer[VkGeometryNV]"
+    ponytypein="NullablePointer[VkGeometryNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkGeometryNV]"
+    structtype="NullablePointer[VkGeometryNV]"
+    structdef="NullablePointer[VkGeometryNV].none()"
+    argtype="NullablePointer[VkGeometryNV] tag"
+    rvtype="NullablePointer[VkGeometryNV]"/>
+
+  <typedef name="NullablePointer[VkCoarseSampleOrderCustomNV]"
+    ponytypein="NullablePointer[VkCoarseSampleOrderCustomNV] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCoarseSampleOrderCustomNV]"
+    structtype="NullablePointer[VkCoarseSampleOrderCustomNV]"
+    structdef="NullablePointer[VkCoarseSampleOrderCustomNV].none()"
+    argtype="NullablePointer[VkCoarseSampleOrderCustomNV] tag"
+    rvtype="NullablePointer[VkCoarseSampleOrderCustomNV]"/>
+
+  <typedef name="NullablePointer[VkFenceT]"
+    ponytypein="NullablePointer[VkFenceT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkFenceT]"
+    structtype="NullablePointer[VkFenceT]"
+    structdef="NullablePointer[VkFenceT].none()"
+    argtype="NullablePointer[VkFenceT] tag"
+    rvtype="NullablePointer[VkFenceT]"/>
+
+  <typedef name="NullablePointer[VkMutableDescriptorTypeListVALVE]"
+    ponytypein="NullablePointer[VkMutableDescriptorTypeListVALVE] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkMutableDescriptorTypeListVALVE]"
+    structtype="NullablePointer[VkMutableDescriptorTypeListVALVE]"
+    structdef="NullablePointer[VkMutableDescriptorTypeListVALVE].none()"
+    argtype="NullablePointer[VkMutableDescriptorTypeListVALVE] tag"
+    rvtype="NullablePointer[VkMutableDescriptorTypeListVALVE]"/>
+
+  <typedef name="NullablePointer[VkDeviceQueueCreateInfo]"
+    ponytypein="NullablePointer[VkDeviceQueueCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkDeviceQueueCreateInfo]"
+    structtype="NullablePointer[VkDeviceQueueCreateInfo]"
+    structdef="NullablePointer[VkDeviceQueueCreateInfo].none()"
+    argtype="NullablePointer[VkDeviceQueueCreateInfo] tag"
+    rvtype="NullablePointer[VkDeviceQueueCreateInfo]"/>
+
+  <typedef name="VkOffset3D"
+    ponytypein="VkOffset3D tag"
+    ponytypeinconv=""
+    ponytypeout="VkOffset3D"
+    structtype="VkOffset3D"
+    structdef="VkOffset3D"
+    argtype="VkOffset3D tag"
+    rvtype="VkOffset3D"/>
+
+  <typedef name="NullablePointer[VkApplicationInfo]"
+    ponytypein="NullablePointer[VkApplicationInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkApplicationInfo]"
+    structtype="NullablePointer[VkApplicationInfo]"
+    structdef="NullablePointer[VkApplicationInfo].none()"
+    argtype="NullablePointer[VkApplicationInfo] tag"
+    rvtype="NullablePointer[VkApplicationInfo]"/>
+
+  <typedef name="Array[NullablePointer[VkSemaphoreT]]"
+    ponytypein="Array[NullablePointer[VkSemaphoreT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Array[NullablePointer[VkSemaphoreT]]"
+    structtype="Array[NullablePointer[VkSemaphoreT]]"
+    structdef="Array[NullablePointer[VkSemaphoreT]]"
+    argtype="Array[NullablePointer[VkSemaphoreT]] tag"
+    rvtype="Array[NullablePointer[VkSemaphoreT]]"/>
+
+  <typedef name="NullablePointer[VkSparseImageMemoryBind]"
+    ponytypein="NullablePointer[VkSparseImageMemoryBind] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSparseImageMemoryBind]"
+    structtype="NullablePointer[VkSparseImageMemoryBind]"
+    structdef="NullablePointer[VkSparseImageMemoryBind].none()"
+    argtype="NullablePointer[VkSparseImageMemoryBind] tag"
+    rvtype="NullablePointer[VkSparseImageMemoryBind]"/>
+
+  <typedef name="NullablePointer[VkPipelineMultisampleStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineMultisampleStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineMultisampleStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineMultisampleStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineMultisampleStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineMultisampleStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineMultisampleStateCreateInfo]"/>
+
+  <typedef name="U8"
+    ponytypein="U8"
+    ponytypeinconv=""
+    ponytypeout="U8"
+    structtype="U8"
+    structdef="U8(0)"
+    argtype="U8"
+    rvtype="U8"/>
+
+  <typedef name="NullablePointer[VkSpecializationInfo]"
+    ponytypein="NullablePointer[VkSpecializationInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkSpecializationInfo]"
+    structtype="NullablePointer[VkSpecializationInfo]"
+    structdef="NullablePointer[VkSpecializationInfo].none()"
+    argtype="NullablePointer[VkSpecializationInfo] tag"
+    rvtype="NullablePointer[VkSpecializationInfo]"/>
+
+  <typedef name="VkFormatProperties"
+    ponytypein="VkFormatProperties tag"
+    ponytypeinconv=""
+    ponytypeout="VkFormatProperties"
+    structtype="VkFormatProperties"
+    structdef="VkFormatProperties"
+    argtype="VkFormatProperties tag"
+    rvtype="VkFormatProperties"/>
+
+  <typedef name="Pointer[NullablePointer[VkPhysicalDeviceT]]"
+    ponytypein="Pointer[NullablePointer[VkPhysicalDeviceT]] tag"
+    ponytypeinconv=""
+    ponytypeout="Pointer[NullablePointer[VkPhysicalDeviceT]]"
+    structtype="Pointer[NullablePointer[VkPhysicalDeviceT]]"
+    structdef="Pointer[NullablePointer[VkPhysicalDeviceT]]"
+    argtype="Pointer[NullablePointer[VkPhysicalDeviceT]] tag"
+    rvtype="Pointer[NullablePointer[VkPhysicalDeviceT]]"/>
+
+  <typedef name="NullablePointer[VkCommandBufferT]"
+    ponytypein="NullablePointer[VkCommandBufferT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkCommandBufferT]"
+    structtype="NullablePointer[VkCommandBufferT]"
+    structdef="NullablePointer[VkCommandBufferT].none()"
+    argtype="NullablePointer[VkCommandBufferT] tag"
+    rvtype="NullablePointer[VkCommandBufferT]"/>
+
+  <typedef name="NullablePointer[VkPipelineDepthStencilStateCreateInfo]"
+    ponytypein="NullablePointer[VkPipelineDepthStencilStateCreateInfo] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkPipelineDepthStencilStateCreateInfo]"
+    structtype="NullablePointer[VkPipelineDepthStencilStateCreateInfo]"
+    structdef="NullablePointer[VkPipelineDepthStencilStateCreateInfo].none()"
+    argtype="NullablePointer[VkPipelineDepthStencilStateCreateInfo] tag"
+    rvtype="NullablePointer[VkPipelineDepthStencilStateCreateInfo]"/>
+
+  <typedef name="NullablePointer[VkFramebufferT]"
+    ponytypein="NullablePointer[VkFramebufferT] tag"
+    ponytypeinconv=""
+    ponytypeout="NullablePointer[VkFramebufferT]"
+    structtype="NullablePointer[VkFramebufferT]"
+    structdef="NullablePointer[VkFramebufferT].none()"
+    argtype="NullablePointer[VkFramebufferT] tag"
+    rvtype="NullablePointer[VkFramebufferT]"/>
+</typedefs>
+

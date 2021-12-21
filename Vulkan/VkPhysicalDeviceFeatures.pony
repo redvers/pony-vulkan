@@ -1,0 +1,121 @@
+
+
+/*
+  Source: /nix/store/009nbc0glwp0pg5x0gzcbwfpyidpkibw-vulkan-headers-1.2.189.1/include/vulkan/vulkan_core.h:2527
+  Original Name: VkPhysicalDeviceFeatures
+  Struct Size (bits):  1760
+  Struct Align (bits): 32
+
+  Fields (Offset in bits):
+     000000: [FundamentalType(unsigned int) size=32]: robustBufferAccess  
+     000032: [FundamentalType(unsigned int) size=32]: fullDrawIndexUint32  
+     000064: [FundamentalType(unsigned int) size=32]: imageCubeArray  
+     000096: [FundamentalType(unsigned int) size=32]: independentBlend  
+     000128: [FundamentalType(unsigned int) size=32]: geometryShader  
+     000160: [FundamentalType(unsigned int) size=32]: tessellationShader  
+     000192: [FundamentalType(unsigned int) size=32]: sampleRateShading  
+     000224: [FundamentalType(unsigned int) size=32]: dualSrcBlend  
+     000256: [FundamentalType(unsigned int) size=32]: logicOp  
+     000288: [FundamentalType(unsigned int) size=32]: multiDrawIndirect  
+     000320: [FundamentalType(unsigned int) size=32]: drawIndirectFirstInstance  
+     000352: [FundamentalType(unsigned int) size=32]: depthClamp  
+     000384: [FundamentalType(unsigned int) size=32]: depthBiasClamp  
+     000416: [FundamentalType(unsigned int) size=32]: fillModeNonSolid  
+     000448: [FundamentalType(unsigned int) size=32]: depthBounds  
+     000480: [FundamentalType(unsigned int) size=32]: wideLines  
+     000512: [FundamentalType(unsigned int) size=32]: largePoints  
+     000544: [FundamentalType(unsigned int) size=32]: alphaToOne  
+     000576: [FundamentalType(unsigned int) size=32]: multiViewport  
+     000608: [FundamentalType(unsigned int) size=32]: samplerAnisotropy  
+     000640: [FundamentalType(unsigned int) size=32]: textureCompressionETC2  
+     000672: [FundamentalType(unsigned int) size=32]: textureCompressionASTC_LDR  
+     000704: [FundamentalType(unsigned int) size=32]: textureCompressionBC  
+     000736: [FundamentalType(unsigned int) size=32]: occlusionQueryPrecise  
+     000768: [FundamentalType(unsigned int) size=32]: pipelineStatisticsQuery  
+     000800: [FundamentalType(unsigned int) size=32]: vertexPipelineStoresAndAtomics  
+     000832: [FundamentalType(unsigned int) size=32]: fragmentStoresAndAtomics  
+     000864: [FundamentalType(unsigned int) size=32]: shaderTessellationAndGeometryPointSize  
+     000896: [FundamentalType(unsigned int) size=32]: shaderImageGatherExtended  
+     000928: [FundamentalType(unsigned int) size=32]: shaderStorageImageExtendedFormats  
+     000960: [FundamentalType(unsigned int) size=32]: shaderStorageImageMultisample  
+     000992: [FundamentalType(unsigned int) size=32]: shaderStorageImageReadWithoutFormat  
+     001024: [FundamentalType(unsigned int) size=32]: shaderStorageImageWriteWithoutFormat  
+     001056: [FundamentalType(unsigned int) size=32]: shaderUniformBufferArrayDynamicIndexing  
+     001088: [FundamentalType(unsigned int) size=32]: shaderSampledImageArrayDynamicIndexing  
+     001120: [FundamentalType(unsigned int) size=32]: shaderStorageBufferArrayDynamicIndexing  
+     001152: [FundamentalType(unsigned int) size=32]: shaderStorageImageArrayDynamicIndexing  
+     001184: [FundamentalType(unsigned int) size=32]: shaderClipDistance  
+     001216: [FundamentalType(unsigned int) size=32]: shaderCullDistance  
+     001248: [FundamentalType(unsigned int) size=32]: shaderFloat64  
+     001280: [FundamentalType(unsigned int) size=32]: shaderInt64  
+     001312: [FundamentalType(unsigned int) size=32]: shaderInt16  
+     001344: [FundamentalType(unsigned int) size=32]: shaderResourceResidency  
+     001376: [FundamentalType(unsigned int) size=32]: shaderResourceMinLod  
+     001408: [FundamentalType(unsigned int) size=32]: sparseBinding  
+     001440: [FundamentalType(unsigned int) size=32]: sparseResidencyBuffer  
+     001472: [FundamentalType(unsigned int) size=32]: sparseResidencyImage2D  
+     001504: [FundamentalType(unsigned int) size=32]: sparseResidencyImage3D  
+     001536: [FundamentalType(unsigned int) size=32]: sparseResidency2Samples  
+     001568: [FundamentalType(unsigned int) size=32]: sparseResidency4Samples  
+     001600: [FundamentalType(unsigned int) size=32]: sparseResidency8Samples  
+     001632: [FundamentalType(unsigned int) size=32]: sparseResidency16Samples  
+     001664: [FundamentalType(unsigned int) size=32]: sparseResidencyAliased  
+     001696: [FundamentalType(unsigned int) size=32]: variableMultisampleRate  
+     001728: [FundamentalType(unsigned int) size=32]: inheritedQueries  
+*/
+struct VkPhysicalDeviceFeatures
+  var robustBufferAccess: U32 = U32(0)
+  var fullDrawIndexUint32: U32 = U32(0)
+  var imageCubeArray: U32 = U32(0)
+  var independentBlend: U32 = U32(0)
+  var geometryShader: U32 = U32(0)
+  var tessellationShader: U32 = U32(0)
+  var sampleRateShading: U32 = U32(0)
+  var dualSrcBlend: U32 = U32(0)
+  var logicOp: U32 = U32(0)
+  var multiDrawIndirect: U32 = U32(0)
+  var drawIndirectFirstInstance: U32 = U32(0)
+  var depthClamp: U32 = U32(0)
+  var depthBiasClamp: U32 = U32(0)
+  var fillModeNonSolid: U32 = U32(0)
+  var depthBounds: U32 = U32(0)
+  var wideLines: U32 = U32(0)
+  var largePoints: U32 = U32(0)
+  var alphaToOne: U32 = U32(0)
+  var multiViewport: U32 = U32(0)
+  var samplerAnisotropy: U32 = U32(0)
+  var textureCompressionETC2: U32 = U32(0)
+  var textureCompressionASTC_LDR: U32 = U32(0)
+  var textureCompressionBC: U32 = U32(0)
+  var occlusionQueryPrecise: U32 = U32(0)
+  var pipelineStatisticsQuery: U32 = U32(0)
+  var vertexPipelineStoresAndAtomics: U32 = U32(0)
+  var fragmentStoresAndAtomics: U32 = U32(0)
+  var shaderTessellationAndGeometryPointSize: U32 = U32(0)
+  var shaderImageGatherExtended: U32 = U32(0)
+  var shaderStorageImageExtendedFormats: U32 = U32(0)
+  var shaderStorageImageMultisample: U32 = U32(0)
+  var shaderStorageImageReadWithoutFormat: U32 = U32(0)
+  var shaderStorageImageWriteWithoutFormat: U32 = U32(0)
+  var shaderUniformBufferArrayDynamicIndexing: U32 = U32(0)
+  var shaderSampledImageArrayDynamicIndexing: U32 = U32(0)
+  var shaderStorageBufferArrayDynamicIndexing: U32 = U32(0)
+  var shaderStorageImageArrayDynamicIndexing: U32 = U32(0)
+  var shaderClipDistance: U32 = U32(0)
+  var shaderCullDistance: U32 = U32(0)
+  var shaderFloat64: U32 = U32(0)
+  var shaderInt64: U32 = U32(0)
+  var shaderInt16: U32 = U32(0)
+  var shaderResourceResidency: U32 = U32(0)
+  var shaderResourceMinLod: U32 = U32(0)
+  var sparseBinding: U32 = U32(0)
+  var sparseResidencyBuffer: U32 = U32(0)
+  var sparseResidencyImage2D: U32 = U32(0)
+  var sparseResidencyImage3D: U32 = U32(0)
+  var sparseResidency2Samples: U32 = U32(0)
+  var sparseResidency4Samples: U32 = U32(0)
+  var sparseResidency8Samples: U32 = U32(0)
+  var sparseResidency16Samples: U32 = U32(0)
+  var sparseResidencyAliased: U32 = U32(0)
+  var variableMultisampleRate: U32 = U32(0)
+  var inheritedQueries: U32 = U32(0)
